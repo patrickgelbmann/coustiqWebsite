@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Philharmonie Forum | Sonic Architecture</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#faf8ff",
+              "primary-container": "#123532",
+              "on-primary-fixed": "#00201e",
+              "on-background": "#131b2e",
+              "surface-container-high": "#e2e7ff",
+              "on-surface": "#131b2e",
+              "on-tertiary-container": "#8d8aff",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed": "#0f0069",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#dae2fd",
+              "on-tertiary-fixed-variant": "#3323cc",
+              "primary-fixed-dim": "#aacec9",
+              "inverse-surface": "#283044",
+              "surface-container": "#eaedff",
+              "inverse-primary": "#aacec9",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#faf8ff",
+              "on-error": "#ffffff",
+              "surface-dim": "#d2d9f4",
+              "on-secondary-fixed-variant": "#00504b",
+              "outline-variant": "#c1c8c6",
+              "on-primary-container": "#7b9e9a",
+              "secondary": "#006a64",
+              "inverse-on-surface": "#eef0ff",
+              "tertiary-fixed-dim": "#c3c0ff",
+              "secondary-fixed-dim": "#51dbcf",
+              "outline": "#717977",
+              "primary-fixed": "#c5eae5",
+              "primary": "#001f1d",
+              "secondary-container": "#6ff4e9",
+              "on-primary-fixed-variant": "#2b4d49",
+              "background": "#faf8ff",
+              "on-surface-variant": "#414847",
+              "surface-container-low": "#f2f3ff",
+              "surface-variant": "#dae2fd",
+              "surface-tint": "#436461",
+              "secondary-fixed": "#72f7eb",
+              "on-error-container": "#93000a",
+              "on-secondary-fixed": "#00201e",
+              "tertiary-fixed": "#e2dfff",
+              "error-container": "#ffdad6",
+              "tertiary-container": "#1d00a3",
+              "on-secondary-container": "#006f68",
+              "on-secondary": "#ffffff",
+              "tertiary": "#0e0067",
+              "surface-container-lowest": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .text-balance {
+        text-wrap: balance;
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-fixed-dim selection:text-on-secondary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl rounded-full z-50 bg-white/70 backdrop-blur-xl outline outline-1 outline-slate-200/20 shadow-[0_20px_50px_rgba(0,0,0,0.1)] flex justify-between items-center px-8 py-3 w-full">
+<img alt="Sonic Architecture Logo" class="h-8 md:h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uh2oc07CUpm8qKWeG_PBezxpf493EmlgaAYP17GX8WXe3u0M5NxAU8rjhi4KZ1wsktBTsSo2aE6WqxuqNQEBNePyun8MP5IVgqyHD4Cn-myseRXEuG8R2y0M0lq76LUGjT7Srm5_XAoldKz2uQzaEy1IAPSxUYk8MPrKpG4nxH_90f75Ntkz7B_NzPAOPD2wSAlT0evFr-tLZObJ8LGHE_6qBZthqzvE71-y9HUGg2KsNUQ7X3zGnM9c26Ip2MVUYkomq37HErBag"/>
+<div class="hidden md:flex items-center space-x-2">
+<a class="text-slate-500 hover:text-slate-900 transition-colors hover:bg-slate-100/50 rounded-full px-4 py-2 font-['Manrope'] font-bold tracking-tight" href="#">Solutions</a>
+<a class="text-teal-600 font-bold border-b-2 border-teal-500 pb-1 hover:bg-slate-100/50 rounded-full px-4 py-2 font-['Manrope'] tracking-tight" href="#">Case Studies</a>
+<a class="text-slate-500 hover:text-slate-900 transition-colors hover:bg-slate-100/50 rounded-full px-4 py-2 font-['Manrope'] font-bold tracking-tight" href="#">Lab Specs</a>
+<a class="text-slate-500 hover:text-slate-900 transition-colors hover:bg-slate-100/50 rounded-full px-4 py-2 font-['Manrope'] font-bold tracking-tight" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold active:scale-95 duration-200 transition-all">Consultation</button>
+<span class="material-symbols-outlined text-slate-900 cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[921px] w-full overflow-hidden flex items-end pb-24 px-6 md:px-12">
+<div class="absolute inset-0 z-0">
+<img alt="Modern concert hall with dramatic acoustic wood paneling" class="w-full h-full object-cover grayscale-[20%] brightness-[0.8]" data-alt="Grand interior of a modern philharmonic hall with geometric wood panels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCZSCp7hhlgio7cFvreMNS36eiIwuxhYJ-RGhmEPNydubjlTDusbReKzX8UcueVO3T6MsTmeQSp8PfVwq4oZIyGzv5kkp9igqkRHbX7Jsi5N4SZS8MF7F39f7QGzqGyD3xVmTl_rl2gyccO4BVHfj8xRpPCBCQqXWqFjwux6HLPULnI2NcbV0KEQzEwe4_OkdoU6bSqFMPMB7KQeG0ozUQcGPPpUW1YQTCrjtakl1EaNbgLyWhnbWFnQ1f3u614SWZA3a-R8eP_l-q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto w-full">
+<div class="inline-flex items-center space-x-2 bg-secondary/20 backdrop-blur-md border border-secondary/30 text-secondary-fixed-dim px-4 py-1 rounded-full mb-6">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-xs font-bold uppercase tracking-widest">Global Masterpiece</span>
+</div>
+<h1 class="font-headline text-5xl md:text-8xl font-black text-white leading-none tracking-tighter max-w-4xl text-balance">
+                Philharmonie Forum
+            </h1>
+<p class="mt-6 text-white/80 text-lg md:text-xl max-w-2xl font-light leading-relaxed">
+                Sculpting the silence of Munich's most ambitious acoustic landmark. A 2,400-seat sanctuary designed for perfect frequency attenuation.
+            </p>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 md:px-12 -mt-12 relative z-20">
+<!-- Project Stats Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-24">
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm border border-outline-variant/10">
+<p class="text-secondary font-bold text-xs uppercase tracking-widest mb-1">Location</p>
+<h3 class="font-headline text-xl font-bold" data-location="Munich, Germany">Munich, Germany</h3>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm border border-outline-variant/10">
+<p class="text-secondary font-bold text-xs uppercase tracking-widest mb-1">Scope</p>
+<h3 class="font-headline text-xl font-bold">Acoustic Engineering &amp; Shell</h3>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm border border-outline-variant/10">
+<p class="text-secondary font-bold text-xs uppercase tracking-widest mb-1">Year</p>
+<h3 class="font-headline text-xl font-bold">2024</h3>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm border border-outline-variant/10">
+<p class="text-secondary font-bold text-xs uppercase tracking-widest mb-1">Client</p>
+<h3 class="font-headline text-xl font-bold">Cultural Heritage Trust</h3>
+</div>
+</section>
+<!-- Detailed Description Content -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-32 items-start">
+<div class="lg:col-span-7">
+<h2 class="font-headline text-4xl font-extrabold text-primary mb-8 leading-tight">Engineering the Unseen</h2>
+<div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+<p>
+                        The Philharmonie Forum presented a unique paradox: how to deliver crystalline orchestral clarity in a space dominated by floor-to-ceiling glass and steel. Sonic Architecture was commissioned to resolve the inherent reverberation challenges without compromising the architect's vision of transparency.
+                    </p>
+<p>
+                        Our solution involved a proprietary **Kinetic Diffusion Array**—hidden within the ceiling structure—that adjusts its angle based on the frequency of the performance. By utilizing micro-perforated acoustic treatments that are visually indistinguishable from solid surfaces, we achieved a "Dry-Wet Balance" typically only found in traditional wooden concert halls.
+                    </p>
+<div class="bg-primary-container p-8 rounded-3xl mt-12 text-on-primary">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-4xl mb-4" data-icon="waves">waves</span>
+<h4 class="font-headline text-xl font-bold mb-2">Technical Breakthrough</h4>
+<p class="text-on-primary-container leading-snug">
+                            Implemented the first-ever 0.8s reverberation time for a glass-enclosed atrium, exceeding European acoustic standards by 40%.
+                        </p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 sticky top-32">
+<div class="bg-surface-container p-8 rounded-[2.5rem] overflow-hidden relative group">
+<img alt="Detailed acoustic panel textures" class="w-full h-80 object-cover rounded-2xl mb-8 group-hover:scale-105 transition-transform duration-700" data-alt="Close up of high-tech acoustic paneling textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFPSDhPWm3PL70bw9tFmKNmDft_IYnCh8_rk3dEOL_Pf9VW0oMz1HnHw-62P_Z_dO5_Gy6FAMsxMntYt9wnA0h88XmRYTjZGBiV6X_oLmNN3LtPb-h2Ax1fomYnUcIWVx77foYXexkiB0EnuJd39I0Ns6VNTcwIkKqt_B98uHvBqA1rorWx3hQng6tXY-9tkO3rcHN3HPbELcFh5spLReny8u5gPYl8p37jHi3kUCj7DrlQeZyMXoBh2qDeiDVBt3QJYIPlsqm4O7B"/>
+<h3 class="font-headline text-2xl font-bold mb-4">Acoustic Specs</h3>
+<ul class="space-y-4">
+<li class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="text-on-surface-variant">Reverb Time</span>
+<span class="font-bold text-primary">0.82 Seconds</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="text-on-surface-variant">Background Noise</span>
+<span class="font-bold text-primary">&lt; RC 15</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="text-on-surface-variant">Diffusor Count</span>
+<span class="font-bold text-primary">1,402 Units</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="mb-32">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="md:w-2/3 h-[500px] overflow-hidden rounded-[3rem]">
+<img alt="Interior wide view of auditorium" class="w-full h-full object-cover" data-alt="Wide angle shot of the grand auditorium interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwwzy0-HXTcST8V1E7RNab6e-uA8ee8AtJTY2i2k9XzHq8DnVVIWXeiUVODqrU-fkc56Y_s02BRuI7M4IJrKOy502T1ZvRPj-Sfe95OWGX2x0BcA8F2LV57cgPuTWISXfwPPVjfbXr6GD4xktOoZdAJudnIJNsfFdUIeYxWw5yPg68Nt2ScR_7F6g6ihtPrKSLpruiJHVcSHCi_XAnekNnzp7flLVSYJPBHwQw6Q0n_XrsHRDEK5PtW4VMR6rA6yVk9U8dxNjSLJuA"/>
+</div>
+<div class="md:w-1/3 flex flex-col gap-6">
+<div class="h-1/2 bg-surface-container-high rounded-[3rem] p-10 flex flex-col justify-center">
+<span class="material-symbols-outlined text-tertiary mb-4" data-icon="architecture">architecture</span>
+<h4 class="font-headline text-2xl font-bold mb-2">Organic Geometry</h4>
+<p class="text-sm text-on-surface-variant">The curves of the balcony were calculated using Fibonacci sequences to ensure sound dispersal to the furthest corners.</p>
+</div>
+<div class="h-1/2 bg-secondary-container rounded-[3rem] p-10 flex flex-col justify-center text-on-secondary-container">
+<span class="material-symbols-outlined mb-4" data-icon="verified">verified</span>
+<h4 class="font-headline text-2xl font-bold mb-2">Sustainability</h4>
+<p class="text-sm opacity-80">90% of acoustic materials were sourced from recycled composite fibers without compromising fidelity.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial -->
+<section class="bg-primary py-24 px-8 md:px-20 rounded-[4rem] mb-32 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-96 h-96 bg-secondary/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<div class="max-w-3xl relative z-10">
+<span class="material-symbols-outlined text-secondary-fixed text-6xl mb-8" data-icon="format_quote" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<blockquote class="font-headline text-3xl md:text-4xl text-white font-light leading-tight mb-12">
+                    "Sonic Architecture didn't just design a room; they engineered an instrument. The Philharmonie Forum is now the global benchmark for acoustic transparency."
+                </blockquote>
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 rounded-full bg-slate-500 overflow-hidden">
+<img alt="Erik Vogel" data-alt="Portrait of Erik Vogel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4o-nrNG9FC-dE-G4gbuZ2yKzRv-q8QYN5K1nwWrMSiyCTbHFcyz6Zyz1wAv7vDJrO23qRRpvFyL4qxUUZkdC88NA_h7FHlBBsY0i2RDdyfeqkjEZbqcWkFAdKq8U5EedZ5xrmFSaOtqRoI5u2vdsKrQEPooXNvtBAk2sQfMM5lza7zsHvoLhhr8yM1EuWApunZWvODooK-R0b8Z5jEFXT2GTkeUDPn3RFWsugndmR0TOQ6ayHHDzHk_6tgSaJrOn1XpJepxW3Z2Vx"/>
+</div>
+<div>
+<p class="text-white font-bold">Dr. Erik Vogel</p>
+<p class="text-secondary-fixed text-sm">Lead Architect, Cultural Heritage Trust</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Projects -->
+<section class="mb-32">
+<h2 class="font-headline text-4xl font-extrabold text-primary mb-12">Similar Precision</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<a class="group block" href="#">
+<div class="aspect-video rounded-[3rem] overflow-hidden mb-6">
+<img alt="The Silent Atrium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist architectural interior with clean lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARqdaXFws2YM0Z4cIDkRdeJnkeUjjnyvBkjKiuTgoydxsH-i9G8kBz-fN462UAitbCI16qbolvfnbYpCGTk1BKvI57qtneJ_9sN0AQ_AyQMhZtLIhDaAN2Qn_Vp6nb6nm7ip83WUr17n4iqzLiddrkWFST6E03r5F_YCHFn9Zipm7NwwTl6G3_DHlqsTP6vLBMqsbflXjv7b-grXwX5nq6dYgEXZM62Pe8EejfOCpRNy9t3AGS8l8hNPfSJoKj6hzilpy_LiUtYZe9"/>
+</div>
+<div class="px-4">
+<p class="text-secondary font-bold text-xs uppercase tracking-widest mb-2">Corporate Headquarters</p>
+<h3 class="font-headline text-2xl font-bold group-hover:text-secondary transition-colors">The Silent Atrium</h3>
+</div>
+</a>
+<a class="group block" href="#">
+<div class="aspect-video rounded-[3rem] overflow-hidden mb-6">
+<img alt="Helix Sound Lab" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Abstract architectural curves in a modern building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5wafQBuEToaRtk9-bzj_V06qi5-pFJmdRqs7riak64Hg-NjtQFEPWG40eVfWG5PI1DIdJQCIGe3jlihKiMS95jU6QPe8HhQ6YTkk1E_-LCawxRp4Rwxak58UhxnjlyCVBOZGVd9RZKXeNS3WqQEImclQtiu4Y0jB03RTYVlbcKR_dteaG9xuxR-1VCBsY3Ynniyc9QQR4OMIgFbxvzM3rFpgtjaWUrr-z6aIIFVFvvrf41ysvXYBrD-914C3STNbpUyJLNByxdZ_R"/>
+</div>
+<div class="px-4">
+<p class="text-secondary font-bold text-xs uppercase tracking-widest mb-2">Research Center</p>
+<h3 class="font-headline text-2xl font-bold group-hover:text-secondary transition-colors">Helix Sound Lab</h3>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[3rem] bg-slate-50 mt-20 bg-gradient-to-t from-slate-100 to-white">
+<div class="max-w-7xl mx-auto px-12 py-24 grid grid-cols-1 md:grid-cols-4 gap-12 font-['Inter'] text-sm text-slate-600">
+<div class="flex flex-col space-y-6">
+<div class="font-['Manrope'] font-black text-lg text-slate-900">Sonic Architecture</div>
+<p class="max-w-xs leading-relaxed">
+                    © 2024 Sonic Architecture Engineering. Precision in Silence.
+                </p>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-bold text-slate-900 uppercase tracking-widest text-xs">Resources</h4>
+<a class="text-slate-500 hover:text-teal-500 transition-all duration-300" href="#">Technical Whitepapers</a>
+<a class="text-slate-500 hover:text-teal-500 transition-all duration-300" href="#">Acoustic Standards</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-bold text-slate-900 uppercase tracking-widest text-xs">Company</h4>
+<a class="text-slate-500 hover:text-teal-500 transition-all duration-300" href="#">Careers</a>
+<a class="text-slate-500 hover:text-teal-500 transition-all duration-300" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col space-y-6">
+<h4 class="font-bold text-slate-900 uppercase tracking-widest text-xs">Stay Connected</h4>
+<div class="flex space-x-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-teal-500 transition-colors" data-icon="share">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-teal-500 transition-colors" data-icon="language">language</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-teal-500 transition-colors" data-icon="alternate_email">alternate_email</span>
+</div>
+<button class="bg-primary text-white px-6 py-3 rounded-full font-bold hover:opacity-80 transition-opacity w-fit">Newsletter</button>
+</div>
+</div>
+</footer>
+</body></html>

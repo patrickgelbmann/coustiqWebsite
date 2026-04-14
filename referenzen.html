@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="de">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Referenzen | Coustiq.</title>
+    <meta name="description" content="Alle Referenzprojekte von Coustiq — Bauakustik, Raumakustik und Schallimmissionsschutz für Büros, Gastronomie, Wohnbau und Industrie in Wien und Österreich."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://coustiq.com/referenzen.html"/>
+    <meta property="og:title" content="Referenzen | Coustiq."/>
+    <meta property="og:description" content="Alle Referenzprojekte von Coustiq — Bauakustik, Raumakustik und Schallimmissionsschutz."/>
+    <meta property="og:image" content="src/assets/fullstack-marketer.webp"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="icon" type="image/svg+xml" href="src/assets/logo-emblem.svg"/>
+    <link rel="stylesheet" href="src/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-2">
+        <div class="glassmorphism absolute inset-0 -z-10 transition-all duration-300 opacity-0" id="nav-bg"></div>
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
+            <a class="flex items-center" href="index.html">
+                <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
+                <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="index.html#about">Über uns</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="leistungen.html">Leistungen</a>
+                <a class="text-accent font-semibold" href="referenzen.html">Projekte</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="index.html#team">Team</a>
+                <a class="flex items-center gap-1.5 hover:text-accent transition-colors" href="index.html#lyzer">
+                    <span class="text-text-light dark:text-text-dark">Lyzer</span>
+                    <span class="text-[9px] font-bold uppercase tracking-wider bg-accent/15 text-accent px-1.5 py-0.5 rounded-full leading-none">Beta</span>
+                </a>
+                <div class="w-px h-6 bg-border-light dark:bg-border-dark"></div>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark" aria-label="Toggle Dark Mode">
+                    <span id="theme-icon" class="material-symbols-outlined text-[20px]">dark_mode</span>
+                </button>
+                <a class="bg-primary dark:bg-white dark:text-primary text-white px-5 py-2.5 rounded-full hover:scale-105 transition-all shadow-md text-sm font-semibold" href="index.html#contact">Projekt anfragen</a>
+            </div>
+            <div class="flex items-center gap-4 md:hidden">
+                <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark">
+                    <span id="theme-icon-mobile" class="material-symbols-outlined text-[20px]">dark_mode</span>
+                </button>
+                <button id="mobile-menu-btn" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-surface-light dark:bg-surface-dark transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col">
+        <div class="p-6 flex justify-between items-center border-b border-border-light dark:border-border-dark">
+            <a class="flex items-center" href="index.html">
+                <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
+                <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
+            </a>
+            <button id="close-menu-btn" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="p-6 flex flex-col gap-6 text-xl font-medium overflow-y-auto no-scrollbar">
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="index.html#about">Über uns</a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="leistungen.html">Leistungen</a>
+            <a class="mobile-link text-accent font-semibold" href="referenzen.html">Projekte</a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="index.html#team">Team</a>
+            <a class="mobile-link flex items-center gap-2 text-text-light dark:text-text-dark hover:text-accent" href="index.html#lyzer">
+                Lyzer <span class="text-[9px] font-bold uppercase tracking-wider bg-accent/15 text-accent px-1.5 py-0.5 rounded-full leading-none">Beta</span>
+            </a>
+            <hr class="border-border-light dark:border-border-dark my-4">
+            <a class="mobile-link bg-primary dark:bg-white text-center dark:text-primary text-white px-5 py-4 rounded-full transition-all shadow-md text-lg font-bold" href="index.html#contact">Projekt anfragen</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <header class="pt-40 pb-16 px-6 border-b border-border-light dark:border-border-dark relative overflow-hidden">
+        <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] -z-10"></div>
+        <div class="max-w-7xl mx-auto animate-on-scroll">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark mb-5 block">
+                <span class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase">Portfolio</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-4 leading-tight">
+                Gemacht für das Auge.<br/>
+                <span class="underline-accent text-primary dark:text-white">Optimiert</span> für das Ohr.
+            </h1>
+            <p class="text-xl text-text-muted-light dark:text-text-muted-dark max-w-2xl leading-relaxed">
+                Eine Auswahl unserer Referenzprojekte aus Büro, Gastronomie, Wohnbau und Industrie.
+            </p>
+        </div>
+    </header>
+
+    <!-- Featured Projects -->
+    <section class="py-16 px-6 border-b border-border-light dark:border-border-dark">
+        <div class="max-w-7xl mx-auto">
+            <p class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase mb-8">Featured Case Studies</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="projekt-wieselthaler.html" class="group block animate-on-scroll">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-4 relative">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/wieselthaler-aufenthaltsraum.webp" alt="Wieselthaler"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 text-[10px] font-bold uppercase tracking-wider text-white bg-accent px-2.5 py-1 rounded-full">Case Study</span>
+                    </div>
+                    <h3 class="font-bold text-lg group-hover:text-accent transition-colors mb-1">Wieselthaler</h3>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark px-2 py-1 rounded">Raumakustik</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark px-2 py-1 rounded">Büro</span>
+                    </div>
+                </a>
+                <a href="projekt-cop.html" class="group block animate-on-scroll delay-100">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-4 relative">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/cop.webp" alt="COP Office Campus"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 text-[10px] font-bold uppercase tracking-wider text-white bg-accent px-2.5 py-1 rounded-full">Case Study</span>
+                    </div>
+                    <h3 class="font-bold text-lg group-hover:text-accent transition-colors mb-1">NENI — C.O.P. Vienna</h3>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark px-2 py-1 rounded">Raumakustik</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark px-2 py-1 rounded">Gastronomie</span>
+                    </div>
+                </a>
+                <a href="projekt-evva.html" class="group block animate-on-scroll delay-200">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-4 relative">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/evva.webp" alt="EVVA"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 text-[10px] font-bold uppercase tracking-wider text-white bg-accent px-2.5 py-1 rounded-full">Case Study</span>
+                    </div>
+                    <h3 class="font-bold text-lg group-hover:text-accent transition-colors mb-1">EVVA Produktionshalle</h3>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark px-2 py-1 rounded">Schallimmissionsschutz</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark px-2 py-1 rounded">Industrie</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Projects Grid with Filter -->
+    <section class="py-16 px-6" id="alle">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap gap-2 mb-10" id="filter-bar">
+                <button data-filter="all" class="filter-btn active px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border transition-all bg-primary text-white border-primary dark:bg-white dark:text-primary dark:border-white">
+                    Alle
+                </button>
+                <button data-filter="raumakustik" class="filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-border-light dark:border-border-dark text-text-muted-light dark:text-text-muted-dark hover:border-accent hover:text-accent transition-all">
+                    Raumakustik
+                </button>
+                <button data-filter="bauakustik" class="filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-border-light dark:border-border-dark text-text-muted-light dark:text-text-muted-dark hover:border-accent hover:text-accent transition-all">
+                    Bauakustik
+                </button>
+                <button data-filter="gastronomie" class="filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-border-light dark:border-border-dark text-text-muted-light dark:text-text-muted-dark hover:border-accent hover:text-accent transition-all">
+                    Gastronomie
+                </button>
+                <button data-filter="wohnbau" class="filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-border-light dark:border-border-dark text-text-muted-light dark:text-text-muted-dark hover:border-accent hover:text-accent transition-all">
+                    Wohnbau
+                </button>
+                <button data-filter="industrie" class="filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-border-light dark:border-border-dark text-text-muted-light dark:text-text-muted-dark hover:border-accent hover:text-accent transition-all">
+                    Industrie
+                </button>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="project-grid">
+
+                <!-- Hypo NOE -->
+                <div class="project-card" data-tags="raumakustik büro">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-3 group relative bg-gray-100 dark:bg-gray-900">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/hypo-2.webp" alt="Hypo NOE"/>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Hypo NOE</h3>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Raumakustik</span>
+                </div>
+
+                <!-- Achau -->
+                <div class="project-card" data-tags="bauakustik industrie">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-3 group relative bg-gray-100 dark:bg-gray-900">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/achau.webp" alt="Achau"/>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Achau</h3>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Bauakustik</span>
+                </div>
+
+                <!-- Gödelgasse -->
+                <div class="project-card" data-tags="raumakustik bauakustik wohnbau">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-3 group relative bg-gray-100 dark:bg-gray-900">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/gödelgasse-wohnzimmer.webp" alt="Gödelgasse"/>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Gödelgasse</h3>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Wohnbau</span>
+                </div>
+
+                <!-- LongTone -->
+                <div class="project-card" data-tags="raumakustik">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-3 group relative bg-gray-100 dark:bg-gray-900">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/longtone-1.webp" alt="LongTone"/>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">LongTone</h3>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Raumakustik</span>
+                </div>
+
+                <!-- HMA Weinkeller -->
+                <div class="project-card" data-tags="raumakustik gastronomie">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-3 group relative bg-gray-100 dark:bg-gray-900">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/hma-weinkeller-2.webp" alt="HMA Weinkeller"/>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">HMA Weinkeller</h3>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Gastronomie</span>
+                </div>
+
+                <!-- Coustiq HQ -->
+                <div class="project-card" data-tags="raumakustik büro">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-3 group relative bg-gray-100 dark:bg-gray-900">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/coustiq-hq-2.webp" alt="Coustiq HQ"/>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Coustiq HQ</h3>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Raumakustik</span>
+                </div>
+
+                <!-- Schallschutzeinhausung -->
+                <div class="project-card" data-tags="bauakustik industrie">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-3 group relative bg-gray-100 dark:bg-gray-900">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/schallschutzeinhausung.webp" alt="Schallschutzeinhausung"/>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Schallschutzeinhausung</h3>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Bauakustik</span>
+                </div>
+
+                <!-- KWP -->
+                <div class="project-card" data-tags="bauakustik wohnbau">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-3 group relative bg-gray-100 dark:bg-gray-900">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/kwp-4.webp" alt="KWP"/>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">KWP</h3>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Bauakustik</span>
+                </div>
+
+                <!-- Audio Electronic Messe -->
+                <div class="project-card" data-tags="raumakustik industrie">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-3 group relative bg-gray-100 dark:bg-gray-900">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/audio-electronic-messe-2.webp" alt="Audio Electronic Messe"/>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Audio Electronic Messe</h3>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Raumakustik</span>
+                </div>
+
+                <!-- Narv -->
+                <div class="project-card" data-tags="bauakustik">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-3 group relative bg-gray-100 dark:bg-gray-900">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/narv-2.webp" alt="Narv"/>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Narv</h3>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Bauakustik</span>
+                </div>
+
+                <!-- Privatprojekt Wien -->
+                <div class="project-card" data-tags="bauakustik wohnbau">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-3 group relative bg-gray-100 dark:bg-gray-900">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/thurner-thomas-1.webp" alt="Privatprojekt Wien"/>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Privatprojekt Wien</h3>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Wohnbau</span>
+                </div>
+
+                <!-- Privatprojekt Niederösterreich -->
+                <div class="project-card" data-tags="bauakustik wohnbau">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-3 group relative bg-gray-100 dark:bg-gray-900">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/zoubek-3.webp" alt="Privatprojekt Niederösterreich"/>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Privatprojekt NÖ</h3>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Wohnbau</span>
+                </div>
+
+                <!-- Heuriger Schüller -->
+                <div class="project-card" data-tags="raumakustik gastronomie">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-3 group relative bg-gray-100 dark:bg-gray-900">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/heuriger-schüller-1.webp" alt="Heuriger Schüller"/>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Heuriger Schüller</h3>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Gastronomie</span>
+                </div>
+
+            </div>
+
+            <!-- Empty state -->
+            <div id="no-results" class="hidden text-center py-20 text-text-muted-light dark:text-text-muted-dark">
+                <span class="material-symbols-outlined text-5xl mb-4 block opacity-30">search_off</span>
+                <p class="font-medium">Keine Projekte in dieser Kategorie.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-[#0a0f0f] text-white py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center animate-on-scroll">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Ihr Projekt wird das<br/><span class="text-accent">nächste.</span>
+            </h2>
+            <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
+                Sprechen Sie mit uns — wir analysieren Ihr Vorhaben und liefern die passende akustische Lösung.
+            </p>
+            <a href="index.html#contact" class="inline-flex items-center gap-2 bg-accent text-primary font-bold px-8 py-4 rounded-full hover:scale-105 transition-all shadow-lg hover:shadow-accent/30 group">
+                Projekt anfragen
+                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+        </div>
+        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase tracking-widest text-gray-500">
+            <a href="index.html" class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-accent text-xl">graphic_eq</span>
+                <span class="font-bold text-white text-base lowercase tracking-normal">coustiq.</span>
+            </a>
+            <p>© 2026 Alle Rechte vorbehalten.</p>
+            <div class="flex gap-8">
+                <a class="hover:text-white transition-colors" href="impressum.html">Impressum</a>
+                <a class="hover:text-white transition-colors" href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Logic -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.project-card');
+        const noResults = document.getElementById('no-results');
+
+        btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+
+                // Update active button
+                btns.forEach(b => {
+                    b.classList.remove('active', 'bg-primary', 'text-white', 'border-primary', 'dark:bg-white', 'dark:text-primary', 'dark:border-white');
+                    b.classList.add('border-border-light', 'dark:border-border-dark', 'text-text-muted-light', 'dark:text-text-muted-dark');
+                });
+                btn.classList.add('active', 'bg-primary', 'text-white', 'border-primary');
+                btn.classList.remove('border-border-light', 'dark:border-border-dark', 'text-text-muted-light', 'dark:text-text-muted-dark');
+
+                // Filter cards
+                let visible = 0;
+                cards.forEach(card => {
+                    const tags = card.dataset.tags || '';
+                    const show = filter === 'all' || tags.includes(filter);
+                    card.style.display = show ? '' : 'none';
+                    if (show) visible++;
+                });
+
+                noResults.classList.toggle('hidden', visible > 0);
+            });
+        });
+    });
+    </script>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>

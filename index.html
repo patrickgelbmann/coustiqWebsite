@@ -3,9 +3,23 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Coustiq. - Wir designen die Akustik der Zukunft</title>
+    <title>Coustiq. — Ingenieurbüro für Akustik</title>
+    <meta name="description" content="Coustiq ist Ihr Ingenieurbüro für Bauakustik, Raumakustik und Schallimmissionsschutz. Präzise Planung, zertifizierte Gutachten, messbare Qualität."/>
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://coustiq.com/"/>
+    <meta property="og:title" content="Coustiq. — Ingenieurbüro für Akustik"/>
+    <meta property="og:description" content="Präzise raumakustische Planung und schalltechnische Gutachten für Gebäude, die genauso gut klingen, wie sie aussehen."/>
+    <meta property="og:image" content="src/assets/fullstack-marketer.webp"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="icon" type="image/svg+xml" href="src/assets/logo-emblem.svg"/>
+    <link rel="apple-touch-icon" href="/favicon.png"/>
+
     <link rel="stylesheet" href="src/style.css" />
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 </head>
@@ -14,9 +28,9 @@
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-2">
         <div class="glassmorphism absolute inset-0 -z-10 transition-all duration-300 opacity-0" id="nav-bg"></div>
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
-            <a class="text-2xl font-bold tracking-tight text-primary dark:text-white flex items-center gap-2" href="#">
-                <span class="material-symbols-outlined text-accent text-3xl">graphic_eq</span>
-                Coustiq.
+            <a class="flex items-center" href="#">
+                <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
+                <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
             </a>
             
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
@@ -50,9 +64,9 @@
 
     <div id="mobile-menu" class="fixed inset-0 z-[60] bg-surface-light dark:bg-surface-dark transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col">
         <div class="p-6 flex justify-between items-center border-b border-border-light dark:border-border-dark">
-            <a class="text-2xl font-bold tracking-tight text-primary dark:text-white flex items-center gap-2" href="#">
-                <span class="material-symbols-outlined text-accent text-3xl">graphic_eq</span>
-                Coustiq.
+            <a class="flex items-center" href="#">
+                <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
+                <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
             </a>
             <button id="close-menu-btn" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
                 <span class="material-symbols-outlined">close</span>
@@ -86,7 +100,7 @@
 
             <div class="w-full max-w-3xl mb-12 relative animate-on-scroll delay-200">
                 <div class="rounded-2xl overflow-hidden shadow-2xl aspect-[21/9] relative group border border-border-light dark:border-border-dark">
-                    <img alt="Modernes Büro mit Akustikdecke" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop"/>
+                    <img alt="Coustiq Akustikprojekt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="src/assets/fullstack-marketer.webp"/>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                     
                     <div class="absolute bottom-4 right-4 bg-white/10 backdrop-blur-md px-4 py-3 rounded-xl shadow-lg flex items-center gap-3 border border-white/20 hover:-translate-y-1 transition-transform cursor-default">
@@ -94,7 +108,7 @@
                             <span class="material-symbols-outlined text-accent text-sm">show_chart</span>
                         </div>
                         <div class="text-left">
-                            <p class="font-bold text-xs leading-tight text-white uppercase">DIN 18041</p>
+                            <p class="font-bold text-xs leading-tight text-white uppercase">ÖNORM B 8115-3</p>
                             <p class="text-[10px] text-gray-300 leading-tight">Zertifizierte Planung</p>
                         </div>
                     </div>
@@ -102,8 +116,8 @@
             </div>
             
             <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight">
-                Wir designen die <br class="hidden sm:block"/>
-                <span class="underline-accent text-primary dark:text-white">Akustik</span> der Zukunft.
+                Stille ist kein Zufall.<br class="hidden sm:block"/>
+                <span class="underline-accent text-primary dark:text-white">Akustik ist planbar.</span>
             </h1>
             
             <p class="text-lg lg:text-xl text-text-muted-light dark:text-text-muted-dark mb-10 max-w-2xl leading-relaxed">
@@ -128,7 +142,7 @@
             <div class="relative animate-on-scroll">
                 <div class="absolute -inset-4 bg-accent/10 rounded-3xl transform -rotate-3 -z-10"></div>
                 <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] relative group">
-                    <img alt="Minimalistisches Interieur" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida/ADBb0uiUOF-3Y5JLnOIzvbEnZ_lFaFOev5JWGMemhBNvOZqyUIeQA80VKjsvxLjaO0XsXes2v9w22KhEXpYMfxbxqNexh5wUmXoZqQdNu3HwPWJRoQwuW-y8Xq-1zQ4AJXaMPWkr9L5pklX546HCnl2y0oNbazSv1GZg4wh8NZPgXClHZVIHNfEqqgoDlunIZ06dD-T0rOjzrCdqRgLXMC-Z6bsUxe2FiWdkO_xZ-3GIolYXmvI7C14WPiCQrQ5_dHlSXhALLjqENPr5Z0I"/>
+                    <img loading="lazy" alt="Wieselthaler Aufenthaltsraum" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="src/assets/wieselthaler-aufenthaltsraum.webp"/>
                     <div class="absolute inset-0 ring-1 ring-inset ring-black/10 dark:ring-white/10 rounded-2xl"></div>
                 </div>
                 
@@ -147,8 +161,8 @@
                 </div>
                 <h2 class="text-4xl lg:text-5xl font-bold mb-6 tracking-tight">Die unsichtbare Dimension guter Architektur.</h2>
                 <div class="space-y-4 text-text-muted-light dark:text-text-muted-dark mb-10 text-lg leading-relaxed">
-                    <p>Wir gestalten die akustische Realität von Räumen. Als spezialisiertes Ingenieurbüro verbinden wir höchste technische Präzision mit einem tiefgreifenden architektonischen Verständnis.</p>
-                    <p>Ob komplexe Konzerthäuser, moderne Arbeitswelten oder sensible Wohnbauprojekte – wir liefern messbare Qualität und spürbaren Komfort.</p>
+                    <p>Seit 2018 begleiten wir Projekte von der ersten Idee bis zur messbaren Umsetzung. Beratung, Messung, Planung und Ausführung — alles aus einer Hand, immer normgerecht nach ÖNORM, DIN und ISO.</p>
+                    <p>Unsere Kunden sind Architekten, Planer, Bauträger und Industriebetriebe, die Akustik nicht dem Zufall überlassen wollen.</p>
                 </div>
                 
                 <ul class="grid sm:grid-cols-2 gap-4 mb-10">
@@ -156,30 +170,30 @@
                         <div class="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent">
                             <span class="material-symbols-outlined text-sm">architecture</span>
                         </div>
-                        <span class="font-semibold text-sm">Herstellerunabhängig</span>
+                        <span class="font-semibold text-sm">Ganzheitlicher Ansatz</span>
                     </li>
                     <li class="flex items-center gap-3 bg-background-light dark:bg-background-dark p-3 rounded-xl border border-border-light dark:border-border-dark hover:border-accent/50 transition-colors">
                         <div class="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent">
                             <span class="material-symbols-outlined text-sm">analytics</span>
                         </div>
-                        <span class="font-semibold text-sm">Geprüfte Messverfahren</span>
-                    </li>
-                    <li class="flex items-center gap-3 bg-background-light dark:bg-background-dark p-3 rounded-xl border border-border-light dark:border-border-dark hover:border-accent/50 transition-colors">
-                        <div class="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent">
-                            <span class="material-symbols-outlined text-sm">groups</span>
-                        </div>
-                        <span class="font-semibold text-sm">Interdisziplinäres Team</span>
+                        <span class="font-semibold text-sm">Technische Präzision</span>
                     </li>
                     <li class="flex items-center gap-3 bg-background-light dark:bg-background-dark p-3 rounded-xl border border-border-light dark:border-border-dark hover:border-accent/50 transition-colors">
                         <div class="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent">
                             <span class="material-symbols-outlined text-sm">verified</span>
                         </div>
-                        <span class="font-semibold text-sm">ISO-Zertifiziert</span>
+                        <span class="font-semibold text-sm">Normensicherheit (ÖNORM, DIN, ISO)</span>
+                    </li>
+                    <li class="flex items-center gap-3 bg-background-light dark:bg-background-dark p-3 rounded-xl border border-border-light dark:border-border-dark hover:border-accent/50 transition-colors">
+                        <div class="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                            <span class="material-symbols-outlined text-sm">tune</span>
+                        </div>
+                        <span class="font-semibold text-sm">Maßgeschneiderte Lösungen</span>
                     </li>
                 </ul>
 
-                <a class="inline-flex items-center gap-2 text-sm font-bold text-primary dark:text-white hover:text-accent dark:hover:text-accent transition-colors group" href="#">
-                    Mehr über unsere Philosophie
+                <a class="inline-flex items-center gap-2 text-sm font-bold text-primary dark:text-white hover:text-accent dark:hover:text-accent transition-colors group" href="leistungen.html">
+                    Unsere Leistungen im Überblick
                     <span class="material-symbols-outlined text-xs group-hover:translate-x-2 transition-transform">arrow_forward</span>
                 </a>
             </div>
@@ -196,27 +210,14 @@
                     <h2 class="text-4xl lg:text-5xl font-bold tracking-tight mb-4">Leistungen mit Präzision.</h2>
                     <p class="text-text-muted-light dark:text-text-muted-dark text-lg">Von der ersten Messung bis zur finalen Abnahme begleiten wir Ihr Projekt mit modernster Technologie und jahrelanger Erfahrung.</p>
                 </div>
-                <a class="shrink-0 inline-flex items-center gap-2 text-sm font-bold bg-background-light dark:bg-background-dark px-6 py-3 rounded-full border border-border-light dark:border-border-dark hover:border-primary dark:hover:border-white transition-all group" href="#">
+                <a class="shrink-0 inline-flex items-center gap-2 text-sm font-bold bg-background-light dark:bg-background-dark px-6 py-3 rounded-full border border-border-light dark:border-border-dark hover:border-primary dark:hover:border-white transition-all group" href="leistungen.html">
                     ALLE LEISTUNGEN
                     <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
                 </a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:shadow-xl hover:-translate-y-1 hover:border-accent/50 transition-all duration-300 group cursor-pointer animate-on-scroll">
-                    <div class="w-14 h-14 rounded-xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark flex items-center justify-center text-primary dark:text-white group-hover:bg-accent group-hover:text-primary transition-colors mb-6 group-hover:scale-110">
-                        <span class="material-symbols-outlined text-3xl">layers</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Bauakustik</h3>
-                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed mb-6">
-                        Planung und Nachweis von Tritt- und Luftschallschutz gemäß aktueller Normen. Wir sorgen für die ruhige Basis in jedem Gebäude.
-                    </p>
-                    <div class="w-8 h-8 rounded-full border border-border-light dark:border-border-dark flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-primary transition-all">
-                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                    </div>
-                </div>
-
-                <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:shadow-xl hover:-translate-y-1 hover:border-accent/50 transition-all duration-300 group cursor-pointer animate-on-scroll delay-100">
+                <a href="leistungen.html#raumakustik" class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:shadow-xl hover:-translate-y-1 hover:border-accent/50 transition-all duration-300 group cursor-pointer animate-on-scroll block">
                     <div class="w-14 h-14 rounded-xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark flex items-center justify-center text-primary dark:text-white group-hover:bg-accent group-hover:text-primary transition-colors mb-6 group-hover:scale-110">
                         <span class="material-symbols-outlined text-3xl">graphic_eq</span>
                     </div>
@@ -227,9 +228,22 @@
                     <div class="w-8 h-8 rounded-full border border-border-light dark:border-border-dark flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-primary transition-all">
                         <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </div>
-                </div>
+                </a>
 
-                <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:shadow-xl hover:-translate-y-1 hover:border-accent/50 transition-all duration-300 group cursor-pointer animate-on-scroll delay-200">
+                <a href="leistungen.html#schallschutz" class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:shadow-xl hover:-translate-y-1 hover:border-accent/50 transition-all duration-300 group cursor-pointer animate-on-scroll delay-100 block">
+                    <div class="w-14 h-14 rounded-xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark flex items-center justify-center text-primary dark:text-white group-hover:bg-accent group-hover:text-primary transition-colors mb-6 group-hover:scale-110">
+                        <span class="material-symbols-outlined text-3xl">layers</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Schallschutz</h3>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed mb-6">
+                        Planung und Nachweis von Tritt- und Luftschallschutz gemäß aktueller Normen. Wir sorgen für die ruhige Basis in jedem Gebäude.
+                    </p>
+                    <div class="w-8 h-8 rounded-full border border-border-light dark:border-border-dark flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-primary transition-all">
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </div>
+                </a>
+
+                <a href="leistungen.html#schallimmissionsschutz" class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:shadow-xl hover:-translate-y-1 hover:border-accent/50 transition-all duration-300 group cursor-pointer animate-on-scroll delay-200 block">
                     <div class="w-14 h-14 rounded-xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark flex items-center justify-center text-primary dark:text-white group-hover:bg-accent group-hover:text-primary transition-colors mb-6 group-hover:scale-110">
                         <span class="material-symbols-outlined text-3xl">radar</span>
                     </div>
@@ -240,7 +254,7 @@
                     <div class="w-8 h-8 rounded-full border border-border-light dark:border-border-dark flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-primary transition-all">
                         <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -256,25 +270,24 @@
                     </div>
                     <h2 class="text-4xl lg:text-5xl font-bold tracking-tight">Gemacht für das Auge.<br/>Optimiert für das Ohr.</h2>
                 </div>
-                <a class="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full text-sm font-bold transition-all border border-white/10 backdrop-blur-sm group flex items-center gap-2 shrink-0" href="#">
+                <a class="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full text-sm font-bold transition-all border border-white/10 backdrop-blur-sm group flex items-center gap-2 shrink-0" href="referenzen.html">
                     PORTFOLIO ÖFFNEN
                     <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
                 </a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="group cursor-pointer animate-on-scroll">
+                <!-- Wieselthaler -->
+                <a href="projekt-wieselthaler.html" class="group cursor-pointer animate-on-scroll block">
                     <div class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-5 bg-gray-900">
-                        <img alt="Philharmonie Forum" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 mix-blend-overlay group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKbEV_4oSpdOVr9Iq935NyqA49roAZtpFwj8_ALSSS-zsoVteRYj-wJut3a9jrPkixbL3Qku9vuqT1KX5FucNiX-pyWqua7Ssh9Boc5MRWczIia_lBAAE6-lqZ84zB0weSviQufhvHR8vBtA5slIJE-MPZfFK1Q3LBzgvLmdy-HX4XVN6Ocx-6jbGtWueI8-60xEYaPWmYptt9-lc8RPG8T-eglXjRbWB3iQgA-eP73inuN7qIMzn49vmY97Ujc05j1UB_QqXqvIhO"/>
-                        
+                        <img loading="lazy" alt="Wieselthaler Aufenthaltsraum" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/wieselthaler-aufenthaltsraum.webp"/>
                         <div class="absolute top-4 left-4 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 flex items-center gap-1.5">
                             <span class="material-symbols-outlined text-[14px] text-accent">location_on</span>
-                            <span class="text-[10px] font-bold uppercase tracking-wide">München</span>
+                            <span class="text-[10px] font-bold uppercase tracking-wide">Niederösterreich</span>
                         </div>
-                        
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                             <p class="text-sm text-gray-300 line-clamp-2 mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                Komplette akustische Neukonzeption des Konzertsaals mit Integration unsichtbarer Absorber.
+                                Raumakustische Optimierung von Aufenthalts- und Schulungsräumen — Nachhallzeit um 58 % reduziert.
                             </p>
                             <span class="inline-flex items-center gap-2 text-accent text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
                                 Case Study lesen <span class="material-symbols-outlined text-xs">arrow_forward</span>
@@ -283,55 +296,25 @@
                     </div>
                     <div class="flex justify-between items-start px-2">
                         <div>
-                            <h3 class="text-xl font-bold mb-1 group-hover:text-accent transition-colors">Philharmonie Forum</h3>
+                            <h3 class="text-xl font-bold mb-1 group-hover:text-accent transition-colors">Wieselthaler</h3>
                             <div class="flex flex-wrap gap-2">
                                 <span class="text-gray-400 text-[10px] uppercase tracking-wider bg-white/5 px-2 py-1 rounded">Raumakustik</span>
-                                <span class="text-gray-400 text-[10px] uppercase tracking-wider bg-white/5 px-2 py-1 rounded">Bauakustik</span>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="group cursor-pointer animate-on-scroll delay-100">
+                <!-- COP Office Campus -->
+                <a href="projekt-cop.html" class="group cursor-pointer animate-on-scroll delay-100 block">
                     <div class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-5 bg-gray-900">
-                        <img alt="Nova Headquarters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida/ADBb0ujZDLZiEK3Z_hex13MnLVM0mUgiz6joVaHffM23Xfg6IWDwdxpfd05XxJQ7cFTpTBriwhvcHMfmhXJGxSucQ9XC11PvVUv8HebNTWRAqjyXhaFun_eWKIp1A5GpTJed0-ZhhjOjj1S6WkZ9yZM8cKDOXeeEj1nvoaPhkjH-WbomodBOwZSUCAOdjsU-1cicxoR9xB0kPs9n2nmNwl7Vf_t-EbAFk_U69MCOlrtFAAupX1doGUUWopGQCsAB7yq9TuiT7Itl8g6M3kw"/>
-                        
-                        <div class="absolute top-4 left-4 bg-white/90 text-black px-3 py-1.5 rounded-lg flex items-center gap-1.5 shadow-lg">
-                            <span class="material-symbols-outlined text-[14px]">location_on</span>
-                            <span class="text-[10px] font-bold uppercase tracking-wide">Berlin</span>
-                        </div>
-                        
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                            <p class="text-sm text-gray-300 line-clamp-2 mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                Offenes Raumkonzept auf 4.000qm mit optimaler Sprachverständlichkeit in allen Workspaces.
-                            </p>
-                            <span class="inline-flex items-center gap-2 text-accent text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
-                                Case Study lesen <span class="material-symbols-outlined text-xs">arrow_forward</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-start px-2">
-                        <div>
-                            <h3 class="text-xl font-bold mb-1 group-hover:text-accent transition-colors">Nova Headquarters</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="text-gray-400 text-[10px] uppercase tracking-wider bg-white/5 px-2 py-1 rounded">Ganzheitliches Konzept</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="group cursor-pointer animate-on-scroll delay-200 md:col-span-2 lg:col-span-1">
-                    <div class="relative rounded-2xl overflow-hidden aspect-[4/3] md:aspect-auto lg:aspect-[4/3] md:h-[calc(100%-4rem)] lg:h-auto mb-5 bg-gray-900">
-                        <img alt="Interior Detail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-70 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida/ADBb0uh8sdjzn-8eDIQfgKaiEYt3FS7LjVD2LAHdff3JJ5fEpdFSXDEvnh9FQURfV8VYbfc2AVjbIBwJbCiqcaw-4B8XjXHhFlYbLWWDso9frgeo4tqmSBJAKqD0d6aEk3PD3sZHTuBL31YHTOF5aMKuTyhzBd4_wGGtxh0k6hQFA4DX57Y4BBxe_U7x1-Jsj-gzTHLsrCWos63kwDzC1pEvhBOhMMxsRx2yMaYFPqzgjQCAUJfujsy1LLCpsE1xPD5yTYi-s8lssy0CBp8"/>
-                        
+                        <img loading="lazy" alt="COP Office Campus" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/cop.webp"/>
                         <div class="absolute top-4 left-4 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 flex items-center gap-1.5">
                             <span class="material-symbols-outlined text-[14px] text-accent">location_on</span>
-                            <span class="text-[10px] font-bold uppercase tracking-wide">Hamburg</span>
+                            <span class="text-[10px] font-bold uppercase tracking-wide">Wien</span>
                         </div>
-                        
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                             <p class="text-sm text-gray-300 line-clamp-2 mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                Maßgeschneidertes Sound-Design für Aufnahmestudios der Spitzenklasse.
+                                Gastronomieakustik im 1. Bezirk — RT60 um bis zu 36 % gesenkt, unsichtbar integriert.
                             </p>
                             <span class="inline-flex items-center gap-2 text-accent text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
                                 Case Study lesen <span class="material-symbols-outlined text-xs">arrow_forward</span>
@@ -340,14 +323,42 @@
                     </div>
                     <div class="flex justify-between items-start px-2">
                         <div>
-                            <h3 class="text-xl font-bold mb-1 group-hover:text-accent transition-colors">Resonanz Studio</h3>
+                            <h3 class="text-xl font-bold mb-1 group-hover:text-accent transition-colors">NENI — C.O.P. Vienna</h3>
                             <div class="flex flex-wrap gap-2">
-                                <span class="text-gray-400 text-[10px] uppercase tracking-wider bg-white/5 px-2 py-1 rounded">Akustik-Design</span>
-                                <span class="text-gray-400 text-[10px] uppercase tracking-wider bg-white/5 px-2 py-1 rounded">Messung</span>
+                                <span class="text-gray-400 text-[10px] uppercase tracking-wider bg-white/5 px-2 py-1 rounded">Raumakustik</span>
+                                <span class="text-gray-400 text-[10px] uppercase tracking-wider bg-white/5 px-2 py-1 rounded">Gastronomie</span>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
+
+                <!-- EVVA -->
+                <a href="projekt-evva.html" class="group cursor-pointer animate-on-scroll delay-200 block md:col-span-2 lg:col-span-1">
+                    <div class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-5 bg-gray-900">
+                        <img loading="lazy" alt="EVVA Headquarters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/evva.webp"/>
+                        <div class="absolute top-4 left-4 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-[14px] text-accent">location_on</span>
+                            <span class="text-[10px] font-bold uppercase tracking-wide">Wien</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <p class="text-sm text-gray-300 line-clamp-2 mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                Bauakustik und Raumakustik im Headquarter eines der führenden Schließsystemhersteller Europas.
+                            </p>
+                            <span class="inline-flex items-center gap-2 text-accent text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                                Case Study lesen <span class="material-symbols-outlined text-xs">arrow_forward</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start px-2">
+                        <div>
+                            <h3 class="text-xl font-bold mb-1 group-hover:text-accent transition-colors">EVVA Produktionshalle</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-gray-400 text-[10px] uppercase tracking-wider bg-white/5 px-2 py-1 rounded">Schallimmissionsschutz</span>
+                                <span class="text-gray-400 text-[10px] uppercase tracking-wider bg-white/5 px-2 py-1 rounded">Industrie</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -364,14 +375,14 @@
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <div class="bg-surface-light dark:bg-surface-dark rounded-3xl overflow-hidden border border-border-light dark:border-border-dark shadow-soft group flex flex-col sm:flex-row animate-on-scroll">
                     <div class="sm:w-2/5 aspect-square sm:aspect-auto overflow-hidden relative">
-                        <img alt="Patrick, Akustikplaner und Lead Architect bei Coustiq" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="src/assets/patrick-coustiq.webp"/>
+                        <img loading="lazy" alt="Patrick, Akustikplaner und Lead Architect bei Coustiq" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="src/assets/patrick-coustiq.webp"/>
                         <div class="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-700"></div>
                     </div>
                     <div class="p-8 sm:w-3/5 flex flex-col justify-center">
-                        <h3 class="text-2xl font-bold mb-1">Patrick</h3>
-                        <p class="text-accent text-xs font-bold uppercase tracking-widest mb-4">CTO</p>
+                        <h3 class="text-2xl font-bold mb-1">Patrick Gelbmann</h3>
+                        <p class="text-accent text-xs font-bold uppercase tracking-widest mb-4">Co-Founder & CTO</p>
                         <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed mb-6">
-                            Mit über 20 Jahren Erfahrung in der akustischen Gestaltung verbindet Patrick technische Exzellenz mit visionärer Architektur. Er treibt die Innovation im Bereich unsichtbarer Akustiklösungen voran.
+                            MSc Toningenieur (TU Graz) mit 8+ Jahren Branchenerfahrung. Patrick verantwortet Messung, akustische Simulation und Planung — und entwickelt die Software-Tools, die Coustiq intern und als Produkt einsetzt. Zuvor leitete er F&amp;E-Projekte internationaler Technologieunternehmen bis zur Patentierung.
                         </p>
                         <div class="flex gap-3 mt-auto">
                             <a href="#" class="w-8 h-8 rounded-full border border-border-light dark:border-border-dark flex items-center justify-center text-text-muted-light hover:text-primary dark:hover:text-white hover:border-primary dark:hover:border-white transition-colors">
@@ -383,14 +394,14 @@
 
                 <div class="bg-surface-light dark:bg-surface-dark rounded-3xl overflow-hidden border border-border-light dark:border-border-dark shadow-soft group flex flex-col sm:flex-row animate-on-scroll delay-100">
                     <div class="sm:w-2/5 aspect-square sm:aspect-auto overflow-hidden relative">
-                        <img alt="Bernd, Geschäftsführer und Head of Engineering bei Coustiq" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="src/assets/bernd-coustiq.webp"/>
+                        <img loading="lazy" alt="Bernd, Geschäftsführer und Head of Engineering bei Coustiq" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="src/assets/bernd-coustiq.webp"/>
                         <div class="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-700"></div>
                     </div>
                     <div class="p-8 sm:w-3/5 flex flex-col justify-center">
-                        <h3 class="text-2xl font-bold mb-1">Bernd</h3>
-                        <p class="text-accent text-xs font-bold uppercase tracking-widest mb-4">CEO</p>
+                        <h3 class="text-2xl font-bold mb-1">Bernd Gelbmann</h3>
+                        <p class="text-accent text-xs font-bold uppercase tracking-widest mb-4">Co-Founder & CEO</p>
                         <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed mb-6">
-                            Spezialisiert auf komplexe Bauphysik und digitale 3D-Simulationen. Bernd leitet unsere technische Abteilung mit absoluter Präzision und einem scharfen analytischen Verstand.
+                            25+ Jahre in technischem Vertrieb und Projektleitung. Bernd führt Projekte vom ersten Gespräch bis zur fertigen Umsetzung — mit einem starken Netzwerk, dem Blick für Design und echter Kundennähe.
                         </p>
                         <div class="flex gap-3 mt-auto">
                             <a href="#" class="w-8 h-8 rounded-full border border-border-light dark:border-border-dark flex items-center justify-center text-text-muted-light hover:text-primary dark:hover:text-white hover:border-primary dark:hover:border-white transition-colors">
@@ -427,7 +438,7 @@
                             <div class="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
                                 <span class="material-symbols-outlined text-accent text-sm">check</span>
                             </div>
-                            <span class="text-text-muted-light dark:text-text-muted-dark">Raumakustische Kenngrößen nach DIN 18041</span>
+                            <span class="text-text-muted-light dark:text-text-muted-dark">Raumakustische Kenngrößen nach ÖNORM B 8115-3</span>
                         </li>
                         <li class="flex items-center gap-3 text-sm">
                             <div class="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
@@ -442,28 +453,55 @@
                             <span class="text-text-muted-light dark:text-text-muted-dark">Kostenlos nutzbar — direkt im Browser</span>
                         </li>
                     </ul>
-                    <a href="#" class="inline-flex items-center gap-2 bg-primary dark:bg-white dark:text-primary text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-lg hover:shadow-accent/20 group">
-                        Lyzer starten
-                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </a>
+                    <div class="flex items-center gap-4">
+                        <span class="inline-flex items-center gap-2.5 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark text-text-muted-light dark:text-text-muted-dark px-8 py-4 rounded-full font-bold cursor-default select-none">
+                            <span class="relative flex h-2 w-2">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-60"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+                            </span>
+                            Demnächst verfügbar
+                        </span>
+                    </div>
                 </div>
 
                 <div class="animate-on-scroll delay-200 relative">
                     <div class="absolute -inset-4 bg-accent/5 rounded-3xl transform rotate-2 -z-10"></div>
                     <div class="bg-surface-light dark:bg-surface-dark rounded-2xl border border-border-light dark:border-border-dark shadow-2xl overflow-hidden">
-                        <!-- App Preview Placeholder — durch echten Screenshot ersetzen -->
+                        <!-- Browser Chrome -->
                         <div class="bg-primary/5 dark:bg-white/5 border-b border-border-light dark:border-border-dark px-4 py-3 flex items-center gap-2">
                             <div class="flex gap-1.5">
-                                <div class="w-3 h-3 rounded-full bg-red-400/60"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-400/60"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-400/60"></div>
+                                <div class="w-3 h-3 rounded-full bg-red-400/30"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-400/30"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-400/30"></div>
                             </div>
-                            <div class="flex-1 mx-4 bg-background-light dark:bg-background-dark rounded-md px-3 py-1 text-[11px] text-text-muted-light dark:text-text-muted-dark">lyzer.coustiq.com</div>
+                            <div class="flex-1 mx-4 bg-background-light dark:bg-background-dark rounded-md px-3 py-1 text-[11px] text-text-muted-light dark:text-text-muted-dark opacity-50">lyzer.coustiq.com</div>
                         </div>
-                        <div class="aspect-[4/3] flex items-center justify-center bg-gradient-to-br from-primary/5 to-accent/5 dark:from-white/3 dark:to-accent/5">
-                            <div class="text-center px-8">
-                                <span class="material-symbols-outlined text-6xl text-accent/40 mb-4 block">graphic_eq</span>
-                                <p class="text-sm text-text-muted-light dark:text-text-muted-dark">App-Screenshot folgt</p>
+                        <!-- Coming Soon Placeholder -->
+                        <div class="aspect-[4/3] relative overflow-hidden bg-[#0a0f0f]">
+                            <!-- blurred background screenshot -->
+                            <img src="src/assets/Lyzer_screenshot.webp" alt="" class="absolute inset-0 w-full h-full object-cover object-top opacity-20 blur-sm scale-105" aria-hidden="true"/>
+                            <!-- overlay content -->
+                            <div class="absolute inset-0 flex flex-col items-center justify-center gap-6 p-8">
+                                <div class="w-14 h-14 rounded-2xl bg-accent/15 border border-accent/30 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-accent text-3xl">graphic_eq</span>
+                                </div>
+                                <div class="text-center">
+                                    <p class="text-white font-bold text-xl mb-1">Lyzer</p>
+                                    <p class="text-gray-400 text-sm">Akustik-Rechner für Planer &amp; Architekten</p>
+                                </div>
+                                <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/25 text-accent px-5 py-2.5 rounded-full text-sm font-bold">
+                                    <span class="relative flex h-2 w-2">
+                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-60"></span>
+                                        <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+                                    </span>
+                                    Coming Soon
+                                </div>
+                                <!-- Fake UI lines -->
+                                <div class="w-full max-w-[220px] space-y-2 opacity-30">
+                                    <div class="h-2 bg-white/20 rounded-full w-full"></div>
+                                    <div class="h-2 bg-white/20 rounded-full w-4/5"></div>
+                                    <div class="h-2 bg-accent/40 rounded-full w-3/5"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -481,29 +519,29 @@
         <div class="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
             <div class="animate-marquee flex items-center gap-16 md:gap-24 w-max opacity-50 dark:opacity-30">
                 <!-- Set 1 -->
-                <img alt="EVVA" class="h-7 md:h-8 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/EVVA.png"/>
-                <img alt="Musiktheater an der Wien" class="h-7 md:h-9 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/Logo_Musiktheater_an_der_Wien_grey.png"/>
+                <img loading="lazy" alt="EVVA" class="h-7 md:h-8 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/EVVA.png"/>
+                <img loading="lazy" alt="Musiktheater an der Wien" class="h-7 md:h-9 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/Logo_Musiktheater_an_der_Wien_grey.png"/>
                 <div class="h-7 md:h-8 overflow-hidden flex items-center mix-blend-multiply dark:mix-blend-screen">
-                    <img alt="HYPO NOE" class="h-[340%] w-auto -translate-y-[5%]" src="src/assets/logos/hypo.png"/>
+                    <img loading="lazy" alt="HYPO NOE" class="h-[340%] w-auto -translate-y-[5%]" src="src/assets/logos/hypo.png"/>
                 </div>
-                <img alt="Kelag" class="h-7 md:h-8 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/kelag.png"/>
-                <img alt="Starlinger" class="h-8 md:h-10 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/starlinger.png"/>
-                <img alt="Wieselthaler" class="h-5 md:h-6 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/wieselthaler.png"/>
-                <img alt="Laufen" class="h-12 md:h-14 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/laufen-logo-png-transparent_greay.png"/>
-                <img alt="Sound Solutions International" class="h-8 md:h-10 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/soundsolution-logo_grey.png"/>
-                <img alt="MACH" class="h-6 md:h-7 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/mach.png"/>
+                <img loading="lazy" alt="Kelag" class="h-7 md:h-8 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/kelag.png"/>
+                <img loading="lazy" alt="Starlinger" class="h-8 md:h-10 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/starlinger.png"/>
+                <img loading="lazy" alt="Wieselthaler" class="h-5 md:h-6 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/wieselthaler.png"/>
+                <img loading="lazy" alt="Laufen" class="h-12 md:h-14 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/laufen-logo-png-transparent_greay.png"/>
+                <img loading="lazy" alt="Sound Solutions International" class="h-8 md:h-10 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/soundsolution-logo_grey.png"/>
+                <img loading="lazy" alt="MACH" class="h-6 md:h-7 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/mach.png"/>
                 <!-- Set 2 — Duplikat für nahtlose Schleife -->
-                <img alt="EVVA" class="h-7 md:h-8 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/EVVA.png"/>
-                <img alt="Musiktheater an der Wien" class="h-7 md:h-9 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/Logo_Musiktheater_an_der_Wien_grey.png"/>
+                <img loading="lazy" alt="EVVA" class="h-7 md:h-8 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/EVVA.png"/>
+                <img loading="lazy" alt="Musiktheater an der Wien" class="h-7 md:h-9 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/Logo_Musiktheater_an_der_Wien_grey.png"/>
                 <div class="h-7 md:h-8 overflow-hidden flex items-center mix-blend-multiply dark:mix-blend-screen">
-                    <img alt="HYPO NOE" class="h-[340%] w-auto -translate-y-[5%]" src="src/assets/logos/hypo.png"/>
+                    <img loading="lazy" alt="HYPO NOE" class="h-[340%] w-auto -translate-y-[5%]" src="src/assets/logos/hypo.png"/>
                 </div>
-                <img alt="Kelag" class="h-7 md:h-8 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/kelag.png"/>
-                <img alt="Starlinger" class="h-8 md:h-10 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/starlinger.png"/>
-                <img alt="Wieselthaler" class="h-5 md:h-6 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/wieselthaler.png"/>
-                <img alt="Laufen" class="h-12 md:h-14 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/laufen-logo-png-transparent_greay.png"/>
-                <img alt="Sound Solutions International" class="h-8 md:h-10 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/soundsolution-logo_grey.png"/>
-                <img alt="MACH" class="h-6 md:h-7 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/mach.png"/>
+                <img loading="lazy" alt="Kelag" class="h-7 md:h-8 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/kelag.png"/>
+                <img loading="lazy" alt="Starlinger" class="h-8 md:h-10 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/starlinger.png"/>
+                <img loading="lazy" alt="Wieselthaler" class="h-5 md:h-6 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/wieselthaler.png"/>
+                <img loading="lazy" alt="Laufen" class="h-12 md:h-14 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/laufen-logo-png-transparent_greay.png"/>
+                <img loading="lazy" alt="Sound Solutions International" class="h-8 md:h-10 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/soundsolution-logo_grey.png"/>
+                <img loading="lazy" alt="MACH" class="h-6 md:h-7 mix-blend-multiply dark:mix-blend-screen" src="src/assets/logos/mach.png"/>
             </div>
         </div>
     </section>
@@ -517,18 +555,18 @@
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 mb-4 bg-white/5">
                     <span class="text-[10px] font-bold tracking-widest text-accent uppercase">Messbare Qualität</span>
                 </div>
-                <h2 class="text-4xl lg:text-5xl font-bold tracking-tight">Zahlen, die klingen</h2>
+                <h2 class="text-4xl lg:text-5xl font-bold tracking-tight">Zahlen, die belegen.</h2>
             </div>
             
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-2xl hover:bg-white/10 transition-colors animate-on-scroll">
                     <div class="flex items-center justify-between mb-4">
-                        <div class="text-6xl font-extrabold text-white tracking-tighter">250<span class="text-accent">+</span></div>
+                        <div class="text-6xl font-extrabold text-white tracking-tighter">150<span class="text-accent">+</span></div>
                         <span class="material-symbols-outlined text-4xl text-white/20">business</span>
                     </div>
                     <div class="text-sm font-bold uppercase tracking-widest text-gray-400">Abgeschlossene Projekte</div>
                 </div>
-                
+
                 <div class="bg-accent p-10 rounded-2xl shadow-lg relative overflow-hidden group animate-on-scroll delay-100">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-2xl transform translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-700"></div>
                     <div class="flex items-center justify-between mb-4 relative z-10">
@@ -537,13 +575,13 @@
                     </div>
                     <div class="text-sm font-bold uppercase tracking-widest text-primary/80 relative z-10">Zufriedene Kunden</div>
                 </div>
-                
+
                 <div class="bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-2xl hover:bg-white/10 transition-colors animate-on-scroll delay-200">
                     <div class="flex items-center justify-between mb-4">
-                        <div class="text-6xl font-extrabold text-white tracking-tighter">15<span class="text-accent">+</span></div>
+                        <div class="text-6xl font-extrabold text-white tracking-tighter">30<span class="text-accent">+</span></div>
                         <span class="material-symbols-outlined text-4xl text-white/20">hourglass_top</span>
                     </div>
-                    <div class="text-sm font-bold uppercase tracking-widest text-gray-400">Jahre Expertise</div>
+                    <div class="text-sm font-bold uppercase tracking-widest text-gray-400">Jahre Expertise im Team</div>
                 </div>
             </div>
         </div>
@@ -559,7 +597,7 @@
                     "Coustiq hat bewiesen, dass herausragende Akustik kein Kompromiss in der Architektur sein muss. Die unsichtbaren, in die Decken integrierten Lösungen haben unser Konzerthaus-Projekt auf ein ganz neues Level gehoben."
                 </p>
                 <div class="flex items-center justify-center gap-4">
-                    <img alt="Prof. Dr. Johannes Bergmann" class="w-12 h-12 rounded-full object-cover border-2 border-border-light dark:border-border-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3nc7JXtLfOI6CK_ENIotkWTU9KRfKb4aa0wAY5ZVBaLhXAFGeYFbJ1Y4JIOS_ZvwB-SphA-ZzJU9k4-Pm0ParK-Jq4vbvN629xBp4yRCyF-tasfGOvY_Ggs5n-_H9--NCdyMpX3e5i60tcIAqNgHPYJPEqPlsmHSS5ABj2-_9JC_0JfCyb70rgHot0Ee7F0FZFI8Unxuiogtm50N94effUqsQANxzoY1u94tG9BYPtTY0qOvl0AplLYVEKmn4M7NSo2-GDwdw2Ua2"/>
+                    <img loading="lazy" alt="Prof. Dr. Johannes Bergmann" class="w-12 h-12 rounded-full object-cover border-2 border-border-light dark:border-border-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3nc7JXtLfOI6CK_ENIotkWTU9KRfKb4aa0wAY5ZVBaLhXAFGeYFbJ1Y4JIOS_ZvwB-SphA-ZzJU9k4-Pm0ParK-Jq4vbvN629xBp4yRCyF-tasfGOvY_Ggs5n-_H9--NCdyMpX3e5i60tcIAqNgHPYJPEqPlsmHSS5ABj2-_9JC_0JfCyb70rgHot0Ee7F0FZFI8Unxuiogtm50N94effUqsQANxzoY1u94tG9BYPtTY0qOvl0AplLYVEKmn4M7NSo2-GDwdw2Ua2"/>
                     <div class="text-left">
                         <h4 class="font-bold text-sm">Prof. Dr. Johannes Bergmann</h4>
                         <p class="text-[10px] text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mt-0.5">Lead Architect, Studio OMA</p>
@@ -627,9 +665,8 @@
             </div>
 
             <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase tracking-widest text-gray-500">
-                <div class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-accent text-xl">graphic_eq</span>
-                    <span class="font-bold text-white text-base lowercase tracking-normal">coustiq.</span>
+                <div class="flex items-center">
+                    <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-7 w-auto"/>
                 </div>
                 
                 <p>© 2026 Alle Rechte vorbehalten.</p>

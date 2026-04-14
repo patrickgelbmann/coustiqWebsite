@@ -13,9 +13,9 @@
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-2">
         <div class="glassmorphism absolute inset-0 -z-10 transition-all duration-300 opacity-100" id="nav-bg"></div>
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
-            <a class="text-2xl font-bold tracking-tight text-primary dark:text-white flex items-center gap-2" href="index.html">
-                <span class="material-symbols-outlined text-accent text-3xl">graphic_eq</span>
-                Coustiq.
+            <a class="flex items-center" href="index.html">
+                <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
+                <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
             </a>
             <div class="flex items-center gap-4">
                 <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark" aria-label="Toggle Dark Mode">
@@ -119,6 +119,16 @@
             </section>
 
             <section class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-text-muted-light dark:text-text-muted-dark mb-5">Google Fonts &amp; externe Ressourcen</h2>
+                <p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed mb-3">
+                    Diese Website verwendet Google Fonts sowie Google Material Symbols zur Darstellung von Schriften und Icons. Dabei werden beim Seitenaufruf Anfragen an Server von Google LLC (USA) gesendet, wodurch Ihre IP-Adresse übermittelt werden kann.
+                </p>
+                <p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+                    Die Nutzung erfolgt auf Basis unseres berechtigten Interesses an einer einheitlichen und technisch zuverlässigen Darstellung unserer Website (Art. 6 Abs. 1 lit. f DSGVO). Google LLC ist unter dem EU-US Data Privacy Framework zertifiziert. Weitere Informationen finden Sie unter <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-accent hover:underline underline-offset-2">policies.google.com/privacy</a>.
+                </p>
+            </section>
+
+            <section class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark">
                 <h2 class="text-xs font-bold uppercase tracking-widest text-text-muted-light dark:text-text-muted-dark mb-5">Beschwerderecht</h2>
                 <p class="text-sm text-text-muted-light dark:text-text-muted-dark leading-relaxed">
                     Sie haben das Recht, Beschwerde bei der österreichischen Datenschutzbehörde einzureichen:
@@ -134,9 +144,9 @@
 
     <footer class="border-t border-border-light dark:border-border-dark py-8 px-6">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] uppercase tracking-widest text-text-muted-light dark:text-text-muted-dark">
-            <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-accent text-xl">graphic_eq</span>
-                <span class="font-bold text-text-light dark:text-white text-base lowercase tracking-normal">coustiq.</span>
+            <div class="flex items-center">
+                <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-7 w-auto block dark:hidden"/>
+                <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-7 w-auto hidden dark:block"/>
             </div>
             <p>© 2026 Alle Rechte vorbehalten.</p>
             <div class="flex gap-8">
