@@ -14,7 +14,6 @@
     <link rel="icon" type="image/png" href="/favicon.png"/>
     <link rel="icon" type="image/svg+xml" href="src/assets/logo-emblem.svg"/>
     <link rel="stylesheet" href="src/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
@@ -43,10 +42,10 @@
                 <a class="bg-primary dark:bg-white dark:text-primary text-white px-5 py-2.5 rounded-full hover:scale-105 transition-all shadow-md hover:shadow-lg text-sm font-semibold" href="index.html#contact">Projekt anfragen</a>
             </div>
             <div class="flex items-center gap-4 md:hidden">
-                <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark">
+                <button id="theme-toggle-mobile" aria-label="Dark Mode umschalten" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark">
                     <span id="theme-icon-mobile" class="material-symbols-outlined text-[20px]">dark_mode</span>
                 </button>
-                <button id="mobile-menu-btn" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
+                <button id="mobile-menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
@@ -60,7 +59,7 @@
                 <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
                 <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
             </a>
-            <button id="close-menu-btn" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
+            <button id="close-menu-btn" aria-label="Menü schließen" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
                 <span class="material-symbols-outlined">close</span>
             </button>
         </div>

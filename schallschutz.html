@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="de">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Bauakustik & Schallschutz Wien — ÖNORM konform | Coustiq</title>
+    <meta name="description" content="Planung und messtechnischer Nachweis von Luft- und Trittschallschutz nach ÖNORM B 8115 und ISO 16283 — für Neubau, Sanierung und Holzbau. Coustiq, Wien."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://coustiq.com/schallschutz.html"/>
+    <meta property="og:title" content="Bauakustik & Schallschutz Wien — ÖNORM konform | Coustiq"/>
+    <meta property="og:description" content="Luft- und Trittschallschutz geplant und gemessen nach ÖNORM B 8115 und ISO 16283 — Neubau, Sanierung, Holzbau. Gerichtsfeste Dokumentation inklusive."/>
+    <meta property="og:image" content="src/assets/schallschutzeinhausung.webp"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <link rel="canonical" href="https://coustiq.com/schallschutz.html"/>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="icon" type="image/svg+xml" href="src/assets/logo-emblem.svg"/>
+    <link rel="stylesheet" href="src/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://coustiq.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://coustiq.com/leistungen.html" },
+          { "@type": "ListItem", "position": 3, "name": "Bauakustik & Schallschutz", "item": "https://coustiq.com/schallschutz.html" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Bauakustik & Schallschutz",
+        "description": "Planung und messtechnischer Nachweis von Luft- und Trittschallschutz nach ÖNORM B 8115 und ISO 16283 — für Neubau, Sanierung und Holzbau.",
+        "provider": { "@type": "Organization", "name": "Coustiq OG", "url": "https://coustiq.com" },
+        "areaServed": "Österreich",
+        "url": "https://coustiq.com/schallschutz.html"
+      }
+    ]
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-2">
+        <div class="glassmorphism absolute inset-0 -z-10 transition-all duration-300 opacity-0" id="nav-bg"></div>
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
+            <a class="flex items-center" href="index.html">
+                <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
+                <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a class="text-text-light dark:text-text-dark hover:text-accent dark:hover:text-accent transition-colors" href="index.html#about">Über uns</a>
+                <a class="text-accent font-semibold" href="leistungen.html">Leistungen</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent dark:hover:text-accent transition-colors" href="referenzen.html">Projekte</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent dark:hover:text-accent transition-colors" href="index.html#team">Team</a>
+                <a class="flex items-center gap-1.5 hover:text-accent dark:hover:text-accent transition-colors" href="index.html#lyzer">
+                    <span class="text-text-light dark:text-text-dark">Lyzer</span>
+                    <span class="text-[9px] font-bold uppercase tracking-wider bg-accent/15 text-accent px-1.5 py-0.5 rounded-full leading-none">Beta</span>
+                </a>
+                <div class="w-px h-6 bg-border-light dark:bg-border-dark"></div>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark" aria-label="Toggle Dark Mode">
+                    <span id="theme-icon" class="material-symbols-outlined text-[20px]">dark_mode</span>
+                </button>
+                <a class="bg-primary dark:bg-white dark:text-primary text-white px-5 py-2.5 rounded-full hover:scale-105 transition-all shadow-md hover:shadow-lg text-sm font-semibold" href="index.html#contact">Projekt anfragen</a>
+            </div>
+            <div class="flex items-center gap-4 md:hidden">
+                <button id="theme-toggle-mobile" aria-label="Dark Mode umschalten" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark">
+                    <span id="theme-icon-mobile" class="material-symbols-outlined text-[20px]">dark_mode</span>
+                </button>
+                <button id="mobile-menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-surface-light dark:bg-surface-dark transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col">
+        <div class="p-6 flex justify-between items-center border-b border-border-light dark:border-border-dark">
+            <a class="flex items-center" href="index.html">
+                <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
+                <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
+            </a>
+            <button id="close-menu-btn" aria-label="Menü schließen" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="p-6 flex flex-col gap-6 text-xl font-medium overflow-y-auto no-scrollbar">
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="index.html#about">Über uns</a>
+            <a class="mobile-link text-accent font-semibold" href="leistungen.html">Leistungen</a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="referenzen.html">Projekte</a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="index.html#team">Team</a>
+            <a class="mobile-link flex items-center gap-2 text-text-light dark:text-text-dark hover:text-accent" href="index.html#lyzer">
+                Lyzer
+                <span class="text-[9px] font-bold uppercase tracking-wider bg-accent/15 text-accent px-1.5 py-0.5 rounded-full leading-none">Beta</span>
+            </a>
+            <hr class="border-border-light dark:border-border-dark my-4">
+            <a class="mobile-link bg-primary dark:bg-white text-center dark:text-primary text-white px-5 py-4 rounded-full transition-all shadow-md text-lg font-bold" href="index.html#contact">Projekt anfragen</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <header class="relative pt-44 pb-20 px-6 overflow-hidden border-b border-border-light dark:border-border-dark">
+        <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 dark:bg-accent/8 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+        <div class="absolute top-1/3 left-0 w-[400px] h-[400px] bg-primary/5 dark:bg-white/3 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto relative z-10 animate-on-scroll">
+            <div class="flex items-center gap-2 mb-6 flex-wrap">
+                <a href="leistungen.html" class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase hover:text-accent transition-colors">Leistungen</a>
+                <span class="text-text-muted-light dark:text-text-muted-dark text-xs">/</span>
+                <span class="text-[10px] font-bold tracking-widest text-accent uppercase">Bauakustik & Schallschutz</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 max-w-4xl leading-tight">
+                Schallschutz,<br/>
+                <span class="underline-accent text-primary dark:text-white">der sich beweist.</span>
+            </h1>
+            <p class="text-xl text-text-muted-light dark:text-text-muted-dark max-w-2xl leading-relaxed">
+                Ruhige Räume entstehen nicht durch Zufall — sie entstehen durch Planung. Wir planen und messen Luft- und Trittschallschutz für Neubau und Sanierung nach ÖNORM B 8115 und ISO 16283. Mit besonderer Expertise im Holzbau.
+            </p>
+            <div class="mt-10 flex flex-wrap gap-4">
+                <a href="index.html#contact" class="bg-primary dark:bg-white dark:text-primary text-white font-semibold px-7 py-3.5 rounded-full hover:scale-105 transition-all shadow-md text-sm flex items-center gap-2 group">
+                    Schallschutz anfragen
+                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                <a href="bautraeger.html" class="border border-border-light dark:border-border-dark text-text-light dark:text-text-dark font-semibold px-7 py-3.5 rounded-full hover:border-accent hover:text-accent transition-all text-sm">
+                    Infos für Bauträger
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- What we do — Bento -->
+    <section class="py-20 px-6 bg-surface-light dark:bg-surface-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-12 animate-on-scroll">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border-light dark:border-border-dark mb-4 bg-background-light dark:bg-background-dark">
+                    <span class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase">Leistungsumfang</span>
+                </div>
+                <h2 class="text-4xl font-bold text-primary dark:text-white mt-2 max-w-2xl leading-tight">Schallschutz von der Planung bis zum Prüfbericht.</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+
+                <!-- Large card -->
+                <div class="md:col-span-7 bg-primary rounded-2xl p-10 flex flex-col justify-between border border-primary hover:shadow-xl transition-all duration-500 group animate-on-scroll">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">layers</span>
+                            </div>
+                            <span class="text-[9px] font-bold uppercase tracking-wider bg-accent/20 text-accent px-3 py-1 rounded-full">Kernleistung</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Luftschallschutz</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Planung und messtechnischer Nachweis der Luftschalldämmung von Wänden, Decken, Türen und Fassaden — nach ÖNORM B 8115 und ISO 16283-1. Wir begleiten von der Detailplanung bis zur Abnahmemessung und liefern einen vollständigen Prüfbericht.
+                        </p>
+                        <ul class="mt-6 space-y-3">
+                            <li class="flex items-center gap-3 text-sm font-medium text-gray-200">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                                Schallschutzprognose für Wände, Decken und Fassaden
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium text-gray-200">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                                Messung nach ISO 16283-1 (In-situ Luftschalldämmung)
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium text-gray-200">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                                Bewertetes Schalldämm-Maß R'w nach ÖNORM B 8115
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium text-gray-200">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                                Flankendämmung und Körperschallübertragung
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 bg-white/5 rounded-xl p-5">
+                        <p class="text-[10px] uppercase tracking-widest font-bold mb-3 text-gray-400">Anwendungsbereiche</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs text-gray-300 bg-white/10 px-3 py-1 rounded-full">Wohnungsbau</span>
+                            <span class="text-xs text-gray-300 bg-white/10 px-3 py-1 rounded-full">Büro & Gewerbe</span>
+                            <span class="text-xs text-gray-300 bg-white/10 px-3 py-1 rounded-full">Hotels</span>
+                            <span class="text-xs text-gray-300 bg-white/10 px-3 py-1 rounded-full">Schulen & Bildung</span>
+                            <span class="text-xs text-gray-300 bg-white/10 px-3 py-1 rounded-full">Holzbau</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trittschall -->
+                <div class="md:col-span-5 bg-background-light dark:bg-background-dark rounded-2xl p-10 border border-border-light dark:border-border-dark hover:shadow-xl hover:border-accent/30 transition-all duration-500 flex flex-col justify-between animate-on-scroll delay-100">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-6">
+                            <span class="material-symbols-outlined text-3xl">vibration</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-text-light dark:text-text-dark mb-4">Trittschallschutz</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+                            Trittschall ist oft der kritischste Schallschutzaspekt im Wohnbau — und der am schwersten zu korrigierende nach dem Bau. Wir planen Trittschalldämmkonstruktionen und messen den bewerteten Norm-Trittschallpegel L'n,w nach ISO 16283-2.
+                        </p>
+                        <ul class="mt-6 space-y-3">
+                            <li class="flex items-center gap-3 text-sm font-medium text-text-light dark:text-text-dark">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                                Trittschallprognose für Decken und Böden
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium text-text-light dark:text-text-dark">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                                Messung nach ISO 16283-2
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium text-text-light dark:text-text-dark">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                                Schwimmende Estriche und Entkopplungslösungen
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative w-full aspect-[21/9] rounded-xl overflow-hidden mt-8">
+                        <img loading="lazy" class="w-full h-full object-cover" alt="Schallschutz Trittschall Konstruktion" src="src/assets/schallschutzeinhausung.webp"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+                    </div>
+                </div>
+
+                <!-- Holzbau Expertise -->
+                <div class="md:col-span-5 bg-surface-light dark:bg-surface-dark rounded-2xl p-10 border border-border-light dark:border-border-dark hover:shadow-xl hover:border-accent/30 transition-all duration-500 flex flex-col justify-between animate-on-scroll delay-200">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
+                                <span class="material-symbols-outlined text-3xl">forest</span>
+                            </div>
+                            <span class="text-[9px] font-bold uppercase tracking-wider bg-accent/10 text-accent px-3 py-1 rounded-full">Expertise</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-text-light dark:text-text-dark mb-4">Holzbau-Akustik</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+                            Holzbau stellt besondere akustische Anforderungen — leichte Konstruktionen, Körperschallübertragung, Flankendämmung. Wir bringen spezifisches Fachwissen für Massivholz, Holzrahmen- und Holztafelbau mit.
+                        </p>
+                    </div>
+                    <div class="mt-8 flex gap-3">
+                        <div class="h-12 w-12 rounded-full bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark flex items-center justify-center shadow-sm">
+                            <span class="material-symbols-outlined text-primary dark:text-white text-lg">layers</span>
+                        </div>
+                        <div class="h-12 w-12 rounded-full bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark flex items-center justify-center shadow-sm">
+                            <span class="material-symbols-outlined text-primary dark:text-white text-lg">straighten</span>
+                        </div>
+                        <div class="h-12 w-12 rounded-full bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark flex items-center justify-center shadow-sm">
+                            <span class="material-symbols-outlined text-primary dark:text-white text-lg">verified</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Anlagenlärm -->
+                <div class="md:col-span-7 bg-background-light dark:bg-background-dark rounded-2xl p-10 border border-border-light dark:border-border-dark hover:shadow-xl hover:border-accent/30 transition-all duration-500 flex flex-col justify-between animate-on-scroll delay-300">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
+                                <span class="material-symbols-outlined text-3xl">hvac</span>
+                            </div>
+                            <span class="text-[9px] font-bold uppercase tracking-wider bg-accent/10 text-accent px-3 py-1 rounded-full">Haustechnik</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-text-light dark:text-text-dark mb-4">Minimierung von Anlagengeräuschen</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed max-w-xl">
+                            Lüftungsanlagen, Pumpen, Aufzüge und haustechnische Einrichtungen sind häufige Lärmquellen in Gebäuden. Wir messen, bewerten und planen Maßnahmen zur Reduktion von Körperschall und Luftschallabstrahlung aus gebäudetechnischen Anlagen.
+                        </p>
+                    </div>
+                    <ul class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <li class="flex items-center gap-3 text-sm font-medium text-text-light dark:text-text-dark">
+                            <span class="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                            Lüftungs- und Klimaanlagen
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-text-light dark:text-text-dark">
+                            <span class="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                            Aufzüge und Förderanlagen
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-text-light dark:text-text-dark">
+                            <span class="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                            Pumpen und Heizungsanlagen
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-text-light dark:text-text-dark">
+                            <span class="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                            Tiefgaragenentlüftung
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Norms -->
+    <section class="py-20 px-6 border-t border-border-light dark:border-border-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-10 animate-on-scroll">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border-light dark:border-border-dark mb-4 bg-surface-light dark:bg-surface-dark">
+                    <span class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase">Normen & Standards</span>
+                </div>
+                <h2 class="text-4xl font-bold text-primary dark:text-white mt-2 max-w-xl leading-tight">Das normative Fundament unserer Arbeit.</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 animate-on-scroll">
+                <div class="p-8 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark hover:border-accent/30 transition-all">
+                    <p class="text-accent font-bold text-lg mb-1">ÖNORM B 8115</p>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-xs uppercase tracking-wider mb-4">Schallschutz und Raumakustik im Hochbau</p>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed">Österreichische Norm für Anforderungen an die Luft- und Trittschalldämmung in Wohn-, Büro- und Zweckbauten. Maßgeblich für alle Baugenehmigungen und Abnahmen in Österreich.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark hover:border-accent/30 transition-all">
+                    <p class="text-accent font-bold text-lg mb-1">ISO 16283-1 / -2</p>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-xs uppercase tracking-wider mb-4">In-situ Messungen der Schalldämmung</p>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed">Internationale Norm für die Feldmessung von Luft- (-1) und Trittschalldämmung (-2) in fertiggestellten Gebäuden. Grundlage für alle unsere baumessungen und Abnahmeprüfungen.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark hover:border-accent/30 transition-all">
+                    <p class="text-accent font-bold text-lg mb-1">OIB-Richtlinie 5</p>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-xs uppercase tracking-wider mb-4">Schallschutz (Bautechnikrichtlinie)</p>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed">Österreichische Bautechnikrichtlinie, die Schallschutzanforderungen für baugenehmigungspflichtige Vorhaben regelt. Unsere Leistungen sind direkt auf die OIB-RL5-Nachweisanforderungen abgestimmt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="py-24 px-6 bg-surface-light dark:bg-surface-dark border-t border-border-light dark:border-border-dark overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-20">
+            <div class="w-full lg:w-1/2 animate-on-scroll">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border-light dark:border-border-dark mb-6 bg-background-light dark:bg-background-dark">
+                    <span class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase">Ablauf</span>
+                </div>
+                <h2 class="text-4xl font-bold text-primary dark:text-white mt-4 mb-10 leading-tight">Von der Konstruktionsprüfung zur gerichtsfesten Dokumentation.</h2>
+                <div class="space-y-10">
+                    <div class="flex gap-6 group">
+                        <span class="font-bold text-4xl text-accent/20 group-hover:text-accent/40 transition-colors flex-shrink-0 w-12">01</span>
+                        <div>
+                            <h4 class="font-bold text-xl text-text-light dark:text-text-dark mb-2">Planungsprüfung</h4>
+                            <p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed">Wir prüfen Ihre Konstruktionsdetails auf Normerfüllung und identifizieren potenzielle Schwachstellen — bevor sie gebaut sind.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 group">
+                        <span class="font-bold text-4xl text-accent/20 group-hover:text-accent/40 transition-colors flex-shrink-0 w-12">02</span>
+                        <div>
+                            <h4 class="font-bold text-xl text-text-light dark:text-text-dark mb-2">Baubegleitung</h4>
+                            <p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed">Bei Bedarf begleiten wir kritische Bauphasen vor Ort — besonders relevant bei Holzbau, Trockenbau und haustechnischen Durchdringungen.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 group">
+                        <span class="font-bold text-4xl text-accent/20 group-hover:text-accent/40 transition-colors flex-shrink-0 w-12">03</span>
+                        <div>
+                            <h4 class="font-bold text-xl text-text-light dark:text-text-dark mb-2">Abnahmemessung</h4>
+                            <p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed">Messung der Luft- und Trittschalldämmung im Fertigbau nach ISO 16283 — an allen vereinbarten Messpunkten, vollständig protokolliert.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 group">
+                        <span class="font-bold text-4xl text-accent/20 group-hover:text-accent/40 transition-colors flex-shrink-0 w-12">04</span>
+                        <div>
+                            <h4 class="font-bold text-xl text-text-light dark:text-text-dark mb-2">Prüfbericht & Dokumentation</h4>
+                            <p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed">Vollständiger Prüfbericht mit allen gemessenen Kennwerten, normgerechter Bewertung und Abweichungsanalyse — verwendbar für Behörden, Käufer und Gerichte.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 relative animate-on-scroll delay-200">
+                <div class="absolute -top-10 -right-10 w-48 h-48 bg-accent/10 rounded-full blur-3xl -z-10"></div>
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5]">
+                    <img loading="lazy" class="w-full h-full object-cover" alt="Schallschutz Einhausung" src="src/assets/schallschutzeinhausung.webp"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 glassmorphism rounded-xl p-5">
+                        <p class="text-xs font-bold uppercase tracking-wider text-white/60 mb-2">Messpräzision</p>
+                        <p class="text-white font-bold text-lg leading-snug">R'w und L'n,w nach ISO 16283 — kalibriert, reproduzierbar, normgerecht bewertet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target audience links -->
+    <section class="py-20 px-6 border-t border-border-light dark:border-border-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-10 animate-on-scroll">
+                <h2 class="text-4xl font-bold text-primary dark:text-white max-w-xl leading-tight">Schallschutz — für wen?</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 animate-on-scroll">
+                <a href="architekten.html" class="group flex items-center gap-6 p-8 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-xl transition-all duration-400">
+                    <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center text-accent flex-shrink-0 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">architecture</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-xl text-text-light dark:text-text-dark mb-1">Architekten & Planer</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark text-sm">Frühzeitige Integration in den Entwurfsprozess — damit Schallschutz kein Nachrüstproblem wird.</p>
+                    </div>
+                    <span class="material-symbols-outlined text-accent group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                <a href="bautraeger.html" class="group flex items-center gap-6 p-8 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-xl transition-all duration-400">
+                    <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center text-accent flex-shrink-0 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">apartment</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-xl text-text-light dark:text-text-dark mb-1">Bauträger & Entwickler</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark text-sm">Normkonforme Abnahme und gerichtsfeste Dokumentation — kein Mängelrisiko nach der Übergabe.</p>
+                    </div>
+                    <span class="material-symbols-outlined text-accent group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA + Footer -->
+    <section class="bg-[#0a0f0f] text-white py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center animate-on-scroll">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6">
+                <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                <span class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Ihr nächstes Projekt</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Schallschutz, der<br/><span class="text-accent">messbar stimmt?</span>
+            </h2>
+            <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+                Egal ob Neubau, Sanierung oder Holzbau — sprechen Sie mit uns. Wir liefern normgerechte Planung und gerichtsfeste Messung.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="index.html#contact" class="bg-accent text-primary font-bold px-8 py-4 rounded-full hover:scale-105 transition-all shadow-lg hover:shadow-accent/30 flex items-center gap-2 group">
+                    Schallschutz anfragen
+                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                <a href="leistungen.html" class="bg-white/10 text-white font-bold px-8 py-4 rounded-full hover:bg-white/20 transition-all border border-white/10 backdrop-blur-sm">
+                    Alle Leistungen ansehen
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10">
+            <div class="flex flex-col md:flex-row justify-between gap-4 mb-8 text-sm text-gray-400">
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-accent">location_on</span><span>Dörfelstraße 9, 1120 Wien</span></div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-accent">phone</span><a href="tel:+4366480788714" class="hover:text-white transition-colors">+43 664 807 887 14</a></div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-accent">mail</span><a href="mailto:office@coustiq.com" class="hover:text-white transition-colors">office@coustiq.com</a></div>
+            </div>
+            <div class="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase tracking-widest text-gray-500">
+                <a href="index.html" class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-xl">graphic_eq</span><span class="font-bold text-white text-base lowercase tracking-normal">coustiq.</span></a>
+                <p>© 2026 Alle Rechte vorbehalten.</p>
+                <div class="flex gap-8"><a class="hover:text-white transition-colors" href="faq.html">FAQ</a>
+                    <a class="hover:text-white transition-colors" href="impressum.html">Impressum</a><a class="hover:text-white transition-colors" href="datenschutz.html">Datenschutz</a></div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>

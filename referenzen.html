@@ -3,19 +3,43 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Referenzen | Coustiq.</title>
+    <title>Akustik-Projekte & Referenzen Österreich | Coustiq</title>
     <meta name="description" content="Alle Referenzprojekte von Coustiq — Bauakustik, Raumakustik und Schallimmissionsschutz für Büros, Gastronomie, Wohnbau und Industrie in Wien und Österreich."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://coustiq.com/referenzen.html"/>
-    <meta property="og:title" content="Referenzen | Coustiq."/>
+    <meta property="og:title" content="Akustik-Projekte & Referenzen Österreich | Coustiq"/>
     <meta property="og:description" content="Alle Referenzprojekte von Coustiq — Bauakustik, Raumakustik und Schallimmissionsschutz."/>
     <meta property="og:image" content="src/assets/fullstack-marketer.webp"/>
     <meta name="twitter:card" content="summary_large_image"/>
+    <link rel="canonical" href="https://coustiq.com/referenzen.html"/>
     <link rel="icon" type="image/png" href="/favicon.png"/>
     <link rel="icon" type="image/svg+xml" href="src/assets/logo-emblem.svg"/>
     <link rel="stylesheet" href="src/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://coustiq.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Referenzen", "item": "https://coustiq.com/referenzen.html" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Referenzprojekte Coustiq",
+        "url": "https://coustiq.com/referenzen.html",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "url": "https://coustiq.com/projekt-evva.html", "name": "EVVA Produktionshalle Wien" },
+          { "@type": "ListItem", "position": 2, "url": "https://coustiq.com/projekt-wieselthaler.html", "name": "Wieselthaler Aufenthaltsraum" },
+          { "@type": "ListItem", "position": 3, "url": "https://coustiq.com/projekt-cop.html", "name": "NENI Restaurant — C.O.P. Vienna" },
+          { "@type": "ListItem", "position": 4, "url": "https://coustiq.com/projekt-schüller.html", "name": "Heuriger Schüller Wien" }
+        ]
+      }
+    ]
+    </script>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
 
@@ -43,10 +67,10 @@
                 <a class="bg-primary dark:bg-white dark:text-primary text-white px-5 py-2.5 rounded-full hover:scale-105 transition-all shadow-md text-sm font-semibold" href="index.html#contact">Projekt anfragen</a>
             </div>
             <div class="flex items-center gap-4 md:hidden">
-                <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark">
+                <button id="theme-toggle-mobile" aria-label="Dark Mode umschalten" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark">
                     <span id="theme-icon-mobile" class="material-symbols-outlined text-[20px]">dark_mode</span>
                 </button>
-                <button id="mobile-menu-btn" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
+                <button id="mobile-menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
@@ -60,7 +84,7 @@
                 <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
                 <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
             </a>
-            <button id="close-menu-btn" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
+            <button id="close-menu-btn" aria-label="Menü schließen" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
                 <span class="material-symbols-outlined">close</span>
             </button>
         </div>
@@ -99,40 +123,49 @@
         <div class="max-w-7xl mx-auto">
             <p class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase mb-8">Featured Case Studies</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="projekt-wieselthaler.html" class="group block animate-on-scroll">
+                <!-- EVVA — Featured #1 -->
+                <a href="projekt-evva.html" class="group block animate-on-scroll">
                     <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-4 relative">
-                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/wieselthaler-aufenthaltsraum.webp" alt="Wieselthaler"/>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <span class="absolute bottom-4 left-4 text-[10px] font-bold uppercase tracking-wider text-white bg-accent px-2.5 py-1 rounded-full">Case Study</span>
-                    </div>
-                    <h3 class="font-bold text-lg group-hover:text-accent transition-colors mb-1">Wieselthaler</h3>
-                    <div class="flex gap-2 flex-wrap">
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark px-2 py-1 rounded">Raumakustik</span>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark px-2 py-1 rounded">Büro</span>
-                    </div>
-                </a>
-                <a href="projekt-cop.html" class="group block animate-on-scroll delay-100">
-                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-4 relative">
-                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/cop.webp" alt="COP Office Campus"/>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <span class="absolute bottom-4 left-4 text-[10px] font-bold uppercase tracking-wider text-white bg-accent px-2.5 py-1 rounded-full">Case Study</span>
-                    </div>
-                    <h3 class="font-bold text-lg group-hover:text-accent transition-colors mb-1">NENI — C.O.P. Vienna</h3>
-                    <div class="flex gap-2 flex-wrap">
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark px-2 py-1 rounded">Raumakustik</span>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark px-2 py-1 rounded">Gastronomie</span>
-                    </div>
-                </a>
-                <a href="projekt-evva.html" class="group block animate-on-scroll delay-200">
-                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-4 relative">
-                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/evva.webp" alt="EVVA"/>
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/evva.webp" alt="EVVA Produktionshalle Wien"/>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <span class="absolute bottom-4 left-4 text-[10px] font-bold uppercase tracking-wider text-white bg-accent px-2.5 py-1 rounded-full">Case Study</span>
                     </div>
                     <h3 class="font-bold text-lg group-hover:text-accent transition-colors mb-1">EVVA Produktionshalle</h3>
+                    <p class="text-xs text-text-muted-light dark:text-text-muted-dark mb-3 leading-relaxed">Schallimmissionsschutz nach TRLV-3 in einer laufenden Produktionshalle Wien — Behördenauflage erfolgreich erfüllt.</p>
                     <div class="flex gap-2 flex-wrap">
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark px-2 py-1 rounded">Schallimmissionsschutz</span>
                         <span class="text-[10px] font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark px-2 py-1 rounded">Industrie</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-accent bg-accent/10 border border-accent/20 px-2 py-1 rounded">−3,66 dB</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-accent bg-accent/10 border border-accent/20 px-2 py-1 rounded">TRLV-3</span>
+                    </div>
+                </a>
+                <!-- Wieselthaler — Featured #2 -->
+                <a href="projekt-wieselthaler.html" class="group block animate-on-scroll delay-100">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-4 relative">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/wieselthaler-aufenthaltsraum.webp" alt="Wieselthaler Aufenthaltsraum Wien"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 text-[10px] font-bold uppercase tracking-wider text-white bg-accent px-2.5 py-1 rounded-full">Case Study</span>
+                    </div>
+                    <h3 class="font-bold text-lg group-hover:text-accent transition-colors mb-1">Wieselthaler Freizeitraum</h3>
+                    <p class="text-xs text-text-muted-light dark:text-text-muted-dark mb-3 leading-relaxed">Vollständige Raumakustik-Sanierung eines Aufenthaltsraums — Messung, Planung und Abnahme nach ISO 3382.</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark px-2 py-1 rounded">Raumakustik</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-accent bg-accent/10 border border-accent/20 px-2 py-1 rounded">−60 % RT60</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-accent bg-accent/10 border border-accent/20 px-2 py-1 rounded">ISO 3382</span>
+                    </div>
+                </a>
+                <!-- COP — Featured #3 -->
+                <a href="projekt-cop.html" class="group block animate-on-scroll delay-200">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-4 relative">
+                        <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/cop.webp" alt="NENI Restaurant C.O.P. Vienna"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 text-[10px] font-bold uppercase tracking-wider text-white bg-accent px-2.5 py-1 rounded-full">Case Study</span>
+                    </div>
+                    <h3 class="font-bold text-lg group-hover:text-accent transition-colors mb-1">NENI — C.O.P. Vienna</h3>
+                    <p class="text-xs text-text-muted-light dark:text-text-muted-dark mb-3 leading-relaxed">Gastronomieakustik im Hotelrestaurant — weniger Lärmpegel, bessere Sprachverständlichkeit und Abnahme inklusive.</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark px-2 py-1 rounded">Gastronomie</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-accent bg-accent/10 border border-accent/20 px-2 py-1 rounded">−36 % Nachhall</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-accent bg-accent/10 border border-accent/20 px-2 py-1 rounded">Abnahme ✓</span>
                     </div>
                 </a>
             </div>
@@ -163,6 +196,9 @@
                 <button data-filter="industrie" class="filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-border-light dark:border-border-dark text-text-muted-light dark:text-text-muted-dark hover:border-accent hover:text-accent transition-all">
                     Industrie
                 </button>
+                <button data-filter="büro" class="filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-border-light dark:border-border-dark text-text-muted-light dark:text-text-muted-dark hover:border-accent hover:text-accent transition-all">
+                    Büro
+                </button>
             </div>
 
             <!-- Grid -->
@@ -174,7 +210,8 @@
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/hypo-2.webp" alt="Hypo NOE"/>
                     </div>
                     <h3 class="font-bold text-sm mb-1">Hypo NOE</h3>
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Raumakustik</span>
+                    <p class="text-[11px] text-text-muted-light dark:text-text-muted-dark mb-1.5 leading-relaxed">Raumakustik-Optimierung Bürogebäude — Messung & Materialempfehlung.</p>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Raumakustik · Büro</span>
                 </div>
 
                 <!-- Achau -->
@@ -183,7 +220,8 @@
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/achau.webp" alt="Achau"/>
                     </div>
                     <h3 class="font-bold text-sm mb-1">Achau</h3>
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Bauakustik</span>
+                    <p class="text-[11px] text-text-muted-light dark:text-text-muted-dark mb-1.5 leading-relaxed">Bauakustische Beurteilung und Dokumentation Industrieanlage Niederösterreich.</p>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Bauakustik · Industrie</span>
                 </div>
 
                 <!-- Gödelgasse -->
@@ -192,7 +230,8 @@
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/gödelgasse-wohnzimmer.webp" alt="Gödelgasse"/>
                     </div>
                     <h3 class="font-bold text-sm mb-1">Gödelgasse</h3>
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Wohnbau</span>
+                    <p class="text-[11px] text-text-muted-light dark:text-text-muted-dark mb-1.5 leading-relaxed">Schallschutz & Raumakustik für Wohnumbau Wien — Luft- und Trittschalldämmung.</p>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Wohnbau · Bauakustik</span>
                 </div>
 
                 <!-- LongTone -->
@@ -201,6 +240,7 @@
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/longtone-1.webp" alt="LongTone"/>
                     </div>
                     <h3 class="font-bold text-sm mb-1">LongTone</h3>
+                    <p class="text-[11px] text-text-muted-light dark:text-text-muted-dark mb-1.5 leading-relaxed">Akustikoptimierung Musik- und Proberaum — Nachhallzeiten-Messung & Absorberplanung.</p>
                     <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Raumakustik</span>
                 </div>
 
@@ -210,7 +250,8 @@
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/hma-weinkeller-2.webp" alt="HMA Weinkeller"/>
                     </div>
                     <h3 class="font-bold text-sm mb-1">HMA Weinkeller</h3>
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Gastronomie</span>
+                    <p class="text-[11px] text-text-muted-light dark:text-text-muted-dark mb-1.5 leading-relaxed">Raumakustik Weinbar Wien — unauffällige Absorber für ein klanglich angenehmes Ambiente.</p>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Gastronomie · Raumakustik</span>
                 </div>
 
                 <!-- Coustiq HQ -->
@@ -219,7 +260,8 @@
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/coustiq-hq-2.webp" alt="Coustiq HQ"/>
                     </div>
                     <h3 class="font-bold text-sm mb-1">Coustiq HQ</h3>
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Raumakustik</span>
+                    <p class="text-[11px] text-text-muted-light dark:text-text-muted-dark mb-1.5 leading-relaxed">Unser eigenes Büro als Referenz — Raumakustik nach Maß, RT60 messbar optimiert.</p>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Raumakustik · Büro</span>
                 </div>
 
                 <!-- Schallschutzeinhausung -->
@@ -228,7 +270,8 @@
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/schallschutzeinhausung.webp" alt="Schallschutzeinhausung"/>
                     </div>
                     <h3 class="font-bold text-sm mb-1">Schallschutzeinhausung</h3>
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Bauakustik</span>
+                    <p class="text-[11px] text-text-muted-light dark:text-text-muted-dark mb-1.5 leading-relaxed">Maßgefertigte Kapselung einer Industriemaschine — Lärmpegelreduktion im laufenden Betrieb.</p>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Industrie · Bauakustik</span>
                 </div>
 
                 <!-- KWP -->
@@ -237,7 +280,8 @@
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/kwp-4.webp" alt="KWP"/>
                     </div>
                     <h3 class="font-bold text-sm mb-1">KWP</h3>
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Bauakustik</span>
+                    <p class="text-[11px] text-text-muted-light dark:text-text-muted-dark mb-1.5 leading-relaxed">Bauakustische Abnahmemessungen Gemeindebau Wien — Luft- und Trittschalldämmung nach ÖNORM.</p>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Wohnbau · Bauakustik</span>
                 </div>
 
                 <!-- Audio Electronic Messe -->
@@ -246,6 +290,7 @@
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/audio-electronic-messe-2.webp" alt="Audio Electronic Messe"/>
                     </div>
                     <h3 class="font-bold text-sm mb-1">Audio Electronic Messe</h3>
+                    <p class="text-[11px] text-text-muted-light dark:text-text-muted-dark mb-1.5 leading-relaxed">Raumakustik für eine Fachmesse — temporäre Lösungen für optimale Hörerfahrung.</p>
                     <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Raumakustik</span>
                 </div>
 
@@ -255,6 +300,7 @@
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/narv-2.webp" alt="Narv"/>
                     </div>
                     <h3 class="font-bold text-sm mb-1">Narv</h3>
+                    <p class="text-[11px] text-text-muted-light dark:text-text-muted-dark mb-1.5 leading-relaxed">Bauakustische Planung und Begleitung Gewerbeobjekt — Schallschutz zwischen Einheiten.</p>
                     <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Bauakustik</span>
                 </div>
 
@@ -264,7 +310,8 @@
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/thurner-thomas-1.webp" alt="Privatprojekt Wien"/>
                     </div>
                     <h3 class="font-bold text-sm mb-1">Privatprojekt Wien</h3>
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Wohnbau</span>
+                    <p class="text-[11px] text-text-muted-light dark:text-text-muted-dark mb-1.5 leading-relaxed">Schallschutz-Sanierung Einfamilienhaus Wien — Beratung, Planung und Abnahmemessung.</p>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Wohnbau · Schallschutz</span>
                 </div>
 
                 <!-- Privatprojekt Niederösterreich -->
@@ -273,17 +320,21 @@
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/zoubek-3.webp" alt="Privatprojekt Niederösterreich"/>
                     </div>
                     <h3 class="font-bold text-sm mb-1">Privatprojekt NÖ</h3>
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Wohnbau</span>
+                    <p class="text-[11px] text-text-muted-light dark:text-text-muted-dark mb-1.5 leading-relaxed">Schallschutzgutachten und Baubegleitung Wohnprojekt Niederösterreich — Normenkonform übergeben.</p>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Wohnbau · Schallschutz</span>
                 </div>
 
                 <!-- Heuriger Schüller -->
-                <div class="project-card" data-tags="raumakustik gastronomie">
-                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-3 group relative bg-gray-100 dark:bg-gray-900">
+                <a href="projekt-schüller.html" class="project-card group block" data-tags="raumakustik gastronomie">
+                    <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-3 relative bg-gray-100 dark:bg-gray-900">
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/heuriger-schüller-1.webp" alt="Heuriger Schüller"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <span class="absolute bottom-3 left-3 text-[10px] font-bold uppercase tracking-wider text-white bg-accent px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">Case Study</span>
                     </div>
-                    <h3 class="font-bold text-sm mb-1">Heuriger Schüller</h3>
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Gastronomie</span>
-                </div>
+                    <h3 class="font-bold text-sm mb-1 group-hover:text-accent transition-colors">Heuriger Schüller</h3>
+                    <p class="text-[11px] text-text-muted-light dark:text-text-muted-dark mb-1.5 leading-relaxed">Gastronomieakustik Wiener Heuriger — Raumakustik mit Charakter, Abnahme inklusive.</p>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-accent">Gastronomie · Raumakustik</span>
+                </a>
 
             </div>
 
@@ -309,15 +360,32 @@
                 <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </a>
         </div>
-        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase tracking-widest text-gray-500">
-            <a href="index.html" class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-accent text-xl">graphic_eq</span>
-                <span class="font-bold text-white text-base lowercase tracking-normal">coustiq.</span>
-            </a>
-            <p>© 2026 Alle Rechte vorbehalten.</p>
-            <div class="flex gap-8">
-                <a class="hover:text-white transition-colors" href="impressum.html">Impressum</a>
-                <a class="hover:text-white transition-colors" href="datenschutz.html">Datenschutz</a>
+        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10">
+            <div class="flex flex-col md:flex-row justify-between gap-4 mb-8 text-sm text-gray-400">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm text-accent">location_on</span>
+                    <span>Dörfelstraße 9, 1120 Wien</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm text-accent">phone</span>
+                    <a href="tel:+4366480788714" class="hover:text-white transition-colors">+43 664 807 887 14</a>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm text-accent">mail</span>
+                    <a href="mailto:office@coustiq.com" class="hover:text-white transition-colors">office@coustiq.com</a>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase tracking-widest text-gray-500">
+                <a href="index.html" class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-accent text-xl">graphic_eq</span>
+                    <span class="font-bold text-white text-base lowercase tracking-normal">coustiq.</span>
+                </a>
+                <p>© 2026 Alle Rechte vorbehalten.</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-white transition-colors" href="faq.html">FAQ</a>
+                    <a class="hover:text-white transition-colors" href="impressum.html">Impressum</a>
+                    <a class="hover:text-white transition-colors" href="datenschutz.html">Datenschutz</a>
+                </div>
             </div>
         </div>
     </section>

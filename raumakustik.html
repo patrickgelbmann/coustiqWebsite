@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="de">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Raumakustik Wien — Messung, Simulation & Planung | Coustiq</title>
+    <meta name="description" content="Raumakustische Messung, 3D-Simulation und Materialplanung nach ÖNORM B 8115-3 und ISO 3382 — für Büro, Gastronomie, Bildung und Industrie. Coustiq, Wien."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://coustiq.com/raumakustik.html"/>
+    <meta property="og:title" content="Raumakustik Wien — Messung, Simulation & Planung | Coustiq"/>
+    <meta property="og:description" content="Raumakustische Messung, 3D-Simulation und Planung nach ÖNORM B 8115-3 und ISO 3382 — von der Erstmessung bis zur Abnahme."/>
+    <meta property="og:image" content="src/assets/fullstack-marketer.webp"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <link rel="canonical" href="https://coustiq.com/raumakustik.html"/>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="icon" type="image/svg+xml" href="src/assets/logo-emblem.svg"/>
+    <link rel="stylesheet" href="src/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://coustiq.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://coustiq.com/leistungen.html" },
+          { "@type": "ListItem", "position": 3, "name": "Raumakustik", "item": "https://coustiq.com/raumakustik.html" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Raumakustik",
+        "description": "Raumakustische Messung, 3D-Simulation und Planung nach ÖNORM B 8115-3 und ISO 3382 — von der Erstmessung bis zur messtechnischen Abnahme.",
+        "provider": { "@type": "Organization", "name": "Coustiq OG", "url": "https://coustiq.com" },
+        "areaServed": "Österreich",
+        "url": "https://coustiq.com/raumakustik.html"
+      }
+    ]
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-2">
+        <div class="glassmorphism absolute inset-0 -z-10 transition-all duration-300 opacity-0" id="nav-bg"></div>
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
+            <a class="flex items-center" href="index.html">
+                <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
+                <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a class="text-text-light dark:text-text-dark hover:text-accent dark:hover:text-accent transition-colors" href="index.html#about">Über uns</a>
+                <a class="text-accent font-semibold" href="leistungen.html">Leistungen</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent dark:hover:text-accent transition-colors" href="referenzen.html">Projekte</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent dark:hover:text-accent transition-colors" href="index.html#team">Team</a>
+                <a class="flex items-center gap-1.5 hover:text-accent dark:hover:text-accent transition-colors" href="index.html#lyzer">
+                    <span class="text-text-light dark:text-text-dark">Lyzer</span>
+                    <span class="text-[9px] font-bold uppercase tracking-wider bg-accent/15 text-accent px-1.5 py-0.5 rounded-full leading-none">Beta</span>
+                </a>
+                <div class="w-px h-6 bg-border-light dark:bg-border-dark"></div>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark" aria-label="Toggle Dark Mode">
+                    <span id="theme-icon" class="material-symbols-outlined text-[20px]">dark_mode</span>
+                </button>
+                <a class="bg-primary dark:bg-white dark:text-primary text-white px-5 py-2.5 rounded-full hover:scale-105 transition-all shadow-md hover:shadow-lg text-sm font-semibold" href="index.html#contact">Projekt anfragen</a>
+            </div>
+            <div class="flex items-center gap-4 md:hidden">
+                <button id="theme-toggle-mobile" aria-label="Dark Mode umschalten" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark">
+                    <span id="theme-icon-mobile" class="material-symbols-outlined text-[20px]">dark_mode</span>
+                </button>
+                <button id="mobile-menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-surface-light dark:bg-surface-dark transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col">
+        <div class="p-6 flex justify-between items-center border-b border-border-light dark:border-border-dark">
+            <a class="flex items-center" href="index.html">
+                <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
+                <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
+            </a>
+            <button id="close-menu-btn" aria-label="Menü schließen" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="p-6 flex flex-col gap-6 text-xl font-medium overflow-y-auto no-scrollbar">
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="index.html#about">Über uns</a>
+            <a class="mobile-link text-accent font-semibold" href="leistungen.html">Leistungen</a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="referenzen.html">Projekte</a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="index.html#team">Team</a>
+            <a class="mobile-link flex items-center gap-2 text-text-light dark:text-text-dark hover:text-accent" href="index.html#lyzer">
+                Lyzer
+                <span class="text-[9px] font-bold uppercase tracking-wider bg-accent/15 text-accent px-1.5 py-0.5 rounded-full leading-none">Beta</span>
+            </a>
+            <hr class="border-border-light dark:border-border-dark my-4">
+            <a class="mobile-link bg-primary dark:bg-white text-center dark:text-primary text-white px-5 py-4 rounded-full transition-all shadow-md text-lg font-bold" href="index.html#contact">Projekt anfragen</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <header class="relative pt-44 pb-20 px-6 overflow-hidden border-b border-border-light dark:border-border-dark">
+        <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 dark:bg-accent/8 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+        <div class="absolute top-1/3 left-0 w-[400px] h-[400px] bg-primary/5 dark:bg-white/3 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto relative z-10 animate-on-scroll">
+            <div class="flex items-center gap-2 mb-6 flex-wrap">
+                <a href="leistungen.html" class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase hover:text-accent transition-colors">Leistungen</a>
+                <span class="text-text-muted-light dark:text-text-muted-dark text-xs">/</span>
+                <span class="text-[10px] font-bold tracking-widest text-accent uppercase">Raumakustik</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 max-w-4xl leading-tight">
+                Raumakustik.<br/>
+                <span class="underline-accent text-primary dark:text-white">Messbar. Planbar.</span>
+            </h1>
+            <p class="text-xl text-text-muted-light dark:text-text-muted-dark max-w-2xl leading-relaxed">
+                Zu laut, zu hallig, schlechte Sprachverständlichkeit — das sind lösbare Probleme. Wir messen, simulieren und planen raumakustische Lösungen nach ÖNORM B 8115-3 und ISO 3382. Von der Erstmessung bis zur Abnahme, alles aus einer Hand.
+            </p>
+            <div class="mt-10 flex flex-wrap gap-4">
+                <a href="index.html#contact" class="bg-primary dark:bg-white dark:text-primary text-white font-semibold px-7 py-3.5 rounded-full hover:scale-105 transition-all shadow-md text-sm flex items-center gap-2 group">
+                    Raumakustik anfragen
+                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                <a href="referenzen.html" class="border border-border-light dark:border-border-dark text-text-light dark:text-text-dark font-semibold px-7 py-3.5 rounded-full hover:border-accent hover:text-accent transition-all text-sm">
+                    Referenzprojekte ansehen
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Key metrics -->
+    <section class="py-12 px-6 bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 animate-on-scroll">
+            <div class="text-center px-6 py-5 rounded-2xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark">
+                <p class="text-3xl font-bold text-accent">−58 %</p>
+                <p class="text-[11px] uppercase tracking-wider font-bold text-text-muted-light dark:text-text-muted-dark mt-1">RT60-Reduktion<br/>(Wieselthaler)</p>
+            </div>
+            <div class="text-center px-6 py-5 rounded-2xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark">
+                <p class="text-3xl font-bold text-accent">−36 %</p>
+                <p class="text-[11px] uppercase tracking-wider font-bold text-text-muted-light dark:text-text-muted-dark mt-1">RT60-Reduktion<br/>(COP Vienna)</p>
+            </div>
+            <div class="text-center px-6 py-5 rounded-2xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark">
+                <p class="text-3xl font-bold text-accent">ISO 3382</p>
+                <p class="text-[11px] uppercase tracking-wider font-bold text-text-muted-light dark:text-text-muted-dark mt-1">Messpräzision<br/>nach Norm</p>
+            </div>
+            <div class="text-center px-6 py-5 rounded-2xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark">
+                <p class="text-3xl font-bold text-accent">100 %</p>
+                <p class="text-[11px] uppercase tracking-wider font-bold text-text-muted-light dark:text-text-muted-dark mt-1">Abnahme-<br/>messung inklusive</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What we do -->
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-12 animate-on-scroll">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border-light dark:border-border-dark mb-4 bg-surface-light dark:bg-surface-dark">
+                    <span class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase">Leistungsumfang</span>
+                </div>
+                <h2 class="text-4xl font-bold text-primary dark:text-white mt-2 max-w-2xl leading-tight">Was Raumakustik bei uns bedeutet.</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:border-accent/30 hover:shadow-lg transition-all duration-400 animate-on-scroll">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-6">
+                        <span class="material-symbols-outlined text-2xl">analytics</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-3">Raumakustikmessung</h3>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed">Messung von Nachhallzeiten (RT60, T20, T30), Schalldruckpegeln und Sprachverständlichkeit (STIPA) nach ISO 3382 und ÖNORM B 8115-3. Vollständige Messketten-Dokumentation inklusive.</p>
+                </div>
+                <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:border-accent/30 hover:shadow-lg transition-all duration-400 animate-on-scroll delay-100">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-6">
+                        <span class="material-symbols-outlined text-2xl">3d_rotation</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-3">3D-Raumsimulation</h3>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed">Ray-Tracing-Simulation auf Basis realer Raumgeometrien und Materialeigenschaften — für präzise Prognosen vor dem Einbau. Das Ergebnis ist hörbar, bevor auch nur ein Absorber montiert ist.</p>
+                </div>
+                <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:border-accent/30 hover:shadow-lg transition-all duration-400 animate-on-scroll delay-200">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-6">
+                        <span class="material-symbols-outlined text-2xl">equalizer</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-3">Frequenzanalyse</h3>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed">Breitbandige Analyse von Oktav- und Terzspektren identifiziert kritische Frequenzbereiche und ermöglicht zielgerichtete Maßnahmen — statt Absorber auf Verdacht.</p>
+                </div>
+                <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:border-accent/30 hover:shadow-lg transition-all duration-400 animate-on-scroll delay-100">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-6">
+                        <span class="material-symbols-outlined text-2xl">texture</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-3">Materialberatung & Selektion</h3>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed">Wir empfehlen Absorber, Diffusoren und akustisch wirksame Oberflächenmaterialien — nach Absorptionsgrad, Brandschutzklasse, Ästhetik und Budget. Produkte, die wir empfehlen, haben wir messtechnisch bewertet.</p>
+                </div>
+                <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:border-accent/30 hover:shadow-lg transition-all duration-400 animate-on-scroll delay-200">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-6">
+                        <span class="material-symbols-outlined text-2xl">design_services</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-3">Akustische Zonierung</h3>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed">Besonders in Großraumbüros und Gastronomie planen wir akustische Zonen — ruhige Arbeitsbereiche, kommunikationsfreundliche Zonen und diskrete Besprechungsbereiche, ohne bauliche Trennung.</p>
+                </div>
+                <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:border-accent/30 hover:shadow-lg transition-all duration-400 animate-on-scroll delay-300">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-6">
+                        <span class="material-symbols-outlined text-2xl">verified</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-3">Abnahmemessung & Bericht</h3>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed">Jedes Projekt endet mit einer messtechnischen Abnahme und einem vollständigen Prüfbericht nach ÖNORM B 8115-3 — als Nachweis für Auftraggeber, Planer und Behörden.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="py-24 px-6 bg-surface-light dark:bg-surface-dark border-t border-border-light dark:border-border-dark overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-20">
+            <div class="w-full lg:w-1/2 relative animate-on-scroll">
+                <div class="absolute -top-10 -left-10 w-48 h-48 bg-accent/10 rounded-full blur-3xl -z-10"></div>
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5]">
+                    <img loading="lazy" class="w-full h-full object-cover" alt="Raumakustik Messung Wien" src="src/assets/fullstack-marketer.webp"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 glassmorphism rounded-xl p-5">
+                        <p class="text-xs font-bold uppercase tracking-wider text-white/60 mb-2">Messpräzision</p>
+                        <p class="text-white font-bold text-lg leading-snug">Nachhallzeiten, STIPA und Frequenzspektren — kalibriert, reproduzierbar, normgerecht.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 animate-on-scroll delay-200">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border-light dark:border-border-dark mb-6 bg-background-light dark:bg-background-dark">
+                    <span class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase">Ablauf</span>
+                </div>
+                <h2 class="text-4xl font-bold text-primary dark:text-white mt-4 mb-10 leading-tight">Von der Diagnose zur messbaren Lösung.</h2>
+                <div class="space-y-10">
+                    <div class="flex gap-6 group">
+                        <span class="font-bold text-4xl text-accent/20 group-hover:text-accent/40 transition-colors flex-shrink-0 w-12">01</span>
+                        <div>
+                            <h4 class="font-bold text-xl text-text-light dark:text-text-dark mb-2">Bestandsmessung</h4>
+                            <p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed">Wir messen RT60, Schalldruckpegel und STIPA im Bestand — auch an mehreren Messpunkten. Das Ergebnis ist eine präzise Bestandsaufnahme: Wo liegt das Problem, wie schwer ist es, und in welchen Frequenzbereichen?</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 group">
+                        <span class="font-bold text-4xl text-accent/20 group-hover:text-accent/40 transition-colors flex-shrink-0 w-12">02</span>
+                        <div>
+                            <h4 class="font-bold text-xl text-text-light dark:text-text-dark mb-2">Simulation & Konzept</h4>
+                            <p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed">Auf Basis der Messung erstellen wir ein Raummodell und simulieren Lösungsszenarien in 3D. Sie sehen den Effekt verschiedener Maßnahmen — und entscheiden auf Basis von Daten, nicht Bauchgefühl.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 group">
+                        <span class="font-bold text-4xl text-accent/20 group-hover:text-accent/40 transition-colors flex-shrink-0 w-12">03</span>
+                        <div>
+                            <h4 class="font-bold text-xl text-text-light dark:text-text-dark mb-2">Planung & Koordination</h4>
+                            <p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed">Materialauswahl, Detailplanung, Abstimmung mit Architekten und Ausführenden — wir liefern alles, was für die reibungslose Umsetzung notwendig ist, inklusive normgerechter Dokumentation.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 group">
+                        <span class="font-bold text-4xl text-accent/20 group-hover:text-accent/40 transition-colors flex-shrink-0 w-12">04</span>
+                        <div>
+                            <h4 class="font-bold text-xl text-text-light dark:text-text-dark mb-2">Abnahmemessung</h4>
+                            <p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed">Nach Fertigstellung messen wir erneut — und dokumentieren alle erreichten Kennwerte im Abschlussbericht. Transparent, nachvollziehbar, ÖNORM-konform.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Norms & Standards -->
+    <section class="py-20 px-6 border-t border-border-light dark:border-border-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-10 animate-on-scroll">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border-light dark:border-border-dark mb-4 bg-surface-light dark:bg-surface-dark">
+                    <span class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase">Normen & Standards</span>
+                </div>
+                <h2 class="text-4xl font-bold text-primary dark:text-white mt-2 max-w-xl leading-tight">Planungssicherheit durch normgerechte Messung.</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 animate-on-scroll">
+                <div class="p-8 rounded-2xl bg-primary text-white border border-primary">
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-accent text-2xl">menu_book</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-lg">ÖNORM B 8115-3</p>
+                            <p class="text-white/60 text-xs uppercase tracking-wider">Schallschutz und Raumakustik</p>
+                        </div>
+                    </div>
+                    <p class="text-white/80 text-sm leading-relaxed">Österreichische Norm für raumakustische Anforderungen nach Nutzungsart — Büros, Schulen, Gastronomie, Veranstaltungsräume. Definiert Zielwerte für Nachhallzeiten und Sprachverständlichkeit, nach denen wir messen und planen.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark">
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-accent text-2xl">menu_book</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-lg text-text-light dark:text-text-dark">ISO 3382</p>
+                            <p class="text-text-muted-light dark:text-text-muted-dark text-xs uppercase tracking-wider">Akustik in Räumen</p>
+                        </div>
+                    </div>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed">Internationale Norm für die Messung von Raumakustikparametern — Nachhallzeit (T20, T30, EDT), Klarheitsmaß (C80), Deutlichkeit (D50) und Sprachübertragungsindex (STIPA). Grundlage für alle unsere messtechnischen Verfahren.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark">
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-accent text-2xl">menu_book</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-lg text-text-light dark:text-text-dark">OIB-Richtlinie 5</p>
+                            <p class="text-text-muted-light dark:text-text-muted-dark text-xs uppercase tracking-wider">Schallschutz</p>
+                        </div>
+                    </div>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed">Österreichische Bautechnikrichtlinie für Schallschutz — relevant für Baugenehmigungen und die Widmungskonformität von Wohn- und Zweckbauten. Unsere Planungsleistungen sind auf die OIB-RL5-Anforderungen abgestimmt.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark">
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-accent text-2xl">menu_book</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-lg text-text-light dark:text-text-dark">ISO 10534-2</p>
+                            <p class="text-text-muted-light dark:text-text-muted-dark text-xs uppercase tracking-wider">Materialprüfung Impedanzrohr</p>
+                        </div>
+                    </div>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed">Norm für die Messung von Absorptionsgraden mit dem Impedanzrohr. Mit unserem hauseigenen Messaufbau können wir Absorptionsmaterialien vor dem Einbau messtechnisch prüfen und vergleichen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application areas -->
+    <section class="py-20 px-6 bg-surface-light dark:bg-surface-dark border-t border-border-light dark:border-border-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-10 animate-on-scroll">
+                <h2 class="text-4xl font-bold text-primary dark:text-white max-w-xl leading-tight">Typische Anwendungsbereiche.</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 animate-on-scroll">
+                <div class="group p-5 rounded-2xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-md transition-all text-center flex flex-col items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-xl">business_center</span>
+                    </div>
+                    <p class="text-sm font-semibold text-text-light dark:text-text-dark">Büro & Großraum</p>
+                </div>
+                <div class="group p-5 rounded-2xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-md transition-all text-center flex flex-col items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-xl">restaurant</span>
+                    </div>
+                    <p class="text-sm font-semibold text-text-light dark:text-text-dark">Gastronomie</p>
+                </div>
+                <div class="group p-5 rounded-2xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-md transition-all text-center flex flex-col items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-xl">school</span>
+                    </div>
+                    <p class="text-sm font-semibold text-text-light dark:text-text-dark">Schulen & Bildung</p>
+                </div>
+                <div class="group p-5 rounded-2xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-md transition-all text-center flex flex-col items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-xl">mic</span>
+                    </div>
+                    <p class="text-sm font-semibold text-text-light dark:text-text-dark">Tonstudio & Heimkino</p>
+                </div>
+                <div class="group p-5 rounded-2xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-md transition-all text-center flex flex-col items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-xl">factory</span>
+                    </div>
+                    <p class="text-sm font-semibold text-text-light dark:text-text-dark">Industrie</p>
+                </div>
+                <div class="group p-5 rounded-2xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-md transition-all text-center flex flex-col items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-xl">stadium</span>
+                    </div>
+                    <p class="text-sm font-semibold text-text-light dark:text-text-dark">Konzertsaal & Bühne</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case study teasers -->
+    <section class="py-20 px-6 border-t border-border-light dark:border-border-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-12 animate-on-scroll">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border-light dark:border-border-dark mb-4 bg-surface-light dark:bg-surface-dark">
+                    <span class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase">Referenzprojekte</span>
+                </div>
+                <h2 class="text-4xl font-bold text-primary dark:text-white mt-2 max-w-xl leading-tight">Raumakustik in der Praxis.</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="projekt-cop.html" class="group relative rounded-2xl overflow-hidden border border-border-light dark:border-border-dark hover:shadow-2xl transition-all duration-500 animate-on-scroll">
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <img loading="lazy" src="src/assets/cop.webp" alt="NENI Restaurant COP Vienna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-accent/20 text-accent px-2.5 py-1 rounded-full">Gastronomie</span>
+                        <h3 class="text-white font-bold text-base mt-2 mb-1">NENI Restaurant — C.O.P. Vienna</h3>
+                        <p class="text-white/70 text-xs">RT60 −36 %, ÖNORM B 8115-3 konform</p>
+                    </div>
+                </a>
+                <a href="projekt-wieselthaler.html" class="group relative rounded-2xl overflow-hidden border border-border-light dark:border-border-dark hover:shadow-2xl transition-all duration-500 animate-on-scroll delay-100">
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <img loading="lazy" src="src/assets/wieselthaler-aufenthaltsraum.webp" alt="Wieselthaler Aufenthaltsraum" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-accent/20 text-accent px-2.5 py-1 rounded-full">Sozialbau</span>
+                        <h3 class="text-white font-bold text-base mt-2 mb-1">Wieselthaler Aufenthaltsraum</h3>
+                        <p class="text-white/70 text-xs">RT60 von 1,4 s → 0,6 s (−58 %)</p>
+                    </div>
+                </a>
+                <a href="projekt-schüller.html" class="group relative rounded-2xl overflow-hidden border border-border-light dark:border-border-dark hover:shadow-2xl transition-all duration-500 animate-on-scroll delay-200">
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <img loading="lazy" src="src/assets/heuriger-schüller-1.webp" alt="Heuriger Schüller Wien" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5">
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-accent/20 text-accent px-2.5 py-1 rounded-full">Gastronomie</span>
+                        <h3 class="text-white font-bold text-base mt-2 mb-1">Heuriger Schüller Wien</h3>
+                        <p class="text-white/70 text-xs">Atmosphäre & Sprachverständlichkeit</p>
+                    </div>
+                </a>
+            </div>
+            <div class="mt-8 text-center animate-on-scroll">
+                <a href="referenzen.html" class="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:gap-3 transition-all group">
+                    Alle Referenzprojekte ansehen
+                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA + Footer -->
+    <section class="bg-[#0a0f0f] text-white py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center animate-on-scroll">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6">
+                <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                <span class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Ihr nächstes Projekt</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Raum für bessere<br/><span class="text-accent">Akustik?</span>
+            </h2>
+            <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+                Schildern Sie uns Ihre Situation — wir liefern eine erste Einschätzung und ein konkretes Angebot. Unverbindlich, schnell, präzise.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="index.html#contact" class="bg-accent text-primary font-bold px-8 py-4 rounded-full hover:scale-105 transition-all shadow-lg hover:shadow-accent/30 flex items-center gap-2 group">
+                    Raumakustik anfragen
+                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                <a href="leistungen.html" class="bg-white/10 text-white font-bold px-8 py-4 rounded-full hover:bg-white/20 transition-all border border-white/10 backdrop-blur-sm">
+                    Alle Leistungen ansehen
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10">
+            <div class="flex flex-col md:flex-row justify-between gap-4 mb-8 text-sm text-gray-400">
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-accent">location_on</span><span>Dörfelstraße 9, 1120 Wien</span></div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-accent">phone</span><a href="tel:+4366480788714" class="hover:text-white transition-colors">+43 664 807 887 14</a></div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-accent">mail</span><a href="mailto:office@coustiq.com" class="hover:text-white transition-colors">office@coustiq.com</a></div>
+            </div>
+            <div class="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase tracking-widest text-gray-500">
+                <a href="index.html" class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-xl">graphic_eq</span><span class="font-bold text-white text-base lowercase tracking-normal">coustiq.</span></a>
+                <p>© 2026 Alle Rechte vorbehalten.</p>
+                <div class="flex gap-8"><a class="hover:text-white transition-colors" href="faq.html">FAQ</a>
+                    <a class="hover:text-white transition-colors" href="impressum.html">Impressum</a><a class="hover:text-white transition-colors" href="datenschutz.html">Datenschutz</a></div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>

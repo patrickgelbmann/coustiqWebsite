@@ -44,12 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openMenu() {
         mobileMenu.classList.remove('translate-x-full');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
+        document.body.style.overflow = 'hidden';
+        if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'true');
     }
 
     function closeMenu() {
         mobileMenu.classList.add('translate-x-full');
         document.body.style.overflow = '';
+        if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'false');
     }
 
     if(mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMenu);

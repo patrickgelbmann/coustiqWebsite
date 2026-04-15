@@ -3,16 +3,18 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Coustiq. — Ingenieurbüro für Akustik</title>
+    <title>Akustik-Ingenieurbüro Wien — Raumakustik & Schallschutz | Coustiq</title>
     <meta name="description" content="Coustiq ist Ihr Ingenieurbüro für Bauakustik, Raumakustik und Schallimmissionsschutz. Präzise Planung, zertifizierte Gutachten, messbare Qualität."/>
 
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://coustiq.com/"/>
-    <meta property="og:title" content="Coustiq. — Ingenieurbüro für Akustik"/>
+    <meta property="og:title" content="Akustik-Ingenieurbüro Wien — Raumakustik & Schallschutz | Coustiq"/>
     <meta property="og:description" content="Präzise raumakustische Planung und schalltechnische Gutachten für Gebäude, die genauso gut klingen, wie sie aussehen."/>
     <meta property="og:image" content="src/assets/fullstack-marketer.webp"/>
     <meta name="twitter:card" content="summary_large_image"/>
+    <link rel="canonical" href="https://coustiq.com/"/>
+    <link rel="preload" as="image" href="src/assets/fullstack-marketer.webp"/>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png"/>
@@ -20,8 +22,71 @@
     <link rel="apple-touch-icon" href="/favicon.png"/>
 
     <link rel="stylesheet" href="src/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Schema.org: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Coustiq OG",
+      "alternateName": "Coustiq",
+      "description": "Ingenieurbüro für Akustik in Wien — Raumakustik, Bauakustik, Schallimmissionsschutz und akustische Gutachten für Architekten, Bauherren und Industrieunternehmen in Österreich.",
+      "url": "https://coustiq.com",
+      "telephone": "+4366480788714",
+      "email": "office@coustiq.com",
+      "foundingDate": "2018",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dörfelstraße 9",
+        "addressLocality": "Wien",
+        "postalCode": "1120",
+        "addressCountry": "AT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.1841,
+        "longitude": 16.3404
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Wien" },
+        { "@type": "AdministrativeArea", "name": "Niederösterreich" },
+        { "@type": "AdministrativeArea", "name": "Steiermark" },
+        { "@type": "Country", "name": "Österreich" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Akustik-Leistungen",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Raumakustik", "url": "https://coustiq.com/leistungen.html#raumakustik" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bauakustik & Schallschutz", "url": "https://coustiq.com/leistungen.html#schallschutz" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Schallimmissionsschutz", "url": "https://coustiq.com/leistungen.html#schallimmissionsschutz" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Materialprüfung / Impedanzrohr", "url": "https://coustiq.com/leistungen.html#impedanzrohr" } }
+        ]
+      },
+      "employee": [
+        {
+          "@type": "Person",
+          "name": "Patrick Gelbmann",
+          "jobTitle": "Toningenieur & Co-Founder"
+        },
+        {
+          "@type": "Person",
+          "name": "Bernd Gelbmann",
+          "jobTitle": "Co-Founder & CEO"
+        }
+      ],
+      "sameAs": []
+    }
+    </script>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
 
@@ -52,10 +117,10 @@
             </div>
             
             <div class="flex items-center gap-4 md:hidden">
-                 <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark">
+                 <button id="theme-toggle-mobile" aria-label="Dark Mode umschalten" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark">
                     <span id="theme-icon-mobile" class="material-symbols-outlined text-[20px]">dark_mode</span>
                 </button>
-                <button id="mobile-menu-btn" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
+                <button id="mobile-menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
@@ -68,7 +133,7 @@
                 <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
                 <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
             </a>
-            <button id="close-menu-btn" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
+            <button id="close-menu-btn" aria-label="Menü schließen" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
                 <span class="material-symbols-outlined">close</span>
             </button>
         </div>
@@ -100,7 +165,7 @@
 
             <div class="w-full max-w-3xl mb-12 relative animate-on-scroll delay-200">
                 <div class="rounded-2xl overflow-hidden shadow-2xl aspect-[21/9] relative group border border-border-light dark:border-border-dark">
-                    <img alt="Coustiq Akustikprojekt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="src/assets/fullstack-marketer.webp"/>
+                    <img alt="Coustiq Akustikprojekt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="src/assets/fullstack-marketer.webp" loading="eager" fetchpriority="high"/>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                     
                     <div class="absolute bottom-4 right-4 bg-white/10 backdrop-blur-md px-4 py-3 rounded-xl shadow-lg flex items-center gap-3 border border-white/20 hover:-translate-y-1 transition-transform cursor-default">
@@ -116,8 +181,8 @@
             </div>
             
             <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight">
-                Stille ist kein Zufall.<br class="hidden sm:block"/>
-                <span class="underline-accent text-primary dark:text-white">Akustik ist planbar.</span>
+                Akustik, die<br class="hidden sm:block"/>
+                <span class="underline-accent text-primary dark:text-white">messbar funktioniert.</span>
             </h1>
             
             <p class="text-lg lg:text-xl text-text-muted-light dark:text-text-muted-dark mb-10 max-w-2xl leading-relaxed">
@@ -217,7 +282,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <a href="leistungen.html#raumakustik" class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:shadow-xl hover:-translate-y-1 hover:border-accent/50 transition-all duration-300 group cursor-pointer animate-on-scroll block">
+                <a href="raumakustik.html" class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:shadow-xl hover:-translate-y-1 hover:border-accent/50 transition-all duration-300 group cursor-pointer animate-on-scroll block">
                     <div class="w-14 h-14 rounded-xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark flex items-center justify-center text-primary dark:text-white group-hover:bg-accent group-hover:text-primary transition-colors mb-6 group-hover:scale-110">
                         <span class="material-symbols-outlined text-3xl">graphic_eq</span>
                     </div>
@@ -230,7 +295,7 @@
                     </div>
                 </a>
 
-                <a href="leistungen.html#schallschutz" class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:shadow-xl hover:-translate-y-1 hover:border-accent/50 transition-all duration-300 group cursor-pointer animate-on-scroll delay-100 block">
+                <a href="schallschutz.html" class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:shadow-xl hover:-translate-y-1 hover:border-accent/50 transition-all duration-300 group cursor-pointer animate-on-scroll delay-100 block">
                     <div class="w-14 h-14 rounded-xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark flex items-center justify-center text-primary dark:text-white group-hover:bg-accent group-hover:text-primary transition-colors mb-6 group-hover:scale-110">
                         <span class="material-symbols-outlined text-3xl">layers</span>
                     </div>
@@ -243,7 +308,7 @@
                     </div>
                 </a>
 
-                <a href="leistungen.html#schallimmissionsschutz" class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:shadow-xl hover:-translate-y-1 hover:border-accent/50 transition-all duration-300 group cursor-pointer animate-on-scroll delay-200 block">
+                <a href="schallimmissionsschutz.html" class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:shadow-xl hover:-translate-y-1 hover:border-accent/50 transition-all duration-300 group cursor-pointer animate-on-scroll delay-200 block">
                     <div class="w-14 h-14 rounded-xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark flex items-center justify-center text-primary dark:text-white group-hover:bg-accent group-hover:text-primary transition-colors mb-6 group-hover:scale-110">
                         <span class="material-symbols-outlined text-3xl">radar</span>
                     </div>
@@ -375,14 +440,18 @@
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <div class="bg-surface-light dark:bg-surface-dark rounded-3xl overflow-hidden border border-border-light dark:border-border-dark shadow-soft group flex flex-col sm:flex-row animate-on-scroll">
                     <div class="sm:w-2/5 aspect-square sm:aspect-auto overflow-hidden relative">
-                        <img loading="lazy" alt="Patrick, Akustikplaner und Lead Architect bei Coustiq" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="src/assets/patrick-coustiq.webp"/>
+                        <img loading="lazy" alt="Patrick Gelbmann, Toningenieur bei Coustiq" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="src/assets/patrick-coustiq.webp"/>
                         <div class="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-700"></div>
                     </div>
                     <div class="p-8 sm:w-3/5 flex flex-col justify-center">
                         <h3 class="text-2xl font-bold mb-1">Patrick Gelbmann</h3>
-                        <p class="text-accent text-xs font-bold uppercase tracking-widest mb-4">Co-Founder & CTO</p>
+                        <p class="text-accent text-xs font-bold uppercase tracking-widest mb-3">Toningenieur & Co-Founder</p>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-widest bg-surface-light dark:bg-background-dark border border-border-light dark:border-border-dark px-2 py-1 rounded-full text-text-muted-light dark:text-text-muted-dark">MSc TU Graz</span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest bg-surface-light dark:bg-background-dark border border-border-light dark:border-border-dark px-2 py-1 rounded-full text-text-muted-light dark:text-text-muted-dark">AES Member</span>
+                        </div>
                         <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed mb-6">
-                            MSc Toningenieur (TU Graz) mit 8+ Jahren Branchenerfahrung. Patrick verantwortet Messung, akustische Simulation und Planung — und entwickelt die Software-Tools, die Coustiq intern und als Produkt einsetzt. Zuvor leitete er F&amp;E-Projekte internationaler Technologieunternehmen bis zur Patentierung.
+                            Toningenieur mit Fokus auf Raumakustik, Messung und Simulation. Patrick verantwortet die akustische Fachplanung — von der Erstmessung über die 3D-Simulation bis zur Abnahmemessung. Daneben entwickelt er Lyzer, das digitale Akustik-Tool von Coustiq.
                         </p>
                         <div class="flex gap-3 mt-auto">
                             <a href="#" class="w-8 h-8 rounded-full border border-border-light dark:border-border-dark flex items-center justify-center text-text-muted-light hover:text-primary dark:hover:text-white hover:border-primary dark:hover:border-white transition-colors">
@@ -394,14 +463,18 @@
 
                 <div class="bg-surface-light dark:bg-surface-dark rounded-3xl overflow-hidden border border-border-light dark:border-border-dark shadow-soft group flex flex-col sm:flex-row animate-on-scroll delay-100">
                     <div class="sm:w-2/5 aspect-square sm:aspect-auto overflow-hidden relative">
-                        <img loading="lazy" alt="Bernd, Geschäftsführer und Head of Engineering bei Coustiq" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="src/assets/bernd-coustiq.webp"/>
+                        <img loading="lazy" alt="Bernd Gelbmann, Geschäftsführer bei Coustiq" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="src/assets/bernd-coustiq.webp"/>
                         <div class="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-700"></div>
                     </div>
                     <div class="p-8 sm:w-3/5 flex flex-col justify-center">
                         <h3 class="text-2xl font-bold mb-1">Bernd Gelbmann</h3>
-                        <p class="text-accent text-xs font-bold uppercase tracking-widest mb-4">Co-Founder & CEO</p>
+                        <p class="text-accent text-xs font-bold uppercase tracking-widest mb-3">Co-Founder & CEO</p>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-widest bg-surface-light dark:bg-background-dark border border-border-light dark:border-border-dark px-2 py-1 rounded-full text-text-muted-light dark:text-text-muted-dark">Projektleitung</span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest bg-surface-light dark:bg-background-dark border border-border-light dark:border-border-dark px-2 py-1 rounded-full text-text-muted-light dark:text-text-muted-dark">Industrie</span>
+                        </div>
                         <p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed mb-6">
-                            25+ Jahre in technischem Vertrieb und Projektleitung. Bernd führt Projekte vom ersten Gespräch bis zur fertigen Umsetzung — mit einem starken Netzwerk, dem Blick für Design und echter Kundennähe.
+                            Langjährige Erfahrung in technischem Vertrieb und Projektleitung in der Industrie. Bernd kennt die Anforderungen von Bauherren, Planern und Industriebetrieben aus erster Hand — und führt Projekte von der ersten Anfrage bis zur Abnahmemessung verlässlich zu Ende.
                         </p>
                         <div class="flex gap-3 mt-auto">
                             <a href="#" class="w-8 h-8 rounded-full border border-border-light dark:border-border-dark flex items-center justify-center text-text-muted-light hover:text-primary dark:hover:text-white hover:border-primary dark:hover:border-white transition-colors">
@@ -479,7 +552,7 @@
                         <!-- Coming Soon Placeholder -->
                         <div class="aspect-[4/3] relative overflow-hidden bg-[#0a0f0f]">
                             <!-- blurred background screenshot -->
-                            <img src="src/assets/Lyzer_screenshot.webp" alt="" class="absolute inset-0 w-full h-full object-cover object-top opacity-20 blur-sm scale-105" aria-hidden="true"/>
+                            <img src="src/assets/Lyzer_screenshot.webp" alt="" class="absolute inset-0 w-full h-full object-cover object-top opacity-20 blur-sm scale-105" aria-hidden="true" loading="lazy"/>
                             <!-- overlay content -->
                             <div class="absolute inset-0 flex flex-col items-center justify-center gap-6 p-8">
                                 <div class="w-14 h-14 rounded-2xl bg-accent/15 border border-accent/30 flex items-center justify-center">
@@ -571,9 +644,9 @@
                     <div class="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-2xl transform translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-700"></div>
                     <div class="flex items-center justify-between mb-4 relative z-10">
                         <div class="text-6xl font-extrabold text-primary tracking-tighter">100<span class="text-white">%</span></div>
-                        <span class="material-symbols-outlined text-4xl text-primary/30">thumb_up</span>
+                        <span class="material-symbols-outlined text-4xl text-primary/30">verified</span>
                     </div>
-                    <div class="text-sm font-bold uppercase tracking-widest text-primary/80 relative z-10">Zufriedene Kunden</div>
+                    <div class="text-sm font-bold uppercase tracking-widest text-primary/80 relative z-10">Abnahmemessung inklusive</div>
                 </div>
 
                 <div class="bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-2xl hover:bg-white/10 transition-colors animate-on-scroll delay-200">
@@ -594,13 +667,13 @@
                     <span class="material-symbols-outlined">format_quote</span>
                 </div>
                 <p class="text-xl md:text-2xl italic font-medium leading-relaxed mb-8 text-text-light dark:text-text-dark mt-4">
-                    "Coustiq hat bewiesen, dass herausragende Akustik kein Kompromiss in der Architektur sein muss. Die unsichtbaren, in die Decken integrierten Lösungen haben unser Konzerthaus-Projekt auf ein ganz neues Level gehoben."
+                    „Unsere Gäste haben die Akustik bemängelt — bei klarer Vorgabe, das Designkonzept nicht anzutasten. Coustiq hat das perfekt gelöst: dezente Deckenintegration, optisch unsichtbar und akustisch spürbar. Wir spielen wieder Musik, und Gespräche beim Essen sind wieder angenehm."
                 </p>
                 <div class="flex items-center justify-center gap-4">
-                    <img loading="lazy" alt="Prof. Dr. Johannes Bergmann" class="w-12 h-12 rounded-full object-cover border-2 border-border-light dark:border-border-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3nc7JXtLfOI6CK_ENIotkWTU9KRfKb4aa0wAY5ZVBaLhXAFGeYFbJ1Y4JIOS_ZvwB-SphA-ZzJU9k4-Pm0ParK-Jq4vbvN629xBp4yRCyF-tasfGOvY_Ggs5n-_H9--NCdyMpX3e5i60tcIAqNgHPYJPEqPlsmHSS5ABj2-_9JC_0JfCyb70rgHot0Ee7F0FZFI8Unxuiogtm50N94effUqsQANxzoY1u94tG9BYPtTY0qOvl0AplLYVEKmn4M7NSo2-GDwdw2Ua2"/>
+                    <div class="w-12 h-12 rounded-full bg-accent text-primary flex items-center justify-center font-bold text-sm border-2 border-border-light dark:border-border-dark shrink-0">EB</div>
                     <div class="text-left">
-                        <h4 class="font-bold text-sm">Prof. Dr. Johannes Bergmann</h4>
-                        <p class="text-[10px] text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mt-0.5">Lead Architect, Studio OMA</p>
+                        <h4 class="font-bold text-sm">Elihay Berliner</h4>
+                        <p class="text-[10px] text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mt-0.5">Gründer, C.O.P. Vienna</p>
                     </div>
                 </div>
             </div>
@@ -620,12 +693,12 @@
                     <div class="grid sm:grid-cols-2 gap-6 mb-6">
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2" for="cf-name">Name *</label>
-                            <input id="cf-name" name="name" type="text" required placeholder="Max Mustermann"
+                            <input id="cf-name" name="name" type="text" required placeholder="Ihr Name"
                                 class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors text-sm" />
                         </div>
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2" for="cf-email">E-Mail *</label>
-                            <input id="cf-email" name="email" type="email" required placeholder="max@beispiel.at"
+                            <input id="cf-email" name="email" type="email" required placeholder="name@unternehmen.at"
                                 class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors text-sm" />
                         </div>
                         <div>
@@ -634,46 +707,66 @@
                                 class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors text-sm" />
                         </div>
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2" for="cf-subject">Bereich</label>
-                            <select id="cf-subject" name="subject"
+                            <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2" for="cf-subject">Projektbereich *</label>
+                            <select id="cf-subject" name="subject" required
                                 class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors text-sm appearance-none cursor-pointer">
                                 <option value="" class="bg-primary">Bitte wählen ...</option>
-                                <option value="Bauakustik" class="bg-primary">Bauakustik</option>
                                 <option value="Raumakustik" class="bg-primary">Raumakustik</option>
+                                <option value="Bauakustik / Schallschutz" class="bg-primary">Bauakustik / Schallschutz</option>
                                 <option value="Schallimmissionsschutz" class="bg-primary">Schallimmissionsschutz</option>
+                                <option value="Industrieakustik" class="bg-primary">Industrieakustik</option>
+                                <option value="Gutachten" class="bg-primary">Gutachten / Fachgutachten</option>
                                 <option value="Sonstiges" class="bg-primary">Sonstiges</option>
                             </select>
                         </div>
                     </div>
                     <div class="mb-8">
-                        <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2" for="cf-message">Nachricht *</label>
-                        <textarea id="cf-message" name="message" required rows="5" placeholder="Beschreiben Sie Ihr Projekt kurz ..."
+                        <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2" for="cf-message">Projektbeschreibung *</label>
+                        <textarea id="cf-message" name="message" required rows="5" placeholder="Beschreiben Sie Ihr Projekt kurz — Projekttyp, Raumgröße, Zeitrahmen ..."
                             class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors text-sm resize-none"></textarea>
                     </div>
 
                     <div id="cf-feedback" class="hidden mb-6 px-4 py-3 rounded-xl text-sm font-medium"></div>
 
                     <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                        <p class="text-xs text-gray-500">* Pflichtfelder — Ihre Daten werden vertraulich behandelt.</p>
+                        <div>
+                            <p class="text-xs text-gray-500">* Pflichtfelder — Ihre Daten werden vertraulich behandelt.</p>
+                            <p class="text-xs text-gray-600 mt-1">Wir melden uns innerhalb von 1 Werktag.</p>
+                        </div>
                         <button type="submit" id="cf-submit"
                             class="flex items-center gap-2 bg-accent text-primary font-bold px-8 py-4 rounded-xl hover:bg-white hover:-translate-y-1 transition-all duration-300 shadow-[0_0_20px_rgba(69,200,166,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] text-sm whitespace-nowrap">
-                            <span id="cf-submit-text">Anfrage senden</span>
+                            <span id="cf-submit-text">Projekt besprechen</span>
                             <span id="cf-submit-icon" class="material-symbols-outlined text-sm">send</span>
                         </button>
                     </div>
                 </form>
             </div>
 
-            <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase tracking-widest text-gray-500">
-                <div class="flex items-center">
-                    <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-7 w-auto"/>
+            <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10">
+                <div class="flex flex-col md:flex-row justify-between gap-4 mb-8 text-sm text-gray-400">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm text-accent">location_on</span>
+                        <span>Dörfelstraße 9, 1120 Wien</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm text-accent">phone</span>
+                        <a href="tel:+4366480788714" class="hover:text-white transition-colors">+43 664 807 887 14</a>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm text-accent">mail</span>
+                        <a href="mailto:office@coustiq.com" class="hover:text-white transition-colors">office@coustiq.com</a>
+                    </div>
                 </div>
-                
-                <p>© 2026 Alle Rechte vorbehalten.</p>
-                
-                <div class="flex gap-8">
+                <div class="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase tracking-widest text-gray-500">
+                    <div class="flex items-center">
+                        <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-7 w-auto"/>
+                    </div>
+                    <p>© 2026 Alle Rechte vorbehalten.</p>
+                    <div class="flex gap-8">
+                        <a class="hover:text-white transition-colors" href="faq.html">FAQ</a>
                     <a class="hover:text-white transition-colors" href="impressum.html">Impressum</a>
-                    <a class="hover:text-white transition-colors" href="datenschutz.html">Datenschutz</a>
+                        <a class="hover:text-white transition-colors" href="datenschutz.html">Datenschutz</a>
+                    </div>
                 </div>
             </div>
         </div>
