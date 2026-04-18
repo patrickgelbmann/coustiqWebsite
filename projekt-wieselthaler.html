@@ -56,10 +56,7 @@
                 <a class="text-text-light dark:text-text-dark hover:text-accent dark:hover:text-accent transition-colors" href="index.html#services">Leistungen</a>
                 <a class="text-accent font-semibold" href="index.html#projects">Projekte</a>
                 <a class="text-text-light dark:text-text-dark hover:text-accent dark:hover:text-accent transition-colors" href="index.html#team">Team</a>
-                <a class="flex items-center gap-1.5 hover:text-accent dark:hover:text-accent transition-colors" href="index.html#lyzer">
-                    <span class="text-text-light dark:text-text-dark">Lyzer</span>
-                    <span class="text-[9px] font-bold uppercase tracking-wider bg-accent/15 text-accent px-1.5 py-0.5 rounded-full leading-none">Beta</span>
-                </a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent dark:hover:text-accent transition-colors" href="https://lyzer.coustiq.com" target="_blank" rel="noopener">Lyzer</a>
                 <div class="w-px h-6 bg-border-light dark:bg-border-dark"></div>
                 <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark" aria-label="Toggle Dark Mode">
                     <span id="theme-icon" class="material-symbols-outlined text-[20px]">dark_mode</span>
@@ -93,10 +90,7 @@
             <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="index.html#services">Leistungen</a>
             <a class="mobile-link text-accent font-semibold" href="index.html#projects">Projekte</a>
             <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="index.html#team">Team</a>
-            <a class="mobile-link flex items-center gap-2 text-text-light dark:text-text-dark hover:text-accent" href="index.html#lyzer">
-                Lyzer
-                <span class="text-[9px] font-bold uppercase tracking-wider bg-accent/15 text-accent px-1.5 py-0.5 rounded-full leading-none">Beta</span>
-            </a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="https://lyzer.coustiq.com" target="_blank" rel="noopener">Lyzer</a>
             <hr class="border-border-light dark:border-border-dark my-4">
             <a class="mobile-link bg-primary dark:bg-white text-center dark:text-primary text-white px-5 py-4 rounded-full transition-all shadow-md text-lg font-bold" href="index.html#contact">Projekt anfragen</a>
         </div>
@@ -194,9 +188,9 @@
                 <div class="bg-surface-light dark:bg-surface-dark rounded-2xl border border-border-light dark:border-border-dark overflow-hidden">
                     <div class="aspect-[4/3] overflow-hidden relative group">
                         <img loading="lazy"
-                            alt="Wieselthaler Besprechungsraum — Akustikpaneele Detail"
+                            alt="Wieselthaler Aufenthaltsraum — Resonanzabsorber-Decke"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                            src="src/assets/wieselthaler-besprechungsraum.webp"
+                            src="src/assets/wieselthaler-aufenthaltsraum.webp"
                         />
                     </div>
                     <div class="p-8">
@@ -233,11 +227,27 @@
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border-light dark:border-border-dark mb-10 bg-surface-light dark:bg-surface-dark">
                 <span class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase">Bildergalerie</span>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+            <!-- Aufenthaltsraum -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
                 <div class="md:col-span-2 rounded-2xl overflow-hidden aspect-[16/10] group">
-                    <img loading="lazy" alt="Wieselthaler Aufenthaltsraum — Gesamtansicht" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/wieselthaler-aufenthaltsraum.webp"/>
+                    <img loading="lazy" alt="Wieselthaler Aufenthaltsraum — Gesamtansicht mit Resonanzabsorber-Decke" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/wieselthaler-aufenthaltsraum.webp"/>
                 </div>
-                <div class="rounded-2xl overflow-hidden aspect-[16/10] md:aspect-auto group">
+                <div class="rounded-2xl overflow-hidden aspect-[16/10] md:aspect-auto group bg-accent/10 dark:bg-accent/5 border border-accent/20 flex flex-col items-center justify-center p-8 text-center">
+                    <span class="material-symbols-outlined text-4xl text-accent mb-3">verified</span>
+                    <h4 class="font-bold text-text-light dark:text-text-dark mb-1">Normkonform</h4>
+                    <p class="text-xs text-text-muted-light dark:text-text-muted-dark leading-relaxed">Alle Zielwerte nach ÖNORM B 8115-3 nachweislich erreicht und dokumentiert.</p>
+                </div>
+            </div>
+
+            <!-- Further rooms -->
+            <div class="flex items-center gap-4 mb-6">
+                <span class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase">Weitere behandelte Räume</span>
+                <div class="flex-1 h-px bg-border-light dark:bg-border-dark"></div>
+                <span class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase">Besprechungs- & Schulungsräume</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="rounded-2xl overflow-hidden aspect-[16/10] group">
                     <img loading="lazy" alt="Wieselthaler Besprechungsraum" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/wieselthaler-besprechungsraum.webp"/>
                 </div>
                 <div class="rounded-2xl overflow-hidden aspect-[16/10] group">
@@ -245,11 +255,6 @@
                 </div>
                 <div class="rounded-2xl overflow-hidden aspect-[16/10] group">
                     <img loading="lazy" alt="Wieselthaler Schulungsraum Detail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/wieselthaler-schulungsraum-2.webp"/>
-                </div>
-                <div class="rounded-2xl overflow-hidden aspect-[16/10] group bg-accent/10 dark:bg-accent/5 border border-accent/20 flex flex-col items-center justify-center p-8 text-center">
-                    <span class="material-symbols-outlined text-4xl text-accent mb-3">verified</span>
-                    <h4 class="font-bold text-text-light dark:text-text-dark mb-1">Normkonform</h4>
-                    <p class="text-xs text-text-muted-light dark:text-text-muted-dark leading-relaxed">Alle Zielwerte nach ÖNORM B 8115-3 nachweislich erreicht und dokumentiert.</p>
                 </div>
             </div>
         </section>
@@ -333,7 +338,7 @@
                 </div>
                 <div class="flex items-center gap-2">
                     <span class="material-symbols-outlined text-sm text-accent">phone</span>
-                    <a href="tel:+4366480788714" class="hover:text-white transition-colors">+43 664 807 887 14</a>
+                    <a href="tel:+436648474040" class="hover:text-white transition-colors">+43 664 847 4040</a>
                 </div>
                 <div class="flex items-center gap-2">
                     <span class="material-symbols-outlined text-sm text-accent">mail</span>
