@@ -2,6 +2,19 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  plugins: [
+    {
+      name: 'remove-css-crossorigin',
+      enforce: 'post',
+      transformIndexHtml(html) {
+        // Safari stalls on CORS-mode CSS requests when the server doesn't return
+        // Access-Control-Allow-Origin. CSS links don't need crossorigin for
+        // same-origin assets — only <script type="module"> requires it.
+        return html.replace(/<link rel="stylesheet" crossorigin href/g,
+                            '<link rel="stylesheet" href');
+      },
+    },
+  ],
   build: {
     rollupOptions: {
       input: {
