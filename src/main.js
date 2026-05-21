@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function toggleTheme() {
         html.classList.toggle('dark');
         if (html.classList.contains('dark')) {
-            localStorage.theme = 'dark';
+            try { localStorage.theme = 'dark'; } catch (_) {}
             updateIcons('light_mode');
         } else {
-            localStorage.theme = 'light';
+            try { localStorage.theme = 'light'; } catch (_) {}
             updateIcons('dark_mode');
         }
     }
