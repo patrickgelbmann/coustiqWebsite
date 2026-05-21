@@ -100,6 +100,19 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // Safari bug: IntersectionObserver doesn't fire for elements already in the
+    // viewport at observe() time. Manually reveal any that are already visible.
+    requestAnimationFrame(() => {
+        animatableElements.forEach(el => {
+            const r = el.getBoundingClientRect();
+            if (r.top < window.innerHeight && r.bottom > 0) {
+                el.classList.add('opacity-100', 'translate-y-0');
+                el.classList.remove('opacity-0', 'translate-y-12');
+                observer.unobserve(el);
+            }
+        });
+    });
+
     // --- 5. Contact Form ---
     const FORM_ENDPOINT = 'https://api.web3forms.com/submit';
     const FORM_ACCESS_KEY = 'be5df1d5-6c44-4a3a-96b4-f372a8c40b0f';
