@@ -65,6 +65,7 @@ Jede unbekannte URL liefert die Startseite mit Status 200 (Soft-404). Google hat
 - [ ] Google-Profil-URL in `sameAs` ergänzen, sobald H4 steht
 
 ### H4 — Google-Unternehmensprofil · Risiko 🟢 (außerhalb der Website) → Paket: [docs/google-business-profile.md](docs/google-business-profile.md)
+> **Zurückgestellt 2026-09-25:** Marketing-Themen (Google-Profil, LinkedIn, später Instagram, Verzeichnis-Einträge) sollen in einen eigenen Ordner `C:\Python\Coustiq\Marketing\` (je Kanal ein Unterordner + zentrale Stammdaten-Datei für Name/Adresse/Telefon/Kurztexte). Dort dann: Schritt-für-Schritt-Anleitung als HTML (mit Kopier-Buttons) und Google-taugliche JPG-Exporte der Projektfotos (WebP wird von Google nicht angenommen; Privatkunden-Fotos nicht verwenden). Das Paket `docs/google-business-profile.md` zieht dann dorthin um.
 - [ ] Profil prüfen/anlegen, Kategorien, Fotos, Leistungen; Bewertungen aktiv einholen (nach jeder Abnahmemessung)
 
 ### H5 — Leistungsseiten ausbauen (500 → 1.000–1.500 Wörter) · Risiko 🟢
