@@ -1,0 +1,48 @@
+# Cloudflare Pages redirects — Altlasten der früheren WordPress-Seite (Stand 2026-09).
+# Nur URLs mit inhaltlicher Entsprechung werden umgeleitet; Shop-, Theme-Demo- und
+# Blog-Platzhalter-URLs liefern bewusst 404 (siehe 404.html), damit Google sie entfernt.
+# Quelle der alten URLs: Wayback-Machine-CDX für coustiq.com.
+# Sobald /wissen existiert (ROADMAP H6), die Wissens-Redirects auf die Artikel umhängen.
+# Bestehende Seiten mit Trailing Slash (/raumakustik/, /impressum/ …) leitet Pages selbst um.
+
+# Kontakt & Über uns
+/kontakt                                   /#contact                 301
+/kontakt/                                  /#contact                 301
+/contact-us/                               /#contact                 301
+/request-quote/                            /#contact                 301
+/ueberuns                                  /#about                   301
+/ueberuns/                                 /#about                   301
+/about/                                    /#about                   301
+/services/                                 /leistungen               301
+
+# Projekte / Referenzen
+/referenz-projekte                         /referenzen               301
+/referenz-projekte/                        /referenzen               301
+/projects/                                 /referenzen               301
+/category/projekte/                        /referenzen               301
+/heuriger-schueller                        /projekt-sch%C3%BCller    301
+/heuriger-schueller/                       /projekt-sch%C3%BCller    301
+/akustikdecke-im-freizeitraum              /projekt-wieselthaler     301
+/akustikdecke-im-freizeitraum/             /projekt-wieselthaler     301
+/longtone-showroom/                        /referenzen               301
+/besprechungsraum-firma-pristusek/         /referenzen               301
+/weinkeller/                               /referenzen               301
+/schalldaemmung-oberlaa/                   /referenzen               301
+
+# Wissen / Fachbeiträge (vorläufig auf passende Leistungsseite)
+/faq-items/*                               /faq                      301
+/faqs/                                     /faq                      301
+/faq_category/*                            /faq                      301
+/raumakustik-in-der-gastronomie/           /gastronomie              301
+/category/gastronomie/                     /gastronomie              301
+/raumakustik-in-der-theorie/               /raumakustik              301
+/raumakustik-und-die-gesundheit/           /raumakustik              301
+/wissenswertes-zum-thema-raumakustik/      /raumakustik              301
+/wissenswertes/                            /raumakustik              301
+/category/wissenswertes/*                  /raumakustik              301
+/tag/nachhall/                             /raumakustik              301
+/din-18041/                                /raumakustik              301
+/stroemungswiderstand/                     /raumakustik              301
+/schall/                                   /raumakustik              301
+/schalldaemmung-fuer-mehr-wohlbefinden/    /schallschutz             301
+/category/schalldaemmung/                  /schallschutz             301

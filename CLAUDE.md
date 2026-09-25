@@ -6,12 +6,18 @@ Stack: **Vite + Tailwind CSS v4 + Vanilla JS** — kein React, kein Framework.
 
 ## Struktur
 ```
-index.html          — Einzige HTML-Seite (Single Page, Anchor-Navigation)
+*.html              — Multi-Page: Startseite, Leistungen, Detailseiten, Zielgruppen, Case Studies, 404
+                      (jede neue Seite in vite.config.js → rollupOptions.input eintragen)
 src/style.css       — Tailwind + Custom Properties (CSS vars für Theme)
-src/main.js         — Vanilla JS: Dark Mode, Mobile Menu, Scroll-Animationen
+src/main.js         — Vanilla JS: Dark Mode, Mobile Menu, Scroll-Animationen, Kontaktformular
 src/assets/         — Statische Assets
-public/             — Direkt kopierte Assets (favicon etc.)
+public/             — Direkt kopierte Assets (favicon, og/, _redirects, _headers, sitemap.xml)
 ```
+
+## Links & URLs (Cloudflare Pages)
+- Interne Links immer root-absolut ohne `.html`: `/leistungen`, `/#contact`, `/`
+- Canonical/og:url/JSON-LD: `https://coustiq.com/<seite>` ohne `.html`
+- Neue Seite → auch in `public/sitemap.xml` eintragen; entfernte Seite → 301 in `public/_redirects`
 
 ## Seiten-Abschnitte (Anchor-IDs)
 | ID         | Inhalt                        |

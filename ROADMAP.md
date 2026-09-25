@@ -1,279 +1,136 @@
-# ROADMAP — Coustiq Website
+# ROADMAP — Coustiq Website (SEO- & Design-Audit 2026-09)
+
+_Erstellt: 2026-09-25 auf Basis eines Audits der **Live-Seite** coustiq.com.
+Vorgänger (Aufbau-Phase bis Launch): [docs/archive/ROADMAP-2026-04.md](docs/archive/ROADMAP-2026-04.md)_
+
+**Ausgangslage:** Lighthouse Mobile Perf 95 / SEO 100, Desktop 100/100 — Geschwindigkeit ist kein Thema.
+Die Probleme sind strukturell (URLs, Duplikate, Soft-404) und inhaltlich (dünne Seiten, Slogan-H1s).
+
+## Risiko-Legende
+
+| Stufe | Bedeutung |
+|---|---|
+| 🟢 niedrig | additiv oder trivial rückgängig zu machen; kein sichtbarer Effekt bei Fehler |
+| 🟡 mittel | berührt viele Dateien oder das Routing; Fehler wären sichtbar (kaputter Link, Layout), aber per Revert sofort behebbar |
+| 🔴 hoch | viele visuelle Stellen gleichzeitig oder schwer testbar; eigener Branch + Preview-Deploy Pflicht |
+
+**Ranking-Risiko** ist separat angegeben: Titel/H1/URL-Änderungen können Rankings für 2–6 Wochen schwanken lassen.
 
 ---
 
-## Phase 1: Grundstruktur & Funktionalität ✅
-- [x] Hero-Sektion mit Bild, Headline, CTA
-- [x] Über uns (About) Sektion
-- [x] Leistungen (3 Karten: Bauakustik, Raumakustik, Schallimmissionsschutz)
-- [x] Projekte / Referenzen (dunkle Sektion, 3 Featured Cards)
-- [x] Dark Mode Toggle (Desktop + Mobile)
-- [x] Mobile Menü (Fullscreen Slide-in)
-- [x] Navbar Scroll-Effekt (Glassmorphism)
-- [x] Scroll-Animationen (Intersection Observer)
-- [x] Team-Sektion — Patrick (CTO) + Bernd (CEO) mit echten Fotos
-- [x] Kontaktformular — Web3Forms eingebunden
+## K — Kritisch: technische SEO (reiner Code, keine Inhaltsentscheidungen)
+
+### K1 — Clean URLs überall · Risiko 🟡 mittel · Ranking-Risiko 🟢
+Cloudflare Pages leitet `*.html` per 308 auf `/seite` um, aber Canonicals, `og:url`, Sitemap, Schema.org und alle internen Links zeigen noch auf `.html`.
+- [ ] Alle internen Links root-absolut ohne `.html` (`/leistungen`, `/#contact`, `/`)
+- [ ] Canonical + `og:url` + JSON-LD-URLs auf Clean URLs
+- [ ] `sitemap.xml` auf Clean URLs + `lastmod`
+- **Warum mittel:** ~400 Link-Stellen in 17 Dateien, mechanisch per Skript. Absicherung: Linkcheck gegen `dist/` + `vite preview`.
+
+### K2 — www → Apex-Redirect · Risiko 🟢 niedrig · Ranking-Risiko 🟢
+`www.coustiq.com` und `coustiq.com` liefern beide 200; Google indexiert www, Canonical sagt Apex.
+- [ ] Cloudflare Dashboard → Rules → Redirect Rule: `www.coustiq.com/*` → `https://coustiq.com/${1}` (301, Query behalten) — **manuell durch Patrick**
+- [ ] Danach Search Console: Domain-Property prüfen, Sitemap neu einreichen
+- **Warum niedrig:** eine Regel, per Klick deaktivierbar. Einziges Risiko: Redirect-Loop bei Fehlkonfiguration → direkt nach Anlage mit `curl -I` prüfen.
+
+### K3 — Echte 404-Seite + Redirects für alte WordPress-URLs · Risiko 🟡 mittel · Ranking-Risiko 🟢
+Jede unbekannte URL liefert die Startseite mit Status 200 (Soft-404). Google hat noch alte WP-URLs im Index (`/kontakt/`, `/faq-items/…`, `/shop-sidebar/` …).
+- [ ] `404.html` (noindex, Navigation + Links zu Leistungen/Referenzen/Kontakt)
+- [ ] `public/_redirects`: inhaltlich passende alte URLs → 301 auf neue Seiten (Liste aus Wayback-CDX); Demo-/Shop-Reste bewusst 404
+- **Warum mittel:** Mit `404.html` endet der „alles zeigt die Startseite"-Fallback. Jeder Link, der heute nur zufällig funktioniert (alte Drucksachen, QR-Codes, Signaturen), zeigt danach 404 → vorher gegen bekannte Links prüfen.
+
+### K4 — OG-/Social-Vorschau · Risiko 🟢 niedrig · Ranking-Risiko 🟢
+- [ ] `og:image` / `twitter:image` als absolute URL (`https://coustiq.com/...`)
+- [ ] Eigenes 1200×630 OG-Bild (ohne Fremdlogo) statt `fullstack-marketer.webp` auf 7 Seiten
+- **Warum niedrig:** betrifft nur Meta-Tags, keine sichtbare Seite.
 
 ---
 
-## Phase 2: Assets & Branding ✅
-- [x] Echtes Logo — SVG mit türkisen Balken (`logo-dark.svg`, `logo-white.svg`, `logo-emblem.svg`)
-- [x] Favicon — `public/favicon.png` + SVG-Icon
-- [x] Hero-Bild — `fullstack-marketer.webp`
-- [x] About-Bild — `wieselthaler-aufenthaltsraum.webp`
-- [x] Logo-Marquee — 9 echte Referenz-Logos
-- [x] Alle Projektfotos lokal — 42 `.webp`-Dateien in `src/assets/`
-- [x] SEO: `<meta description>` + OG-Tags auf allen Seiten
-- [ ] **Impressum + Datenschutz** — Inhalte rechtlich prüfen lassen
+## H — Hoch: Inhalte & interne Verlinkung (braucht Input von Coustiq)
+
+### H1 — Keyword-H1s · Risiko 🟢 technisch · Ranking-Risiko 🟡
+- [ ] H1 = Suchbegriff + Ort, Slogan wird Subline (z. B. „Raumakustik in Wien — messbar geplant")
+- [ ] Referenzen-H1 ist Duplikat der Startseiten-H2 → eigene H1
+- Seitenweise Vorschläge vorbereiten, Freigabe durch Patrick/Bernd
+
+### H2 — Interne Verlinkung · Risiko 🟢
+- [ ] Startseite: Block „Für wen wir arbeiten" → Architekten / Bauträger / Industrie / Gastronomie
+- [ ] Footer: Spalten Leistungen + Zielgruppen + Projekte
+- [ ] Case Studies verlinken auf Detailseiten (`/raumakustik`) statt `leistungen#anker`
+
+### H3 — Schema.org vervollständigen · Risiko 🟢
+- [ ] `sameAs` (LinkedIn, Google-Unternehmensprofil, WKO, firmenabc), `logo`, `image`
+- [ ] Article: `datePublished`, `image`; OfferCatalog-URLs auf Detailseiten
+- Validierung: Google Rich Results Test
+
+### H4 — Google-Unternehmensprofil · Risiko 🟢 (außerhalb der Website)
+- [ ] Profil prüfen/anlegen, Kategorien, Fotos, Leistungen; Bewertungen aktiv einholen (nach jeder Abnahmemessung)
+
+### H5 — Leistungsseiten ausbauen (500 → 1.000–1.500 Wörter) · Risiko 🟢
+- [ ] Je Seite: Kostenrahmen, Dauer, Beispiel-Messergebnis, 3–4 seitenspezifische FAQs (+ FAQPage-Schema)
+- Reihenfolge: Raumakustik → Schallschutz → Schallimmissionsschutz → Zielgruppenseiten
+
+### H6 — Wissensbereich `/wissen` · Risiko 🟢 (rein additiv)
+- [ ] Alte WP-Themen neu aufsetzen: DIN 18041, Schröderfrequenz, Absorptionsgrad, Strömungswiderstand, Raumakustik in der Gastronomie, Raumakustik & Gesundheit
+- [ ] Redirects aus K3 danach auf die neuen Artikel umhängen
+- [ ] Querverlinkung zu Lyzer (Rechner) und Leistungsseiten
+
+### H7 — Weitere Case Studies · Risiko 🟢
+- [ ] 4 von 13 Projekten haben eine eigene Seite — nächste Kandidaten mit Messwerten auswählen
 
 ---
 
-## Phase 3: Seitenstruktur ✅
-- [x] `leistungen.html` — Bento-Grid aller Leistungen + Prozesssektion
-- [x] `referenzen.html` — filterbarer Grid (Alle / Raumakustik / Bauakustik / Gastronomie / Wohnbau / Industrie)
-- [x] `projekt-wieselthaler.html` — Featured Detailseite
-- [x] `projekt-schüller.html` — Featured Detailseite
-- [x] `projekt-evva.html` — Featured Detailseite
-- [x] Navigation durchgängig verdrahtet (alle Links aktiv)
-- [ ] **Projekttexte finalisieren** — echte Beschreibungen, Kennwerte, Jahre für alle 3 Detailseiten
+## M — Mittel: Performance, Recht, Aufräumen
+
+### M1 — Material Symbols durch Inline-SVG ersetzen · Risiko 🔴 hoch · Ranking-Risiko 🟢
+Google-CDN-Iconfont = 1,1 MB (größte Einzeldatei) + IP-Übermittlung an Google (DSGVO).
+- [ ] Verwendete Icons inventarisieren, als SVG-Sprite einbinden, CDN-Links entfernen
+- [ ] Datenschutz-Absatz „Google Fonts" danach streichen
+- **Warum hoch:** Icons auf allen 17 Seiten, Light + Dark Mode, Mobile-Menü, FAQ-Accordion (JS tauscht Icons). Nur mit Preview-Deploy und Seiten-für-Seiten-Sichtprüfung.
+
+### M2 — Bilder responsiv · Risiko 🟡 mittel
+- [ ] `srcset`/`sizes` + `width`/`height` für Content-Bilder; `wieselthaler-aufenthaltsraum.webp` (1,1 MB) neu komprimieren
+- **Warum mittel:** `width/height` kann Seitenverhältnisse bei `object-cover`-Containern verändern.
+
+### M3 — Datenschutz ergänzen · Risiko 🟢
+- [ ] Web3Forms (Kontaktformular) und Cloudflare (Hosting/CDN, E-Mail-Schutz) als Auftragsverarbeiter nennen
+
+### M4 — Barrierefreiheit · Risiko 🟢
+- [ ] Footer-Kontrast (#6a7282 auf Dunkel = 2,9:1 → ≥ 4,5:1)
+- [ ] Heading-Reihenfolge (h4 ohne h3)
+
+### M5 — Umlaut-URL `/projekt-schüller` → `/projekt-schueller` · Risiko 🟡 mittel · Ranking-Risiko 🟡
+- [ ] Datei umbenennen, 301 von alter URL; Redirect-Match mit Nicht-ASCII-Pfad auf Cloudflare vorher testen
+
+### M6 — Aufräumen · Risiko 🟢
+- [ ] `projekt-detail.html` (Vorlage, nicht im Build) und `stitch template/` entfernen oder nach `docs/` verschieben
+- [ ] `CLAUDE.md` aktualisieren (beschreibt noch Single-Page)
 
 ---
 
-## Phase 4: Lyzer-Integration
-- [x] Nav-Eintrag "Lyzer" mit Beta-Badge (Desktop + Mobile)
-- [x] Lyzer-Section (`#lyzer`) als Placeholder
-- [x] Lyzer als Leistungskarte auf `leistungen.html` eingebunden
-- [ ] App-Screenshot einbauen
-- [ ] CTA-Button auf echte URL setzen
-- [ ] Entscheiden: Embed (iframe) oder externer Link?
+## D — Design (kleine Eingriffe)
 
----
-
-## Phase 5: Inhalte verfeinern
-- [x] Wieselthaler Galerie: alle 4 Fotos eingebaut
-- [x] "Weitere Projekte"-Links auf allen 3 Detailseiten korrekt verdrahtet
-- [x] Dead links in Projekt-Detailseiten beseitigt
-- [ ] Projekt-Kategorien in `referenzen.html` überprüfen und ggf. korrigieren
-- [ ] Private Kunden im Grid: echte Namen oder anonymisieren?
-- [ ] **About-Sektion: Standort / Adresse ergänzen** ← wartet auf Input
-- [ ] **About-Sektion: Gründungsjahr bestätigen** (aktuell "Seit 2018") ← wartet auf Input
-- [ ] **Team: LinkedIn-URLs für Patrick und Bernd** ← wartet auf Input
-- [ ] Weitere COP-Fotos für Galerie ← wartet auf Fotos
-- [ ] Foto vom Impedanzrohr für Materialprüfungs-Karte (`leistungen.html#impedanzrohr`) ← wartet auf Foto
-
----
-
-## Phase 6: SEO & Qualität
-- [ ] OG-Bilder: eigene Vorschaubilder pro Seite (aktuell generische Fotos)
-- [ ] Performance: `loading="lazy"` auf alle Bilder unterhalb des Folds
-- [ ] Accessibility: ARIA-Labels, Keyboard-Navigation, Kontrastprüfung
-- [ ] Cross-Browser Testing (Chrome, Firefox, Safari, Edge)
-- [ ] Mobile Testing (iOS, Android)
-
----
-
-## Phase 7: Launch
-- [ ] `npm run build` → `dist/`-Ordner prüfen
-- [ ] Domain + Hosting einrichten
-- [ ] Analytics einbinden (Matomo oder Plausible — kein Google Analytics)
-- [ ] Kontaktformular Bestätigungsmail testen (Web3Forms)
-- [ ] Impressum + Datenschutz rechtlich finalisieren
-
----
-
-## Backlog / Ideen
-- Akustik-Visualisierung / Animation im Hero
-- Interaktiver Vorher/Nachher-Vergleich (Schallpegel)
-- Blog / Wissensartikel zu Akustik-Themen
-- Mehrsprachigkeit (DE/EN)
-- Kundenstimmen / Testimonials-Sektion
-- Downloadbereich (Referenzliste PDF, Norm-Übersicht)
-
----
-
----
-
-# AUDIT-UMSETZUNG — Coustiq Website
-_Basis: Vollständiger UX/SEO/Conversion-Audit vom 2026-04-14_
-_Ziel: Qualifizierte B2B-Projektanfragen, Vertrauensaufbau, organische Sichtbarkeit in Österreich_
-
----
-
-## A1 — Quick Wins ✅ abgeschlossen
-
-### A1.1 — Statistiken korrigieren und vereinheitlichen ✅
-- [x] `leistungen.html` — „500+" auf „150+" korrigiert (konsistent mit `index.html`)
-- [x] `index.html` — „100% Zufriedene Kunden" → „100% Abnahmemessung inklusive" (Icon: thumb_up → verified)
-
-### A1.2 — EVVA Meta-Description korrigieren ✅
-- [x] `projekt-evva.html` — Title + Meta-Description + OG korrigiert auf Industrieakustik/Produktionshalle
-- [x] Neuer Title: „EVVA Produktionshalle — Industrieakustik Wien | Coustiq."
-- [x] Neue Description: „Industrieakustik in der EVVA Produktionshalle Wien — Dauerschallpegel um 3,66 dB gesenkt, Nachhallzeit 2,5-fach reduziert. TRLV-3 konform."
-
-### A1.3 — OG-Image auf Homepage ✅ kein Handlungsbedarf
-- [x] `fullstack-marketer.webp` ist ein echtes Projektfoto — Fullstack Marketer, eine Marketing-Agentur, die ihr Tonstudio akustisch behandeln ließ
-- [ ] **Projekt zur `referenzen.html` hinzufügen** (← auf Fotos + Details warten): Tonstudio / Raumakustik, Auftraggeber: Fullstack Marketer
-
-### A1.4 — Testimonial ersetzen ✅
-- [x] Ersetzt durch echtes Zitat von Elihay Berliner, Gründer C.O.P. Vienna
-- [x] Avatar: Initialen-Placeholder „EB" (kein Foto vorhanden)
-- [ ] Optional: Foto von Elihay Berliner einbauen sobald verfügbar
-
-### A1.5 — Lyzer in Navigation ✅ kein Handlungsbedarf
-- [x] Lyzer ist kurz vor Launch — Beta-Label ist nur während Entwicklung. Bleibt in Nav.
-
-### A1.6 — Footer mit Kontaktdaten ergänzen ✅
-- [x] Alle 9 Seiten — Adresse, Telefon (klickbar), E-Mail in Footer eingefügt
-- [x] Konsistentes Design: Dark Footer (7 Seiten) + Light Footer (Impressum, Datenschutz)
-
-### A1.7 — Click-to-Call auf mobilen Geräten ✅
-- [x] Telefonnummer im Footer auf allen Seiten als `tel:+436691224957` verlinkt
-
----
-
-## A2 — Kurzfristige Optimierungen ✅ abgeschlossen
-
-### A2.1 — Sitemap.xml und Robots.txt ✅
-- [x] `public/sitemap.xml` angelegt — alle 9 Seiten mit Priorities (1.0 / 0.9 / 0.8 / 0.7 / 0.2)
-- [x] `public/robots.txt` angelegt — `User-agent: * Allow: /` + Sitemap-Verweis
-- [ ] Sitemap in Google Search Console einreichen (nach Launch)
-
-### A2.2 — Google Fonts selbst hosten ✅
-- [x] Inter Variable + Manrope Variable (Latin) als woff2 in `public/fonts/`
-- [x] `@font-face` mit `font-display: swap` in `style.css` (nach `@import "tailwindcss"`)
-- [x] Google Fonts CDN-Links für Inter/Manrope aus allen 16 HTML-Dateien entfernt
-- [ ] Material Symbols Outlined — noch CDN (Icon-Subsetting erforderlich, separater Schritt)
-
-### A2.3 — Team-Qualifikationen ausbauen ✅
-- [x] Patrick: Titel → „Toningenieur & Co-Founder", Badges „MSc TU Graz" + „AES Member", Bio überarbeitet
-- [x] Bernd: Badges „Projektleitung" + „Industrie", Bio neu formuliert — industrieller Background als Kompetenz-Signal
-- [ ] LinkedIn-URLs für Patrick und Bernd eintragen sobald verfügbar
-
-### A2.4 — Hero-Bereich überarbeiten ✅
-- [x] Headline: „Stille ist kein Zufall. Akustik ist planbar." → **„Akustik, die messbar funktioniert."** — Akzent auf „messbar funktioniert."
-- [x] Hero-Bild: `fullstack-marketer.webp` bleibt (Tonstudio-Projekt, Option C)
-- [ ] **Option B — Split-Layout (Foto rechts / Text links)** für spätere Adaption (im Code kommentiert)
-- [ ] Trust-Badge erweitern: „ÖNORM B 8115-3 · ISO 3382 · Seit 2018 · Wien"
-
-### A2.5 — Seitentitel optimieren ✅
-- [x] `index.html` → „Akustik-Ingenieurbüro Wien — Raumakustik & Schallschutz | Coustiq"
-- [x] `leistungen.html` → „Raumakustik, Schallschutz & Schallimmissionsschutz — Leistungen | Coustiq"
-- [x] `referenzen.html` → „Akustik-Projekte & Referenzen Österreich | Coustiq"
-- [x] `projekt-evva.html` → „EVVA Produktionshalle — Industrieakustik Wien | Coustiq."
-- [x] Alle Detailseiten mit spezifischen, keyword-reichen Titeln versehen
-
-### A2.6 — Interne Verlinkung systematisieren ✅ (inkl. index.html)
-- [x] Alle Case Studies → je 1 kontextueller Link zur passenden Leistungsseite ergänzt
-  - `projekt-wieselthaler.html` → `leistungen.html#raumakustik`
-  - `projekt-cop.html` → `leistungen.html#raumakustik`
-  - `projekt-evva.html` → `leistungen.html#schallimmissionsschutz`
-  - `projekt-schüller.html` → `leistungen.html#raumakustik`
-- [x] `leistungen.html` — „Mehr erfahren"-Links von den 3 Haupt-Leistungskarten zu den Detailseiten
-- [x] `leistungen.html` — neuer Zielgruppen-Block (3 Karten) → `architekten.html`, `bautraeger.html`, `industrie.html`
-- [x] **`index.html` Service-Kacheln** → direkt auf `raumakustik.html`, `schallschutz.html`, `schallimmissionsschutz.html`
-
-### A2.7 — Kontaktformular mit qualifizierenden Feldern ✅
-- [x] Dropdown „Projektbereich" (required) — inkl. Industrieakustik, Gutachten
-- [x] Placeholder „Max Mustermann" → „Ihr Name", E-Mail-Placeholder angepasst
-- [x] Button-Text → „Projekt besprechen"
-- [x] Subtext: „Wir melden uns innerhalb von 1 Werktag."
-
----
-
-## A3 — Mittelfristige Verbesserungen (laufend)
-
-### A3.1 — Schema.org Markup ✅
-- [x] `index.html` — `ProfessionalService`-JSON-LD (Name, Adresse, Tel, E-Mail, URL, serviceArea, employees)
-- [x] `leistungen.html` — `ItemList` + `Service`-JSON-LD (4 Leistungen)
-- [x] `projekt-wieselthaler.html` — `BreadcrumbList` + `Article`-JSON-LD
-- [x] `projekt-cop.html` — `BreadcrumbList` + `Article`-JSON-LD
-- [x] `projekt-evva.html` — `BreadcrumbList` + `Article`-JSON-LD
-- [x] `projekt-schüller.html` — `BreadcrumbList` + `Article`-JSON-LD
-- [x] Alle 6 neuen Seiten (Zielgruppen + Leistungen) — `BreadcrumbList` + `WebPage`/`Service`-JSON-LD
-
-### A3.2 — Zielgruppen-Seiten aufbauen ✅ (Dummy-Content)
-- [x] `architekten.html` — „Akustik von Anfang an. Für Architekten & Planer."
-  - Sections: Pain Points, Prozess (4 Schritte), Passende Leistungen (3 Cards), Referenz-Teasers
-  - Cross-Links: → `leistungen.html#raumakustik`, `leistungen.html#schallschutz`, `leistungen.html#digitale-tools`, `projekt-cop.html`, `projekt-wieselthaler.html`
-- [x] `bautraeger.html` — „Schallschutz, der standhält."
-  - Sections: Pain Points, Prozess (4 Schritte), Passende Leistungen, Trust-Strip (3 Punkte)
-  - Cross-Links: → `leistungen.html#schallschutz`, `leistungen.html#schallimmissionsschutz`, `leistungen.html#raumakustik`
-- [x] `industrie.html` — „Arbeitslärm messbar senken."
-  - Sections: Key-Metrics-Strip (EVVA-Zahlen), Pain Points, Prozess (4 Schritte), Passende Leistungen, EVVA Case Study Detail
-  - Cross-Links: → `leistungen.html#schallimmissionsschutz`, `leistungen.html#raumakustik`, `leistungen.html#impedanzrohr`, `projekt-evva.html`
-- [ ] **Inhalte finalisieren** — echte Texte, Fotos, spezifische Details sobald verfügbar
-
-### A3.3 — Dedizierte Leistungsseiten ✅ (Dummy-Content)
-- [x] `raumakustik.html` — „Raumakustik. Messbar. Planbar."
-  - Sections: Key-Metrics-Strip (−58%, −36%), Leistungsumfang (6 Cards), Prozess, Normen (ÖNORM B 8115-3 / ISO 3382 / OIB-RL5 / ISO 10534-2), Anwendungsbereiche (6 Kacheln), 3 Case Study Teasers
-- [x] `schallschutz.html` — „Schallschutz, der sich beweist."
-  - Sections: Bento-Grid (Luftschall-Hero + Trittschall + Holzbau + Anlagenlärm), Normen (ÖNORM B 8115 / ISO 16283 / OIB-RL5), Prozess, Cross-Links → Architekten & Bauträger
-- [x] `schallimmissionsschutz.html` — „Lärm erfassen, bewerten, belegen."
-  - Sections: Leistungsumfang (6 Cards), Prozess, Normen (ÖAL-RL3 / ÖNORM S 5021 / TRLV-3 / GewO), Use-Cases (4 typische Anlässe), EVVA-Referenz-Highlight
-- [ ] **Inhalte finalisieren** — echte Texte, Fotos, spezifische Details sobald verfügbar
-
-### A3.4 — Referenzseite inhaltlich ausbauen ✅
-- [x] Featured-Reihenfolge: EVVA → Wieselthaler → COP (stärkste Kennzahl zuerst)
-- [x] Featured-Cards: Beschreibungstext + Metrik-Chips (−3,66 dB / −60% RT60 / −36% Nachhall)
-- [x] Alle 13 Grid-Karten mit kurzem Beschreibungstext
-- [x] Büro-Filter ergänzt
-- [x] Heuriger Schüller → Link zu `projekt-schüller.html`
-- [x] BreadcrumbList + ItemList Schema.org
-
-### A3.5 — FAQ-Seite ✅
-- [x] `faq.html` — 11 Fragen in 4 Kategorien (Grundlagen, Ablauf, Behörden, Kosten)
-- [x] Accordion (Vanilla JS), nur eine Frage gleichzeitig offen
-- [x] FAQPage Schema.org JSON-LD
-- [x] FAQ-Link im Footer aller 16 Seiten
-
-### A3.6 — Lokale SEO stärken ✅
-- [x] `<link rel="canonical">` auf allen 16 Seiten (Schüller percent-encoded)
-- [x] Schema.org `index.html`: areaServed + NÖ/Steiermark, openingHoursSpecification Mo–Fr 09–18
-- [x] `sitemap.xml` auf alle 16 Seiten erweitert, kommentiert, Schüller URL korrekt
-- [x] Telefonnummer in Schema.org `index.html` korrigiert
-- [ ] Google Business Profile anlegen/vervollständigen ← nach Launch
-
----
-
-## A4 — Strategische Maßnahmen (langfristig)
-
-### A4.1 — Fachbeitrags-Bereich einrichten
-- [ ] Verzeichnisstruktur `/themen/` oder `/blog/` anlegen
-- [ ] 5 Startartikel (Themenvorschläge aus Audit):
-  - „Raumakustik im Büro: Was gilt nach ÖNORM B 8115-3?"
-  - „Holzdecken und Schallschutz — häufige Fehler und Lösungen"
-  - „Gastronomieakustik: Warum zu viel Hall Umsatz kostet"
-  - „Lärmschutz am Arbeitsplatz: TRLV-3 und Gehörschutzpflicht"
-  - „Schallschutzplanung im Neubau: Was Bauherren wissen müssen"
-
-### A4.2 — Echte Kundenstimmen einpflegen
-- [ ] Mindestens 2–3 Testimonials mit: Foto, vollständiger Name, Unternehmen, Projektreferenz
-- [ ] Idealerweise: je eine Stimme aus Architektur, Industrie und Gastronomie
-- [ ] `Review`-Schema (JSON-LD) implementieren
-
-### A4.3 — Case Studies als vollständige Case Studies ausbauen
-- [ ] Jeder Case Study: Problem → Analyse → Lösung → Messergebnis → Kundenstimme → CTA
-- [ ] Weitere Projekte als vollständige Case Studies (Hypo NOE, LongTone, Fullstack Marketer als nächste Kandidaten)
-
-### A4.4 — Performance & Accessibility
-- [x] `loading="lazy"` auf alle Bilder unterhalb des Folds (alle 16 Seiten)
-- [x] `loading="eager"` + `fetchpriority="high"` auf alle Hero-Bilder (LCP-Optimierung)
-- [x] `<link rel="preload">` für Hero-Bilder auf allen Projekt-Detailseiten + index.html
-- [x] ARIA-Labels: `theme-toggle-mobile`, `mobile-menu-btn` (+ `aria-expanded`/`aria-controls`), `close-menu-btn`
-- [x] FAQ-Accordion: `aria-expanded`, `aria-controls`, `role="region"` dynamisch via JS
-- [x] `aria-expanded` in `main.js` beim Mobile-Menu-Toggle synchronisiert
-- [x] Google Fonts selbst hosten — Inter + Manrope als variable woff2 in `public/fonts/`, DSGVO-konform
-- [x] Vite Security-Patch: 8.0.0 → 8.0.8 (`npm audit fix`)
-- [ ] Kontrastcheck `#45C8A6` auf weißem Hintergrund (WCAG AA) ← nach Launch mit echtem Tool prüfen
-- [ ] Core Web Vitals nach Launch messen
-
----
-
-## Reihenfolge auf einen Blick
-
-| Phase | Aufwand | Status |
+| # | Maßnahme | Risiko |
 |---|---|---|
-| A1 — Quick Wins | 1–2 Tage | ✅ Abgeschlossen |
-| A2 — Kurzfristig | 1–2 Wochen | ✅ Abgeschlossen (außer A2.2 deferred) |
-| A3 — Mittelfristig | 1–2 Monate | ✅ Abgeschlossen (Content-Finalisierung wartet auf Input) |
-| A4 — Strategisch | laufend | ⏳ Pending |
+| D1 | Hero-Bild ersetzen: Projektfoto mit sichtbarer Akustik, ohne Fremdlogo, breiter | 🟢 (LCP-Preload mit anpassen) |
+| D2 | Erfahrungszahlen vereinheitlichen („Seit 2018" / „15+" / „30+") | 🟢 |
+| D3 | Teamfotos im gleichen Stil | 🟢 (wartet auf Fotos) |
+| D4 | Kontaktformular: Eingabefelder heller / stärkerer Rahmen | 🟢 |
+| D5 | Testimonial mit Foto oder NENI-Logo | 🟢 (wartet auf Asset) |
+| D6 | Zielgruppen-Block auf Startseite (= H2) | 🟢 |
+
+---
+
+## Reihenfolge
+
+1. **K1–K4** (dieser Branch `seo-audit-2026-09`) → Preview-Deploy → Merge → K2 im Dashboard → Search Console
+2. **H2, H3, M3, M4, M6** — schnelle, risikoarme Code-Themen
+3. **H1 + D1/D2** — nach Freigabe der Texte/Bilder
+4. **M1** — eigener Branch, Preview-Pflicht
+5. **H5, H6, H7** — laufend, Inhaltsarbeit
+6. **M2, M5** — wenn Zeit
+
+## Erfolgsmessung
+- Search Console: indexierte Seiten = Sitemap-Seiten; keine „Soft 404"/„Alternative Seite mit Canonical"-Meldungen mehr
+- `site:coustiq.com` zeigt nur noch Apex-URLs, keine WP-Reste (4–8 Wochen)
+- Rankings: „Raumakustik Wien", „Akustiker Wien", „Schallschutz Gutachten Wien", „Lärmgutachten Wien"

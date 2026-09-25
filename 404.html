@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="de">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Seite nicht gefunden | Coustiq</title>
+    <meta name="robots" content="noindex"/>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="icon" type="image/svg+xml" href="src/assets/logo-emblem.svg"/>
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/></noscript>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-2">
+        <div class="glassmorphism absolute inset-0 -z-10 transition-all duration-300 opacity-0" id="nav-bg"></div>
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
+            <a class="flex items-center" href="/">
+                <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
+                <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="/#about">Über uns</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="/leistungen">Leistungen</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="/referenzen">Projekte</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="/#team">Team</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="https://lyzer.coustiq.com" target="_blank" rel="noopener">Lyzer</a>
+                <div class="w-px h-6 bg-border-light dark:bg-border-dark"></div>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark" aria-label="Toggle Dark Mode">
+                    <span id="theme-icon" class="material-symbols-outlined text-[20px]">dark_mode</span>
+                </button>
+                <a class="bg-primary dark:bg-white dark:text-primary text-white px-5 py-2.5 rounded-full hover:scale-105 transition-all shadow-md text-sm font-semibold" href="/#contact">Projekt anfragen</a>
+            </div>
+            <div class="flex items-center gap-4 md:hidden">
+                <button id="theme-toggle-mobile" aria-label="Dark Mode umschalten" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark">
+                    <span id="theme-icon-mobile" class="material-symbols-outlined text-[20px]">dark_mode</span>
+                </button>
+                <button id="mobile-menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-surface-light dark:bg-surface-dark transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col">
+        <div class="p-6 flex justify-between items-center border-b border-border-light dark:border-border-dark">
+            <a class="flex items-center" href="/">
+                <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
+                <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
+            </a>
+            <button id="close-menu-btn" aria-label="Menü schließen" class="p-2 text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="p-6 flex flex-col gap-6 text-xl font-medium overflow-y-auto no-scrollbar">
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="/#about">Über uns</a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="/leistungen">Leistungen</a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="/referenzen">Projekte</a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="/#team">Team</a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="https://lyzer.coustiq.com" target="_blank" rel="noopener">Lyzer</a>
+            <hr class="border-border-light dark:border-border-dark my-4">
+            <a class="mobile-link bg-primary dark:bg-white text-center dark:text-primary text-white px-5 py-4 rounded-full transition-all shadow-md text-lg font-bold" href="/#contact">Projekt anfragen</a>
+        </div>
+    </div>
+
+    <!-- 404 -->
+    <main class="pt-40 pb-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark mb-5">
+                <span class="w-2 h-2 rounded-full bg-accent"></span>
+                <span class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase">Fehler 404</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-4 leading-tight">
+                Hier ist es<br/>
+                <span class="underline-accent text-primary dark:text-white">still geworden.</span>
+            </h1>
+            <p class="text-xl text-text-muted-light dark:text-text-muted-dark max-w-2xl leading-relaxed mb-12">
+                Diese Seite gibt es nicht (mehr) — vermutlich ein Link auf unsere frühere Website. Hier geht es weiter:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+                <a href="/raumakustik" class="block bg-surface-light dark:bg-surface-dark rounded-2xl p-6 border border-border-light dark:border-border-dark hover:border-accent/50 hover:-translate-y-1 transition-all group">
+                    <span class="material-symbols-outlined text-accent text-2xl mb-3 block">graphic_eq</span>
+                    <span class="block font-bold mb-1">Raumakustik</span>
+                    <span class="block text-sm text-text-muted-light dark:text-text-muted-dark">Nachhallzeit, Sprachverständlichkeit, Messung</span>
+                </a>
+                <a href="/schallschutz" class="block bg-surface-light dark:bg-surface-dark rounded-2xl p-6 border border-border-light dark:border-border-dark hover:border-accent/50 hover:-translate-y-1 transition-all group">
+                    <span class="material-symbols-outlined text-accent text-2xl mb-3 block">layers</span>
+                    <span class="block font-bold mb-1">Schallschutz</span>
+                    <span class="block text-sm text-text-muted-light dark:text-text-muted-dark">Luft- und Trittschall nach ÖNORM B 8115</span>
+                </a>
+                <a href="/schallimmissionsschutz" class="block bg-surface-light dark:bg-surface-dark rounded-2xl p-6 border border-border-light dark:border-border-dark hover:border-accent/50 hover:-translate-y-1 transition-all group">
+                    <span class="material-symbols-outlined text-accent text-2xl mb-3 block">radar</span>
+                    <span class="block font-bold mb-1">Schallimmissionsschutz</span>
+                    <span class="block text-sm text-text-muted-light dark:text-text-muted-dark">Lärmgutachten für Behörde und Anrainer</span>
+                </a>
+                <a href="/referenzen" class="block bg-surface-light dark:bg-surface-dark rounded-2xl p-6 border border-border-light dark:border-border-dark hover:border-accent/50 hover:-translate-y-1 transition-all group">
+                    <span class="material-symbols-outlined text-accent text-2xl mb-3 block">photo_library</span>
+                    <span class="block font-bold mb-1">Referenzen</span>
+                    <span class="block text-sm text-text-muted-light dark:text-text-muted-dark">Projekte aus Büro, Gastronomie und Industrie</span>
+                </a>
+                <a href="/faq" class="block bg-surface-light dark:bg-surface-dark rounded-2xl p-6 border border-border-light dark:border-border-dark hover:border-accent/50 hover:-translate-y-1 transition-all group">
+                    <span class="material-symbols-outlined text-accent text-2xl mb-3 block">help_outline</span>
+                    <span class="block font-bold mb-1">FAQ</span>
+                    <span class="block text-sm text-text-muted-light dark:text-text-muted-dark">Häufige Fragen zu Ablauf und Kosten</span>
+                </a>
+                <a href="/#contact" class="block bg-surface-light dark:bg-surface-dark rounded-2xl p-6 border border-border-light dark:border-border-dark hover:border-accent/50 hover:-translate-y-1 transition-all group">
+                    <span class="material-symbols-outlined text-accent text-2xl mb-3 block">mail</span>
+                    <span class="block font-bold mb-1">Kontakt</span>
+                    <span class="block text-sm text-text-muted-light dark:text-text-muted-dark">Projekt anfragen — Antwort binnen 24 Stunden</span>
+                </a>
+            </div>
+            <a href="/" class="inline-flex items-center gap-2 bg-primary dark:bg-white dark:text-primary text-white font-bold px-8 py-4 rounded-full hover:scale-105 transition-all shadow-md group">
+                Zur Startseite
+                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <section class="bg-[#0a0f0f] text-white pb-12 px-6">
+        <div class="max-w-7xl mx-auto pt-12">
+            <div class="flex flex-col md:flex-row justify-between gap-4 mb-8 text-sm text-gray-400">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm text-accent">location_on</span>
+                    <span>Dörfelstraße 9, 1120 Wien</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm text-accent">phone</span>
+                    <a href="tel:+436648474040" class="hover:text-white transition-colors">+43 664 847 4040</a>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm text-accent">mail</span>
+                    <a href="mailto:office@coustiq.com" class="hover:text-white transition-colors">office@coustiq.com</a>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase tracking-widest text-gray-500">
+                <a href="/" class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-accent text-xl">graphic_eq</span>
+                    <span class="font-bold text-white text-base lowercase tracking-normal">coustiq.</span>
+                </a>
+                <p>© 2026 Alle Rechte vorbehalten.</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-white transition-colors" href="/impressum">Impressum</a>
+                    <a class="hover:text-white transition-colors" href="/datenschutz">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>

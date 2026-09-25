@@ -14,6 +14,22 @@ export default defineConfig({
                             '<link rel="stylesheet" href');
       },
     },
+    {
+      name: 'absolute-og-image',
+      enforce: 'post',
+      // Social scrapers (LinkedIn, WhatsApp, Facebook) require absolute
+      // og:image URLs; Vite emits hashed assets as root-relative paths.
+      // Runs on the bundle because asset URLs are resolved after transformIndexHtml.
+      generateBundle(_, bundle) {
+        for (const file of Object.values(bundle)) {
+          if (file.type === 'asset' && file.fileName.endsWith('.html')) {
+            file.source = String(file.source).replace(
+              /(<meta property="og:image" content=")(\/[^"]+")/g,
+              '$1https://coustiq.com$2');
+          }
+        }
+      },
+    },
   ],
   build: {
     rollupOptions: {
@@ -24,6 +40,7 @@ export default defineConfig({
         faq:                     resolve(__dirname, 'faq.html'),
         impressum:               resolve(__dirname, 'impressum.html'),
         datenschutz:             resolve(__dirname, 'datenschutz.html'),
+        notfound:                resolve(__dirname, '404.html'),
         architekten:             resolve(__dirname, 'architekten.html'),
         bautraeger:              resolve(__dirname, 'bautraeger.html'),
         industrie:               resolve(__dirname, 'industrie.html'),

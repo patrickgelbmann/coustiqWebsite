@@ -6,12 +6,14 @@
     <title>FAQ — Häufige Fragen zur Akustikplanung | Coustiq</title>
     <meta name="description" content="Antworten auf die häufigsten Fragen rund um Raumakustik, Schallschutz, Schallimmissionsschutz, Gutachten und Projektablauf bei Coustiq."/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://coustiq.com/faq.html"/>
+    <meta property="og:url" content="https://coustiq.com/faq"/>
     <meta property="og:title" content="FAQ — Häufige Fragen zur Akustikplanung | Coustiq"/>
     <meta property="og:description" content="Antworten auf die häufigsten Fragen rund um Raumakustik, Schallschutz und Schallimmissionsschutz."/>
-    <meta property="og:image" content="src/assets/fullstack-marketer.webp"/>
+    <meta property="og:image" content="https://coustiq.com/og/coustiq-og.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
     <meta name="twitter:card" content="summary_large_image"/>
-    <link rel="canonical" href="https://coustiq.com/faq.html"/>
+    <link rel="canonical" href="https://coustiq.com/faq"/>
     <link rel="icon" type="image/png" href="/favicon.png"/>
     <link rel="icon" type="image/svg+xml" href="src/assets/logo-emblem.svg"/>
     <link rel="stylesheet" href="src/style.css" />
@@ -26,7 +28,7 @@
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://coustiq.com/" },
-          { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://coustiq.com/faq.html" }
+          { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://coustiq.com/faq" }
         ]
       },
       {
@@ -124,21 +126,21 @@
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-2">
         <div class="glassmorphism absolute inset-0 -z-10 transition-all duration-300 opacity-0" id="nav-bg"></div>
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
-            <a class="flex items-center" href="index.html">
+            <a class="flex items-center" href="/">
                 <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
                 <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
             </a>
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="index.html#about">Über uns</a>
-                <a class="text-accent font-semibold" href="leistungen.html">Leistungen</a>
-                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="referenzen.html">Projekte</a>
-                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="index.html#team">Team</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="/#about">Über uns</a>
+                <a class="text-accent font-semibold" href="/leistungen">Leistungen</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="/referenzen">Projekte</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="/#team">Team</a>
                 <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="https://lyzer.coustiq.com" target="_blank" rel="noopener">Lyzer</a>
                 <div class="w-px h-6 bg-border-light dark:bg-border-dark"></div>
                 <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark" aria-label="Toggle Dark Mode">
                     <span id="theme-icon" class="material-symbols-outlined text-[20px]">dark_mode</span>
                 </button>
-                <a class="bg-primary dark:bg-white dark:text-primary text-white px-5 py-2.5 rounded-full hover:scale-105 transition-all shadow-md text-sm font-semibold" href="index.html#contact">Projekt anfragen</a>
+                <a class="bg-primary dark:bg-white dark:text-primary text-white px-5 py-2.5 rounded-full hover:scale-105 transition-all shadow-md text-sm font-semibold" href="/#contact">Projekt anfragen</a>
             </div>
             <div class="flex items-center gap-4 md:hidden">
                 <button id="theme-toggle-mobile" aria-label="Dark Mode umschalten" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark">
@@ -154,7 +156,7 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="fixed inset-0 z-[60] bg-surface-light dark:bg-surface-dark transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col">
         <div class="p-6 flex justify-between items-center border-b border-border-light dark:border-border-dark">
-            <a class="flex items-center" href="index.html">
+            <a class="flex items-center" href="/">
                 <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
                 <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
             </a>
@@ -163,13 +165,13 @@
             </button>
         </div>
         <div class="p-6 flex flex-col gap-6 text-xl font-medium overflow-y-auto no-scrollbar">
-            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="index.html#about">Über uns</a>
-            <a class="mobile-link text-accent font-semibold" href="leistungen.html">Leistungen</a>
-            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="referenzen.html">Projekte</a>
-            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="index.html#team">Team</a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="/#about">Über uns</a>
+            <a class="mobile-link text-accent font-semibold" href="/leistungen">Leistungen</a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="/referenzen">Projekte</a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="/#team">Team</a>
             <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="https://lyzer.coustiq.com" target="_blank" rel="noopener">Lyzer</a>
             <hr class="border-border-light dark:border-border-dark my-4">
-            <a class="mobile-link bg-primary dark:bg-white text-center dark:text-primary text-white px-5 py-4 rounded-full transition-all shadow-md text-lg font-bold" href="index.html#contact">Projekt anfragen</a>
+            <a class="mobile-link bg-primary dark:bg-white text-center dark:text-primary text-white px-5 py-4 rounded-full transition-all shadow-md text-lg font-bold" href="/#contact">Projekt anfragen</a>
         </div>
     </div>
 
@@ -364,7 +366,7 @@
                         </button>
                         <div class="faq-answer hidden px-6 pb-5">
                             <p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed">
-                                Der Aufwand variiert stark je nach Projektgröße, Leistungsart und erforderlichen Normnachweisen. Für eine erste Einschätzung genügt ein kurzes Gespräch. <a href="index.html#contact" class="text-accent font-semibold hover:underline">Kontaktieren Sie uns</a> — wir melden uns innerhalb von 24 Stunden mit einer Einschätzung.
+                                Der Aufwand variiert stark je nach Projektgröße, Leistungsart und erforderlichen Normnachweisen. Für eine erste Einschätzung genügt ein kurzes Gespräch. <a href="/#contact" class="text-accent font-semibold hover:underline">Kontaktieren Sie uns</a> — wir melden uns innerhalb von 24 Stunden mit einer Einschätzung.
                             </p>
                         </div>
                     </div>
@@ -388,7 +390,7 @@
                         </button>
                         <div class="faq-answer hidden px-6 pb-5">
                             <p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed">
-                                Kein Problem — schreiben Sie uns einfach direkt. Über das <a href="index.html#contact" class="text-accent font-semibold hover:underline">Projektformular</a> oder per Mail an <a href="mailto:office@coustiq.com" class="text-accent font-semibold hover:underline">office@coustiq.com</a>. Wir antworten persönlich.
+                                Kein Problem — schreiben Sie uns einfach direkt. Über das <a href="/#contact" class="text-accent font-semibold hover:underline">Projektformular</a> oder per Mail an <a href="mailto:office@coustiq.com" class="text-accent font-semibold hover:underline">office@coustiq.com</a>. Wir antworten persönlich.
                             </p>
                         </div>
                     </div>
@@ -408,7 +410,7 @@
             <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
                 Schildern Sie uns Ihr Vorhaben — wir melden uns innerhalb von 24 Stunden.
             </p>
-            <a href="index.html#contact" class="inline-flex items-center gap-2 bg-accent text-primary font-bold px-8 py-4 rounded-full hover:scale-105 transition-all shadow-lg hover:shadow-accent/30 group">
+            <a href="/#contact" class="inline-flex items-center gap-2 bg-accent text-primary font-bold px-8 py-4 rounded-full hover:scale-105 transition-all shadow-lg hover:shadow-accent/30 group">
                 Projekt anfragen
                 <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </a>
@@ -429,14 +431,14 @@
                 </div>
             </div>
             <div class="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase tracking-widest text-gray-500">
-                <a href="index.html" class="flex items-center gap-2">
+                <a href="/" class="flex items-center gap-2">
                     <span class="material-symbols-outlined text-accent text-xl">graphic_eq</span>
                     <span class="font-bold text-white text-base lowercase tracking-normal">coustiq.</span>
                 </a>
                 <p>© 2026 Alle Rechte vorbehalten.</p>
                 <div class="flex gap-8">
-                    <a class="hover:text-white transition-colors" href="impressum.html">Impressum</a>
-                    <a class="hover:text-white transition-colors" href="datenschutz.html">Datenschutz</a>
+                    <a class="hover:text-white transition-colors" href="/impressum">Impressum</a>
+                    <a class="hover:text-white transition-colors" href="/datenschutz">Datenschutz</a>
                 </div>
             </div>
         </div>

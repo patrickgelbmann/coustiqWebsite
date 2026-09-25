@@ -6,12 +6,14 @@
     <title>Akustik-Projekte & Referenzen Österreich | Coustiq</title>
     <meta name="description" content="Alle Referenzprojekte von Coustiq — Bauakustik, Raumakustik und Schallimmissionsschutz für Büros, Gastronomie, Wohnbau und Industrie in Wien und Österreich."/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://coustiq.com/referenzen.html"/>
+    <meta property="og:url" content="https://coustiq.com/referenzen"/>
     <meta property="og:title" content="Akustik-Projekte & Referenzen Österreich | Coustiq"/>
     <meta property="og:description" content="Alle Referenzprojekte von Coustiq — Bauakustik, Raumakustik und Schallimmissionsschutz."/>
-    <meta property="og:image" content="src/assets/fullstack-marketer.webp"/>
+    <meta property="og:image" content="https://coustiq.com/og/coustiq-og.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
     <meta name="twitter:card" content="summary_large_image"/>
-    <link rel="canonical" href="https://coustiq.com/referenzen.html"/>
+    <link rel="canonical" href="https://coustiq.com/referenzen"/>
     <link rel="icon" type="image/png" href="/favicon.png"/>
     <link rel="icon" type="image/svg+xml" href="src/assets/logo-emblem.svg"/>
     <link rel="stylesheet" href="src/style.css" />
@@ -26,19 +28,19 @@
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://coustiq.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Referenzen", "item": "https://coustiq.com/referenzen.html" }
+          { "@type": "ListItem", "position": 2, "name": "Referenzen", "item": "https://coustiq.com/referenzen" }
         ]
       },
       {
         "@context": "https://schema.org",
         "@type": "ItemList",
         "name": "Referenzprojekte Coustiq",
-        "url": "https://coustiq.com/referenzen.html",
+        "url": "https://coustiq.com/referenzen",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "url": "https://coustiq.com/projekt-evva.html", "name": "EVVA Produktionshalle Wien" },
-          { "@type": "ListItem", "position": 2, "url": "https://coustiq.com/projekt-wieselthaler.html", "name": "Wieselthaler Aufenthaltsraum" },
-          { "@type": "ListItem", "position": 3, "url": "https://coustiq.com/projekt-cop.html", "name": "NENI Restaurant — C.O.P. Vienna" },
-          { "@type": "ListItem", "position": 4, "url": "https://coustiq.com/projekt-schüller.html", "name": "Heuriger Schüller Wien" }
+          { "@type": "ListItem", "position": 1, "url": "https://coustiq.com/projekt-evva", "name": "EVVA Produktionshalle Wien" },
+          { "@type": "ListItem", "position": 2, "url": "https://coustiq.com/projekt-wieselthaler", "name": "Wieselthaler Aufenthaltsraum" },
+          { "@type": "ListItem", "position": 3, "url": "https://coustiq.com/projekt-cop", "name": "NENI Restaurant — C.O.P. Vienna" },
+          { "@type": "ListItem", "position": 4, "url": "https://coustiq.com/projekt-sch%C3%BCller", "name": "Heuriger Schüller Wien" }
         ]
       }
     ]
@@ -50,21 +52,21 @@
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-2">
         <div class="glassmorphism absolute inset-0 -z-10 transition-all duration-300 opacity-0" id="nav-bg"></div>
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
-            <a class="flex items-center" href="index.html">
+            <a class="flex items-center" href="/">
                 <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
                 <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
             </a>
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="index.html#about">Über uns</a>
-                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="leistungen.html">Leistungen</a>
-                <a class="text-accent font-semibold" href="referenzen.html">Projekte</a>
-                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="index.html#team">Team</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="/#about">Über uns</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="/leistungen">Leistungen</a>
+                <a class="text-accent font-semibold" href="/referenzen">Projekte</a>
+                <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="/#team">Team</a>
                 <a class="text-text-light dark:text-text-dark hover:text-accent transition-colors" href="https://lyzer.coustiq.com" target="_blank" rel="noopener">Lyzer</a>
                 <div class="w-px h-6 bg-border-light dark:bg-border-dark"></div>
                 <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark" aria-label="Toggle Dark Mode">
                     <span id="theme-icon" class="material-symbols-outlined text-[20px]">dark_mode</span>
                 </button>
-                <a class="bg-primary dark:bg-white dark:text-primary text-white px-5 py-2.5 rounded-full hover:scale-105 transition-all shadow-md text-sm font-semibold" href="index.html#contact">Projekt anfragen</a>
+                <a class="bg-primary dark:bg-white dark:text-primary text-white px-5 py-2.5 rounded-full hover:scale-105 transition-all shadow-md text-sm font-semibold" href="/#contact">Projekt anfragen</a>
             </div>
             <div class="flex items-center gap-4 md:hidden">
                 <button id="theme-toggle-mobile" aria-label="Dark Mode umschalten" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-text-muted-light dark:text-text-muted-dark">
@@ -80,7 +82,7 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="fixed inset-0 z-[60] bg-surface-light dark:bg-surface-dark transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col">
         <div class="p-6 flex justify-between items-center border-b border-border-light dark:border-border-dark">
-            <a class="flex items-center" href="index.html">
+            <a class="flex items-center" href="/">
                 <img src="src/assets/logo-dark.svg" alt="Coustiq" class="h-8 w-auto block dark:hidden"/>
                 <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-8 w-auto hidden dark:block"/>
             </a>
@@ -89,13 +91,13 @@
             </button>
         </div>
         <div class="p-6 flex flex-col gap-6 text-xl font-medium overflow-y-auto no-scrollbar">
-            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="index.html#about">Über uns</a>
-            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="leistungen.html">Leistungen</a>
-            <a class="mobile-link text-accent font-semibold" href="referenzen.html">Projekte</a>
-            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="index.html#team">Team</a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="/#about">Über uns</a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="/leistungen">Leistungen</a>
+            <a class="mobile-link text-accent font-semibold" href="/referenzen">Projekte</a>
+            <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="/#team">Team</a>
             <a class="mobile-link text-text-light dark:text-text-dark hover:text-accent" href="https://lyzer.coustiq.com" target="_blank" rel="noopener">Lyzer</a>
             <hr class="border-border-light dark:border-border-dark my-4">
-            <a class="mobile-link bg-primary dark:bg-white text-center dark:text-primary text-white px-5 py-4 rounded-full transition-all shadow-md text-lg font-bold" href="index.html#contact">Projekt anfragen</a>
+            <a class="mobile-link bg-primary dark:bg-white text-center dark:text-primary text-white px-5 py-4 rounded-full transition-all shadow-md text-lg font-bold" href="/#contact">Projekt anfragen</a>
         </div>
     </div>
 
@@ -122,7 +124,7 @@
             <p class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase mb-8">Featured Case Studies</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- EVVA — Featured #1 -->
-                <a href="projekt-evva.html" class="group block animate-on-scroll">
+                <a href="/projekt-evva" class="group block animate-on-scroll">
                     <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-4 relative">
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/evva.webp" alt="EVVA Produktionshalle Wien"/>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -137,7 +139,7 @@
                     </div>
                 </a>
                 <!-- Wieselthaler — Featured #2 -->
-                <a href="projekt-wieselthaler.html" class="group block animate-on-scroll delay-100">
+                <a href="/projekt-wieselthaler" class="group block animate-on-scroll delay-100">
                     <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-4 relative">
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/wieselthaler-aufenthaltsraum.webp" alt="Wieselthaler Aufenthaltsraum Wien"/>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -152,7 +154,7 @@
                     </div>
                 </a>
                 <!-- COP — Featured #3 -->
-                <a href="projekt-cop.html" class="group block animate-on-scroll delay-200">
+                <a href="/projekt-cop" class="group block animate-on-scroll delay-200">
                     <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-4 relative">
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="src/assets/cop.webp" alt="NENI Restaurant C.O.P. Vienna"/>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -323,7 +325,7 @@
                 </div>
 
                 <!-- Heuriger Schüller -->
-                <a href="projekt-schüller.html" class="project-card group block" data-tags="raumakustik gastronomie">
+                <a href="/projekt-schüller" class="project-card group block" data-tags="raumakustik gastronomie">
                     <div class="rounded-2xl overflow-hidden aspect-[4/3] mb-3 relative bg-gray-100 dark:bg-gray-900">
                         <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="src/assets/heuriger-schüller-1.webp" alt="Heuriger Schüller"/>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -353,7 +355,7 @@
             <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
                 Sprechen Sie mit uns — wir analysieren Ihr Vorhaben und liefern die passende akustische Lösung.
             </p>
-            <a href="index.html#contact" class="inline-flex items-center gap-2 bg-accent text-primary font-bold px-8 py-4 rounded-full hover:scale-105 transition-all shadow-lg hover:shadow-accent/30 group">
+            <a href="/#contact" class="inline-flex items-center gap-2 bg-accent text-primary font-bold px-8 py-4 rounded-full hover:scale-105 transition-all shadow-lg hover:shadow-accent/30 group">
                 Projekt anfragen
                 <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </a>
@@ -374,15 +376,15 @@
                 </div>
             </div>
             <div class="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase tracking-widest text-gray-500">
-                <a href="index.html" class="flex items-center gap-2">
+                <a href="/" class="flex items-center gap-2">
                     <span class="material-symbols-outlined text-accent text-xl">graphic_eq</span>
                     <span class="font-bold text-white text-base lowercase tracking-normal">coustiq.</span>
                 </a>
                 <p>© 2026 Alle Rechte vorbehalten.</p>
                 <div class="flex gap-8">
-                    <a class="hover:text-white transition-colors" href="faq.html">FAQ</a>
-                    <a class="hover:text-white transition-colors" href="impressum.html">Impressum</a>
-                    <a class="hover:text-white transition-colors" href="datenschutz.html">Datenschutz</a>
+                    <a class="hover:text-white transition-colors" href="/faq">FAQ</a>
+                    <a class="hover:text-white transition-colors" href="/impressum">Impressum</a>
+                    <a class="hover:text-white transition-colors" href="/datenschutz">Datenschutz</a>
                 </div>
             </div>
         </div>
