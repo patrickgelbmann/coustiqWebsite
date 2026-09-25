@@ -54,16 +54,17 @@ Jede unbekannte URL liefert die Startseite mit Status 200 (Soft-404). Google hat
 - Seitenweise Vorschläge vorbereiten, Freigabe durch Patrick/Bernd
 
 ### H2 — Interne Verlinkung · Risiko 🟢
-- [ ] Startseite: Block „Für wen wir arbeiten" → Architekten / Bauträger / Industrie / Gastronomie
-- [ ] Footer: Spalten Leistungen + Zielgruppen + Projekte
-- [ ] Case Studies verlinken auf Detailseiten (`/raumakustik`) statt `leistungen#anker`
+- [x] Startseite: Block „Für wen wir arbeiten" → Architekten / Bauträger / Industrie / Gastronomie
+- [x] Footer: Spalten Leistungen + Zielgruppen + Projekte
+- [x] Case Studies verlinken auf Detailseiten (`/raumakustik`) statt `leistungen#anker`
 
 ### H3 — Schema.org vervollständigen · Risiko 🟢
-- [ ] `sameAs` (LinkedIn, Google-Unternehmensprofil, WKO, firmenabc), `logo`, `image`
-- [ ] Article: `datePublished`, `image`; OfferCatalog-URLs auf Detailseiten
+- [x] `sameAs` (LinkedIn, Google-Unternehmensprofil, WKO, firmenabc), `logo`, `image`
+- [x] Article: `datePublished`, `image`; OfferCatalog-URLs auf Detailseiten
 - Validierung: Google Rich Results Test
+- [ ] Google-Profil-URL in `sameAs` ergänzen, sobald H4 steht
 
-### H4 — Google-Unternehmensprofil · Risiko 🟢 (außerhalb der Website)
+### H4 — Google-Unternehmensprofil · Risiko 🟢 (außerhalb der Website) → Paket: [docs/google-business-profile.md](docs/google-business-profile.md)
 - [ ] Profil prüfen/anlegen, Kategorien, Fotos, Leistungen; Bewertungen aktiv einholen (nach jeder Abnahmemessung)
 
 ### H5 — Leistungsseiten ausbauen (500 → 1.000–1.500 Wörter) · Risiko 🟢
@@ -93,18 +94,18 @@ Google-CDN-Iconfont = 1,1 MB (größte Einzeldatei) + IP-Übermittlung an Google
 - **Warum mittel:** `width/height` kann Seitenverhältnisse bei `object-cover`-Containern verändern.
 
 ### M3 — Datenschutz ergänzen · Risiko 🟢
-- [ ] Web3Forms (Kontaktformular) und Cloudflare (Hosting/CDN, E-Mail-Schutz) als Auftragsverarbeiter nennen
+- [x] Web3Forms (Kontaktformular) und Cloudflare (Hosting/CDN, E-Mail-Schutz) als Auftragsverarbeiter nennen
 
 ### M4 — Barrierefreiheit · Risiko 🟢
-- [ ] Footer-Kontrast (#6a7282 auf Dunkel = 2,9:1 → ≥ 4,5:1)
-- [ ] Heading-Reihenfolge (h4 ohne h3)
+- [x] Footer-Kontrast (#6a7282 auf Dunkel = 2,9:1 → ≥ 4,5:1)
+- [x] Heading-Reihenfolge (h4 ohne h3)
 
 ### M5 — Umlaut-URL `/projekt-schüller` → `/projekt-schueller` · Risiko 🟡 mittel · Ranking-Risiko 🟡
 - [ ] Datei umbenennen, 301 von alter URL; Redirect-Match mit Nicht-ASCII-Pfad auf Cloudflare vorher testen
 
 ### M6 — Aufräumen · Risiko 🟢
-- [ ] `projekt-detail.html` (Vorlage, nicht im Build) und `stitch template/` entfernen oder nach `docs/` verschieben
-- [ ] `CLAUDE.md` aktualisieren (beschreibt noch Single-Page)
+- [x] `projekt-detail.html` (Vorlage, nicht im Build) und `stitch template/` entfernen oder nach `docs/` verschieben
+- [x] `CLAUDE.md` aktualisieren (beschreibt noch Single-Page)
 
 ---
 

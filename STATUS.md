@@ -7,6 +7,14 @@ _Zuletzt aktualisiert: 2026-09-25. Vorgänger (bis April 2026): [docs/archive/ST
 
 ## Session-Log
 
+### 2026-09-25 — Quick Wins (Branch `seo-quickwins`)
+- **H2** Startseite „Für wen wir arbeiten" (4 Zielgruppen); Footer-Linkraster auf allen Seiten; Links `/leistungen#…` → Detailseiten; Leistungen-Zielgruppen-Grid 2/4 Spalten
+- **H3** Schema: Organisation mit `@id`, Logo (PNG), Bild, `sameAs` (LinkedIn, Facebook, firmenabc); Case-Study-Article mit Datum + funktionierendem Bild (vorher 404 auf `/src/assets/`); feste OG-Bilder `public/og/projekt-*.jpg`
+- **M3** Datenschutz: Cloudflare + Web3Forms ergänzt (rechtliche Prüfung weiterhin empfohlen)
+- **M4** Footer-Kontrast, Heading-Reihenfolge → Lighthouse Accessibility 100
+- **M6** `projekt-detail.html` + `stitch template/` entfernt; `/home` → `/`
+- Google-Unternehmensprofil: Einrichtungs-Paket in `docs/google-business-profile.md`
+
 ### 2026-09-25 — Audit + kritische SEO-Fixes (live seit 2026-09-25, Commit 2fa6731)
 - Live-Audit: Lighthouse Mobile 95/94/100/100, Desktop 100/94/100/100; Probleme strukturell → ROADMAP K/H/M/D
 - **K1** Clean URLs: alle internen Links root-absolut ohne `.html`; Canonical, `og:url`, JSON-LD, Sitemap (+ `lastmod`) auf Clean URLs
