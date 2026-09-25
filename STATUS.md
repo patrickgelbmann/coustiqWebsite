@@ -14,7 +14,8 @@ _Zuletzt aktualisiert: 2026-09-25. Vorgänger (bis April 2026): [docs/archive/ST
 - **K4** OG-Bild `public/og/coustiq-og.jpg` (1200×630) für 6 generische Seiten; Vite-Plugin `absolute-og-image` macht alle `og:image` absolut
 - Getestet mit `wrangler pages dev dist`: 404-Status, 301-Redirects, 308 `.html`→Clean, Linkcheck 667 Referenzen ohne Fehler
 - Preview-Deploys: `https://<branch>.coustiqwebsite.pages.dev` (Projektname ohne Bindestrich)
-- **Offen K2:** www→Apex-Redirect im Cloudflare-Dashboard (manuell), danach Sitemap in Search Console neu einreichen
+- **K2** www→Apex: Cloudflare Redirect Rule (301, Pfad + Query erhalten), per curl geprüft, keine Schleife
+- **Offen:** Sitemap in Search Console neu einreichen; in 2–6 Wochen `site:coustiq.com` auf www-/WP-Reste prüfen
 
 ## Technischer Stand
 ```

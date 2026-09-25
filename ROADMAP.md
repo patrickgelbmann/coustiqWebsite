@@ -18,30 +18,30 @@ Die Probleme sind strukturell (URLs, Duplikate, Soft-404) und inhaltlich (dünne
 
 ---
 
-## K — Kritisch: technische SEO (reiner Code, keine Inhaltsentscheidungen)
+## K — Kritisch: technische SEO ✅ live seit 2026-09-25
 
 ### K1 — Clean URLs überall · Risiko 🟡 mittel · Ranking-Risiko 🟢
 Cloudflare Pages leitet `*.html` per 308 auf `/seite` um, aber Canonicals, `og:url`, Sitemap, Schema.org und alle internen Links zeigen noch auf `.html`.
-- [ ] Alle internen Links root-absolut ohne `.html` (`/leistungen`, `/#contact`, `/`)
-- [ ] Canonical + `og:url` + JSON-LD-URLs auf Clean URLs
-- [ ] `sitemap.xml` auf Clean URLs + `lastmod`
+- [x] Alle internen Links root-absolut ohne `.html` (`/leistungen`, `/#contact`, `/`)
+- [x] Canonical + `og:url` + JSON-LD-URLs auf Clean URLs
+- [x] `sitemap.xml` auf Clean URLs + `lastmod`
 - **Warum mittel:** ~400 Link-Stellen in 17 Dateien, mechanisch per Skript. Absicherung: Linkcheck gegen `dist/` + `vite preview`.
 
 ### K2 — www → Apex-Redirect · Risiko 🟢 niedrig · Ranking-Risiko 🟢
 `www.coustiq.com` und `coustiq.com` liefern beide 200; Google indexiert www, Canonical sagt Apex.
-- [ ] Cloudflare Dashboard → Rules → Redirect Rule: `www.coustiq.com/*` → `https://coustiq.com/${1}` (301, Query behalten) — **manuell durch Patrick**
-- [ ] Danach Search Console: Domain-Property prüfen, Sitemap neu einreichen
+- [x] Cloudflare Dashboard → Rules → Redirect Rule: `www.coustiq.com/*` → `https://coustiq.com/${1}` (301, Query behalten) — **erledigt 2026-09-25** (Template „Redirect from WWW to root", DNS-Warnung ignoriert — www ist proxied)
+- [x] Danach Search Console: Domain-Property prüfen, Sitemap neu einreichen
 - **Warum niedrig:** eine Regel, per Klick deaktivierbar. Einziges Risiko: Redirect-Loop bei Fehlkonfiguration → direkt nach Anlage mit `curl -I` prüfen.
 
 ### K3 — Echte 404-Seite + Redirects für alte WordPress-URLs · Risiko 🟡 mittel · Ranking-Risiko 🟢
 Jede unbekannte URL liefert die Startseite mit Status 200 (Soft-404). Google hat noch alte WP-URLs im Index (`/kontakt/`, `/faq-items/…`, `/shop-sidebar/` …).
-- [ ] `404.html` (noindex, Navigation + Links zu Leistungen/Referenzen/Kontakt)
-- [ ] `public/_redirects`: inhaltlich passende alte URLs → 301 auf neue Seiten (Liste aus Wayback-CDX); Demo-/Shop-Reste bewusst 404
+- [x] `404.html` (noindex, Navigation + Links zu Leistungen/Referenzen/Kontakt)
+- [x] `public/_redirects`: inhaltlich passende alte URLs → 301 auf neue Seiten (Liste aus Wayback-CDX); Demo-/Shop-Reste bewusst 404
 - **Warum mittel:** Mit `404.html` endet der „alles zeigt die Startseite"-Fallback. Jeder Link, der heute nur zufällig funktioniert (alte Drucksachen, QR-Codes, Signaturen), zeigt danach 404 → vorher gegen bekannte Links prüfen.
 
 ### K4 — OG-/Social-Vorschau · Risiko 🟢 niedrig · Ranking-Risiko 🟢
-- [ ] `og:image` / `twitter:image` als absolute URL (`https://coustiq.com/...`)
-- [ ] Eigenes 1200×630 OG-Bild (ohne Fremdlogo) statt `fullstack-marketer.webp` auf 7 Seiten
+- [x] `og:image` / `twitter:image` als absolute URL (`https://coustiq.com/...`)
+- [x] Eigenes 1200×630 OG-Bild (ohne Fremdlogo) statt `fullstack-marketer.webp` auf 7 Seiten
 - **Warum niedrig:** betrifft nur Meta-Tags, keine sichtbare Seite.
 
 ---
