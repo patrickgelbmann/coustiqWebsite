@@ -7,13 +7,14 @@ _Zuletzt aktualisiert: 2026-09-25. Vorgänger (bis April 2026): [docs/archive/ST
 
 ## Session-Log
 
-### 2026-09-25 — Audit + kritische SEO-Fixes (Branch `seo-audit-2026-09`)
+### 2026-09-25 — Audit + kritische SEO-Fixes (live seit 2026-09-25, Commit 2fa6731)
 - Live-Audit: Lighthouse Mobile 95/94/100/100, Desktop 100/94/100/100; Probleme strukturell → ROADMAP K/H/M/D
 - **K1** Clean URLs: alle internen Links root-absolut ohne `.html`; Canonical, `og:url`, JSON-LD, Sitemap (+ `lastmod`) auf Clean URLs
 - **K3** `404.html` (noindex, Build-Input `notfound`) beendet Soft-404-Fallback; `public/_redirects` für alte WordPress-URLs (301 nur bei inhaltlicher Entsprechung)
 - **K4** OG-Bild `public/og/coustiq-og.jpg` (1200×630) für 6 generische Seiten; Vite-Plugin `absolute-og-image` macht alle `og:image` absolut
 - Getestet mit `wrangler pages dev dist`: 404-Status, 301-Redirects, 308 `.html`→Clean, Linkcheck 667 Referenzen ohne Fehler
-- **Offen K2:** www→Apex-Redirect im Cloudflare-Dashboard (manuell)
+- Preview-Deploys: `https://<branch>.coustiqwebsite.pages.dev` (Projektname ohne Bindestrich)
+- **Offen K2:** www→Apex-Redirect im Cloudflare-Dashboard (manuell), danach Sitemap in Search Console neu einreichen
 
 ## Technischer Stand
 ```
