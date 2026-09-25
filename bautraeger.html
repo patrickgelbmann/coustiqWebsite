@@ -36,7 +36,7 @@
         "name": "Schallschutz für Bauträger & Projektentwickler",
         "description": "Messbare Schallschutzwerte für Wohn- und Gewerbeimmobilien — ÖNORM-konform, gerichtsfest dokumentiert.",
         "url": "https://coustiq.com/bautraeger",
-        "provider": { "@type": "Organization", "name": "Coustiq", "url": "https://coustiq.com" }
+        "provider": { "@type": "Organization", "@id": "https://coustiq.com/#organization", "name": "Coustiq OG", "url": "https://coustiq.com/" }
       }
     ]
     </script>
@@ -119,7 +119,7 @@
                     Projekt besprechen
                     <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
                 </a>
-                <a href="/leistungen#schallschutz" class="border border-border-light dark:border-border-dark text-text-light dark:text-text-dark font-semibold px-7 py-3.5 rounded-full hover:border-accent hover:text-accent transition-all text-sm">
+                <a href="/schallschutz" class="border border-border-light dark:border-border-dark text-text-light dark:text-text-dark font-semibold px-7 py-3.5 rounded-full hover:border-accent hover:text-accent transition-all text-sm">
                     Schallschutz-Leistungen
                 </a>
             </div>
@@ -231,7 +231,7 @@
                 <h2 class="text-4xl font-bold text-primary dark:text-white mt-2 max-w-xl leading-tight">Alles aus einer Hand — für Ihr gesamtes Projekt.</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="/leistungen#schallschutz" class="group bg-background-light dark:bg-background-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-xl transition-all duration-400 flex flex-col animate-on-scroll">
+                <a href="/schallschutz" class="group bg-background-light dark:bg-background-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-xl transition-all duration-400 flex flex-col animate-on-scroll">
                     <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
                         <span class="material-symbols-outlined text-2xl">layers</span>
                     </div>
@@ -241,7 +241,7 @@
                         Zur Leistung <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </div>
                 </a>
-                <a href="/leistungen#schallimmissionsschutz" class="group bg-background-light dark:bg-background-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-xl transition-all duration-400 flex flex-col animate-on-scroll delay-100">
+                <a href="/schallimmissionsschutz" class="group bg-background-light dark:bg-background-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-xl transition-all duration-400 flex flex-col animate-on-scroll delay-100">
                     <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
                         <span class="material-symbols-outlined text-2xl">radar</span>
                     </div>
@@ -251,7 +251,7 @@
                         Zur Leistung <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </div>
                 </a>
-                <a href="/leistungen#raumakustik" class="group bg-background-light dark:bg-background-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-xl transition-all duration-400 flex flex-col animate-on-scroll delay-200">
+                <a href="/raumakustik" class="group bg-background-light dark:bg-background-dark rounded-2xl p-8 border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-xl transition-all duration-400 flex flex-col animate-on-scroll delay-200">
                     <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
                         <span class="material-symbols-outlined text-2xl">graphic_eq</span>
                     </div>
@@ -325,6 +325,46 @@
         </div>
 
         <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10">
+            <nav aria-label="Footer" class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 text-sm">
+                <div>
+                    <p class="font-bold text-white mb-4">Leistungen</p>
+                    <ul class="space-y-2.5">
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/raumakustik">Raumakustik</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/schallschutz">Bauakustik & Schallschutz</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/schallimmissionsschutz">Schallimmissionsschutz</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/leistungen">Alle Leistungen</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-bold text-white mb-4">Für wen</p>
+                    <ul class="space-y-2.5">
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/architekten">Architekten & Planer</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/bautraeger">Bauträger & Entwickler</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/industrie">Industrie & Produktion</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/gastronomie">Gastronomie</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-bold text-white mb-4">Projekte</p>
+                    <ul class="space-y-2.5">
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/projekt-evva">EVVA Produktionshalle</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/projekt-cop">NENI — C.O.P. Vienna</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/projekt-wieselthaler">Wieselthaler</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/projekt-sch%C3%BCller">Heuriger Schüller</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/referenzen">Alle Referenzen</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-bold text-white mb-4">Coustiq</p>
+                    <ul class="space-y-2.5">
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/#about">Über uns</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/#team">Team</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/faq">FAQ</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="https://lyzer.coustiq.com" target="_blank" rel="noopener">Lyzer</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="/#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+            </nav>
             <div class="flex flex-col md:flex-row justify-between gap-4 mb-8 text-sm text-gray-400">
                 <div class="flex items-center gap-2">
                     <span class="material-symbols-outlined text-sm text-accent">location_on</span>
@@ -339,7 +379,7 @@
                     <a href="mailto:office@coustiq.com" class="hover:text-white transition-colors">office@coustiq.com</a>
                 </div>
             </div>
-            <div class="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase tracking-widest text-gray-500">
+            <div class="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase tracking-widest text-gray-400">
                 <a href="/" class="flex items-center gap-2">
                     <span class="material-symbols-outlined text-accent text-xl">graphic_eq</span>
                     <span class="font-bold text-white text-base lowercase tracking-normal">coustiq.</span>

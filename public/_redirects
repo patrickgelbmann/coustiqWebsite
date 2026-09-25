@@ -46,3 +46,7 @@
 /schall/                                   /raumakustik              301
 /schalldaemmung-fuer-mehr-wohlbefinden/    /schallschutz             301
 /category/schalldaemmung/                  /schallschutz             301
+
+# Startseiten-Varianten
+/home                                      /                         301
+/home/                                     /                         301

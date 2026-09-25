@@ -34,10 +34,13 @@
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
+      "@id": "https://coustiq.com/#organization",
       "name": "Coustiq OG",
       "alternateName": "Coustiq",
       "description": "Ingenieurbüro für Akustik in Wien — Raumakustik, Bauakustik, Schallimmissionsschutz und akustische Gutachten für Architekten, Bauherren und Industrieunternehmen in Österreich.",
-      "url": "https://coustiq.com",
+      "url": "https://coustiq.com/",
+      "logo": "https://coustiq.com/og/coustiq-logo.png",
+      "image": "https://coustiq.com/og/coustiq-og.jpg",
       "telephone": "+436648474040",
       "email": "office@coustiq.com",
       "foundingDate": "2018",
@@ -71,9 +74,9 @@
         "@type": "OfferCatalog",
         "name": "Akustik-Leistungen",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Raumakustik", "url": "https://coustiq.com/leistungen#raumakustik" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bauakustik & Schallschutz", "url": "https://coustiq.com/leistungen#schallschutz" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Schallimmissionsschutz", "url": "https://coustiq.com/leistungen#schallimmissionsschutz" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Raumakustik", "url": "https://coustiq.com/raumakustik" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bauakustik & Schallschutz", "url": "https://coustiq.com/schallschutz" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Schallimmissionsschutz", "url": "https://coustiq.com/schallimmissionsschutz" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Materialprüfung / Impedanzrohr", "url": "https://coustiq.com/leistungen#impedanzrohr" } }
         ]
       },
@@ -89,7 +92,11 @@
           "jobTitle": "Co-Founder & CEO"
         }
       ],
-      "sameAs": []
+      "sameAs": [
+        "https://www.linkedin.com/company/coustiq",
+        "https://www.facebook.com/Coustiq/",
+        "https://www.firmenabc.at/coustiq-og_Oaba"
+      ]
     }
     </script>
 </head>
@@ -319,6 +326,53 @@
                         <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </div>
                 </a>
+            </div>
+
+            <!-- Zielgruppen -->
+            <div class="mt-16 animate-on-scroll">
+                <h3 class="text-xs font-bold tracking-widest uppercase text-text-muted-light dark:text-text-muted-dark mb-6">Für wen wir arbeiten</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <a href="/architekten" class="group flex items-center gap-4 p-5 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-lg transition-all duration-300">
+                    <div class="w-11 h-11 shrink-0 rounded-xl bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">architecture</span>
+                    </div>
+                    <div class="min-w-0">
+                        <span class="block font-bold text-text-light dark:text-text-dark">Architekten & Planer</span>
+                        <span class="block text-xs text-text-muted-light dark:text-text-muted-dark">Akustik ab dem Vorentwurf</span>
+                    </div>
+                    <span class="material-symbols-outlined text-sm text-accent ml-auto group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                <a href="/bautraeger" class="group flex items-center gap-4 p-5 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-lg transition-all duration-300">
+                    <div class="w-11 h-11 shrink-0 rounded-xl bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">apartment</span>
+                    </div>
+                    <div class="min-w-0">
+                        <span class="block font-bold text-text-light dark:text-text-dark">Bauträger & Entwickler</span>
+                        <span class="block text-xs text-text-muted-light dark:text-text-muted-dark">Schallschutz ohne Mängelrisiko</span>
+                    </div>
+                    <span class="material-symbols-outlined text-sm text-accent ml-auto group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                <a href="/industrie" class="group flex items-center gap-4 p-5 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-lg transition-all duration-300">
+                    <div class="w-11 h-11 shrink-0 rounded-xl bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">factory</span>
+                    </div>
+                    <div class="min-w-0">
+                        <span class="block font-bold text-text-light dark:text-text-dark">Industrie & Produktion</span>
+                        <span class="block text-xs text-text-muted-light dark:text-text-muted-dark">Arbeitslärm nach TRLV-3 senken</span>
+                    </div>
+                    <span class="material-symbols-outlined text-sm text-accent ml-auto group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                <a href="/gastronomie" class="group flex items-center gap-4 p-5 rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark hover:border-accent/40 hover:shadow-lg transition-all duration-300">
+                    <div class="w-11 h-11 shrink-0 rounded-xl bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">restaurant</span>
+                    </div>
+                    <div class="min-w-0">
+                        <span class="block font-bold text-text-light dark:text-text-dark">Restaurants & Gaststätten</span>
+                        <span class="block text-xs text-text-muted-light dark:text-text-muted-dark">Weniger Hall, mehr Gäste</span>
+                    </div>
+                    <span class="material-symbols-outlined text-sm text-accent ml-auto group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                </div>
             </div>
         </div>
     </section>
@@ -637,7 +691,7 @@
                 <div class="flex items-center justify-center gap-4">
                     <div class="w-12 h-12 rounded-full bg-accent text-primary flex items-center justify-center font-bold text-sm border-2 border-border-light dark:border-border-dark shrink-0">EB</div>
                     <div class="text-left">
-                        <h4 class="font-bold text-sm">Elihay Berliner</h4>
+                        <p class="font-bold text-sm">Elihay Berliner</p>
                         <p class="text-[10px] text-text-muted-light dark:text-text-muted-dark uppercase tracking-widest mt-0.5">Gründer, C.O.P. Vienna</p>
                     </div>
                 </div>
@@ -708,6 +762,46 @@
             </div>
 
             <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10">
+                <nav aria-label="Footer" class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 text-sm">
+                    <div>
+                        <p class="font-bold text-white mb-4">Leistungen</p>
+                        <ul class="space-y-2.5">
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/raumakustik">Raumakustik</a></li>
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/schallschutz">Bauakustik & Schallschutz</a></li>
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/schallimmissionsschutz">Schallimmissionsschutz</a></li>
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/leistungen">Alle Leistungen</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-bold text-white mb-4">Für wen</p>
+                        <ul class="space-y-2.5">
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/architekten">Architekten & Planer</a></li>
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/bautraeger">Bauträger & Entwickler</a></li>
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/industrie">Industrie & Produktion</a></li>
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/gastronomie">Gastronomie</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-bold text-white mb-4">Projekte</p>
+                        <ul class="space-y-2.5">
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/projekt-evva">EVVA Produktionshalle</a></li>
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/projekt-cop">NENI — C.O.P. Vienna</a></li>
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/projekt-wieselthaler">Wieselthaler</a></li>
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/projekt-sch%C3%BCller">Heuriger Schüller</a></li>
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/referenzen">Alle Referenzen</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-bold text-white mb-4">Coustiq</p>
+                        <ul class="space-y-2.5">
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/#about">Über uns</a></li>
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/#team">Team</a></li>
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/faq">FAQ</a></li>
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="https://lyzer.coustiq.com" target="_blank" rel="noopener">Lyzer</a></li>
+                            <li><a class="text-gray-400 hover:text-white transition-colors" href="/#contact">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </nav>
                 <div class="flex flex-col md:flex-row justify-between gap-4 mb-8 text-sm text-gray-400">
                     <div class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-sm text-accent">location_on</span>
@@ -722,7 +816,7 @@
                         <a href="mailto:office@coustiq.com" class="hover:text-white transition-colors">office@coustiq.com</a>
                     </div>
                 </div>
-                <div class="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase tracking-widest text-gray-500">
+                <div class="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase tracking-widest text-gray-400">
                     <div class="flex items-center">
                         <img src="src/assets/logo-white.svg" alt="Coustiq" class="h-7 w-auto"/>
                     </div>
