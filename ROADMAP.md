@@ -49,9 +49,9 @@ Jede unbekannte URL liefert die Startseite mit Status 200 (Soft-404). Google hat
 ## H — Hoch: Inhalte & interne Verlinkung (braucht Input von Coustiq)
 
 ### H1 — Keyword-H1s · Risiko 🟢 technisch · Ranking-Risiko 🟡
-- [ ] H1 = Suchbegriff + Ort, Slogan wird Subline (z. B. „Raumakustik in Wien — messbar geplant")
-- [ ] Referenzen-H1 ist Duplikat der Startseiten-H2 → eigene H1
-- Seitenweise Vorschläge vorbereiten, Freigabe durch Patrick/Bernd
+- [x] H1 = Suchbegriff + Ort, Slogan wird Subline (z. B. „Raumakustik in Wien — messbar geplant")
+- [x] Referenzen-H1 ist Duplikat der Startseiten-H2 → eigene H1
+- Umgesetzt 2026-09-25 (nur Text, Layout gleich); Startseite bewusst Markenzeile „Akustik, die messbar funktioniert." + Badge „· Wien"
 
 ### H2 — Interne Verlinkung · Risiko 🟢
 - [x] Startseite: Block „Für wen wir arbeiten" → Architekten / Bauträger / Industrie / Gastronomie
@@ -133,6 +133,7 @@ Google-CDN-Iconfont = 1,1 MB (größte Einzeldatei) + IP-Übermittlung an Google
 6. **M2, M5** — wenn Zeit
 
 ## Erfolgsmessung
+- **Baseline sichern:** Search Console → Leistung → letzte 3 Monate exportieren (Stand 2026-09-25), Vergleich ca. Mitte November
 - Search Console: indexierte Seiten = Sitemap-Seiten; keine „Soft 404"/„Alternative Seite mit Canonical"-Meldungen mehr
 - `site:coustiq.com` zeigt nur noch Apex-URLs, keine WP-Reste (4–8 Wochen)
 - Rankings: „Raumakustik Wien", „Akustiker Wien", „Schallschutz Gutachten Wien", „Lärmgutachten Wien"

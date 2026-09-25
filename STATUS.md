@@ -7,6 +7,12 @@ _Zuletzt aktualisiert: 2026-09-25. Vorgänger (bis April 2026): [docs/archive/ST
 
 ## Session-Log
 
+### 2026-09-25 — Keyword-H1s (live, Commit 8186f65)
+- **H1** auf 10 Seiten Suchbegriff in die erste Slogan-Zeile (Raumakustik in Wien, Bauakustik & Schallschutz, Lärmgutachten, …); Startseite behält Markenzeile, Badge „Ingenieurbüro für Akustik · Wien"
+- EVVA-Badge „Industrieakustik"; Mobile-Fixes: EVVA-Hero-Überlauf, Impressum-E-Mail
+- Neuer Prüfschritt: Overflow-Check aller Seiten bei 390/360 px
+- Marketing (Google-Profil-Anleitung, LinkedIn, Instagram) zurückgestellt → eigener Ordner geplant, siehe ROADMAP H4
+
 ### 2026-09-25 — Quick Wins (Branch `seo-quickwins`)
 - **H2** Startseite „Für wen wir arbeiten" (4 Zielgruppen); Footer-Linkraster auf allen Seiten; Links `/leistungen#…` → Detailseiten; Leistungen-Zielgruppen-Grid 2/4 Spalten
 - **H3** Schema: Organisation mit `@id`, Logo (PNG), Bild, `sameAs` (LinkedIn, Facebook, firmenabc); Case-Study-Article mit Datum + funktionierendem Bild (vorher 404 auf `/src/assets/`); feste OG-Bilder `public/og/projekt-*.jpg`
