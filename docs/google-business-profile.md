@@ -29,7 +29,7 @@ Im Kategorie-Feld tippen und aus Googles Liste wählen (deutsche Bezeichnung kan
 ## 3. Einzugsgebiet
 Wien · Niederösterreich · Steiermark · Burgenland _(max. 20 Gebiete; Österreich gesamt ist als Gebiet zu grob)_
 
-## 4. Beschreibung (max. 750 Zeichen — dieser Text: ~690)
+## 4. Beschreibung (max. 750 Zeichen — dieser Text: 642)
 ```
 Coustiq ist ein Ingenieurbüro für Akustik in Wien. Seit 2018 planen, messen und dokumentieren wir Raumakustik, Bauakustik und Schallimmissionsschutz – für Architekten, Bauträger, Industrie und Gastronomie in ganz Österreich.
 
