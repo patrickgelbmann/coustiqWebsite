@@ -123,6 +123,21 @@ Google-CDN-Iconfont = 1,1 MB (größte Einzeldatei) + IP-Übermittlung an Google
 
 ---
 
+## A — KI-Suche (ChatGPT, Claude, Gemini, Perplexity) · ergänzt 2026-10-07
+
+KI-Assistenten suchen über Suchindizes (ChatGPT → Bing, Gemini/AI Overviews → Google) und eigene Crawler und zitieren Quellen, die klar, faktenreich und mehrfach bestätigt sind. K1–K4, H1–H3 wirken hier bereits mit (saubere URLs, strukturierte Daten, `sameAs`, klare Überschriften).
+
+| # | Maßnahme | Risiko |
+|---|---|---|
+| A1 | Cloudflare prüfen: Security → Bots / „AI Crawl Control": KI-Crawler (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot) **nicht** blockieren — **manuell durch Patrick** | 🟢 |
+| A2 | Bing Webmaster Tools: Site hinzufügen (Import aus Search Console), Sitemap einreichen — ChatGPT-Suche basiert auf Bing | 🟢 |
+| A3 | `llms.txt` mit Kurzprofil, Leistungen, Kontakt, wichtigsten Seiten (geringer, aber billiger Effekt) | 🟢 |
+| A4 | Fakten in Textform statt nur in Bildern/Kacheln: Preise/Kostenrahmen, Dauer, Normen, Messwerte je Projekt (überschneidet H5) | 🟢 |
+| A5 | Erwähnungen auf Drittseiten: Google-Profil + Bewertungen (H4), Verzeichnisse einheitlich, Fachartikel/Partner-Referenzen (Hersteller, Architekten) | 🟢 |
+| A6 | Test: alle 1–2 Monate in ChatGPT/Claude/Gemini/Perplexity fragen „Akustik-Ingenieurbüro Wien", „Lärmgutachten Wien", „Raumakustik Restaurant Wien" — wird Coustiq genannt? | 🟢 |
+
+---
+
 ## Reihenfolge
 
 1. **K1–K4** (dieser Branch `seo-audit-2026-09`) → Preview-Deploy → Merge → K2 im Dashboard → Search Console
