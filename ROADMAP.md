@@ -130,7 +130,7 @@ KI-Assistenten suchen über Suchindizes (ChatGPT → Bing, Gemini/AI Overviews �
 | # | Maßnahme | Risiko |
 |---|---|---|
 | A1 | ✅ 2026-10-07: Cloudflare AI Crawl Control — alle Crawler erlaubt (vorher blockiert: GPTBot, ClaudeBot, Claude-User, Amazonbot) | 🟢 |
-| A2 | Bing Webmaster Tools: Site hinzufügen (Import aus Search Console), Sitemap einreichen — ChatGPT-Suche basiert auf Bing | 🟢 |
+| A2 | ✅ 2026-10-07: Bing Webmaster Tools per Import aus Search Console (URL-Präfix-Property `https://coustiq.com/`) | 🟢 |
 | A3 | `llms.txt` mit Kurzprofil, Leistungen, Kontakt, wichtigsten Seiten (geringer, aber billiger Effekt) | 🟢 |
 | A4 | Fakten in Textform statt nur in Bildern/Kacheln: Preise/Kostenrahmen, Dauer, Normen, Messwerte je Projekt (überschneidet H5) | 🟢 |
 | A5 | Erwähnungen auf Drittseiten: Google-Profil + Bewertungen (H4), Verzeichnisse einheitlich, Fachartikel/Partner-Referenzen (Hersteller, Architekten) | 🟢 |
@@ -148,6 +148,7 @@ KI-Assistenten suchen über Suchindizes (ChatGPT → Bing, Gemini/AI Overviews �
 6. **M2, M5** — wenn Zeit
 
 ## Erfolgsmessung
+- **Search Console** eingerichtet 2026-10-07: Domain-Property `coustiq.com` (Hauptansicht) + URL-Präfix `https://coustiq.com/` (nur für Bing-Import); Sitemap eingereicht (Status anfangs „Konnte nicht abgerufen werden" — nach 1–2 Tagen prüfen)
 - **Baseline sichern:** Search Console → Leistung → letzte 3 Monate exportieren (Stand 2026-09-25), Vergleich ca. Mitte November
 - Search Console: indexierte Seiten = Sitemap-Seiten; keine „Soft 404"/„Alternative Seite mit Canonical"-Meldungen mehr
 - `site:coustiq.com` zeigt nur noch Apex-URLs, keine WP-Reste (4–8 Wochen)
