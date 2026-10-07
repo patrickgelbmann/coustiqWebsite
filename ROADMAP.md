@@ -129,7 +129,7 @@ KI-Assistenten suchen über Suchindizes (ChatGPT → Bing, Gemini/AI Overviews �
 
 | # | Maßnahme | Risiko |
 |---|---|---|
-| A1 | Cloudflare prüfen: Security → Bots / „AI Crawl Control": KI-Crawler (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot) **nicht** blockieren — **manuell durch Patrick** | 🟢 |
+| A1 | ✅ 2026-10-07: Cloudflare AI Crawl Control — alle Crawler erlaubt (vorher blockiert: GPTBot, ClaudeBot, Claude-User, Amazonbot) | 🟢 |
 | A2 | Bing Webmaster Tools: Site hinzufügen (Import aus Search Console), Sitemap einreichen — ChatGPT-Suche basiert auf Bing | 🟢 |
 | A3 | `llms.txt` mit Kurzprofil, Leistungen, Kontakt, wichtigsten Seiten (geringer, aber billiger Effekt) | 🟢 |
 | A4 | Fakten in Textform statt nur in Bildern/Kacheln: Preise/Kostenrahmen, Dauer, Normen, Messwerte je Projekt (überschneidet H5) | 🟢 |
