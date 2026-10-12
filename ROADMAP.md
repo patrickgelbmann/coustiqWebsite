@@ -138,6 +138,19 @@ KI-Assistenten suchen über Suchindizes (ChatGPT → Bing, Gemini/AI Overviews �
 
 ---
 
+## L — Niedrige Priorität / später
+
+### L1 — Astro-Migration · Risiko 🟡 mittel · Ranking-Effekt keiner · ergänzt 2026-10-12
+Kein SEO-Hebel: Die Seite liefert schon fertiges HTML (kein React). Nutzen liegt in der Pflege:
+- Navigation/Footer als **eine** Komponente statt in 18 Dateien kopiert (3 Varianten)
+- `/wissen`-Artikel als Markdown statt kompletter HTML-Seiten (passt zu H6)
+- Responsive Bilder automatisch (würde M2 erledigen), Sitemap automatisch
+- Aufwand ca. 1–2 Tage; URLs, `_redirects`, Schema, Meta-Tags 1:1 erhalten; Ablauf wie gehabt (Preview-Branch, Linkcheck, Overflow-Test)
+- **Frühestens beim Start von H6** sinnvoll; günstigere Zwischenlösung: Nav/Footer per Vite-Plugin auslagern (~½ Tag)
+- **Nicht ohne ausdrückliche Freigabe umsetzen.**
+
+---
+
 ## Reihenfolge
 
 1. **K1–K4** (dieser Branch `seo-audit-2026-09`) → Preview-Deploy → Merge → K2 im Dashboard → Search Console
