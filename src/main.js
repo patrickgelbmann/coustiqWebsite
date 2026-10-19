@@ -151,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         phone:   document.getElementById('cf-phone').value,
                         subject: document.getElementById('cf-subject').value,
                         message: document.getElementById('cf-message').value,
+                        gefunden_ueber: document.getElementById('cf-source')?.value || 'keine Angabe',
                     }),
                 });
 
