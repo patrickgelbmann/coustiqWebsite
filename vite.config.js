@@ -49,6 +49,7 @@ export default defineConfig({
         'raumakustik-buero':     resolve(__dirname, 'raumakustik-buero.html'),
         'raumakustik-kindergarten-schule': resolve(__dirname, 'raumakustik-kindergarten-schule.html'),
         schallschutz:            resolve(__dirname, 'schallschutz.html'),
+        'schallschutz-wohnung-messen': resolve(__dirname, 'schallschutz-wohnung-messen.html'),
         schallimmissionsschutz:  resolve(__dirname, 'schallimmissionsschutz.html'),
         'waermepumpe-laermnachweis': resolve(__dirname, 'waermepumpe-laermnachweis.html'),
         'projekt-wieselthaler':  resolve(__dirname, 'projekt-wieselthaler.html'),
