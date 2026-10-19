@@ -46,6 +46,8 @@ export default defineConfig({
         industrie:               resolve(__dirname, 'industrie.html'),
         gastronomie:             resolve(__dirname, 'gastronomie.html'),
         raumakustik:             resolve(__dirname, 'raumakustik.html'),
+        'raumakustik-buero':     resolve(__dirname, 'raumakustik-buero.html'),
+        'raumakustik-kindergarten-schule': resolve(__dirname, 'raumakustik-kindergarten-schule.html'),
         schallschutz:            resolve(__dirname, 'schallschutz.html'),
         schallimmissionsschutz:  resolve(__dirname, 'schallimmissionsschutz.html'),
         'waermepumpe-laermnachweis': resolve(__dirname, 'waermepumpe-laermnachweis.html'),
