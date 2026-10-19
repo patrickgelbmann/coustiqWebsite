@@ -48,6 +48,7 @@ export default defineConfig({
         raumakustik:             resolve(__dirname, 'raumakustik.html'),
         schallschutz:            resolve(__dirname, 'schallschutz.html'),
         schallimmissionsschutz:  resolve(__dirname, 'schallimmissionsschutz.html'),
+        'waermepumpe-laermnachweis': resolve(__dirname, 'waermepumpe-laermnachweis.html'),
         'projekt-wieselthaler':  resolve(__dirname, 'projekt-wieselthaler.html'),
         'projekt-cop':           resolve(__dirname, 'projekt-cop.html'),
         'projekt-evva':          resolve(__dirname, 'projekt-evva.html'),
