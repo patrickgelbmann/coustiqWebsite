@@ -192,8 +192,8 @@
                     Nachweis anfragen
                     <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
                 </a>
-                <a href="#unterlagen" class="border border-border-light dark:border-border-dark text-text-light dark:text-text-dark font-semibold px-7 py-3.5 rounded-full hover:border-accent hover:text-accent transition-all text-sm">
-                    Was wir von Ihnen brauchen
+                <a href="#schnellcheck" class="border border-border-light dark:border-border-dark text-text-light dark:text-text-dark font-semibold px-7 py-3.5 rounded-full hover:border-accent hover:text-accent transition-all text-sm">
+                    Schnellcheck: passt mein Gerät?
                 </a>
             </div>
         </div>
@@ -256,6 +256,128 @@
             </div>
         </div>
     </section>
+
+    <!-- Quick check (Lyzer Immission, stage 1: Vienna guideline 2024). Runs in the browser; nothing is sent. -->
+    <section id="schnellcheck" class="py-20 px-6 border-t border-border-light dark:border-border-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-10 animate-on-scroll">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border-light dark:border-border-dark mb-4 bg-surface-light dark:bg-surface-dark">
+                    <span class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase">Schnellcheck Wien · Lyzer Immission</span>
+                </div>
+                <h2 class="text-4xl font-bold text-primary dark:text-white mt-2 max-w-3xl leading-tight">Passt Ihr Gerät? Eine erste Abschätzung.</h2>
+                <p class="mt-4 text-text-muted-light dark:text-text-muted-dark max-w-3xl leading-relaxed">
+                    Gerechnet nach der vereinfachten Formel des Wiener Leitfadens „Schallschutz haustechnischer Anlagen“ (2024).
+                    Ihre Angaben bleiben in Ihrem Browser — es wird nichts gesendet.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <form id="sc-form" class="rounded-2xl p-6 md:p-8 border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark space-y-5 text-sm" onsubmit="return false">
+                    <label class="block">
+                        <span class="font-semibold">Schallleistungspegel L<sub>WA</sub> des Außengeräts (Datenblatt)</span>
+                        <div class="mt-1 flex items-center gap-2"><input id="sc-lwa" type="number" min="30" max="100" step="0.5" value="55" class="w-28 rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-3 py-2"/> dB(A)</div>
+                        <span class="text-xs text-text-muted-light dark:text-text-muted-dark">Für den Betrieb, um den es geht — nachts oft ein leiserer Modus.</span>
+                    </label>
+                    <label class="block">
+                        <span class="font-semibold">Kürzester Abstand zur Nachbargrundgrenze</span>
+                        <div class="mt-1 flex items-center gap-2"><input id="sc-dist" type="number" min="1" max="200" step="0.5" value="5" class="w-28 rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-3 py-2"/> m</div>
+                        <span class="text-xs text-text-muted-light dark:text-text-muted-dark">Auch zu öffentlichem Gut (Gehsteig, Straße).</span>
+                    </label>
+                    <fieldset>
+                        <legend class="font-semibold mb-1">Aufstellung</legend>
+                        <div class="flex flex-wrap gap-4">
+                            <label class="flex items-center gap-2"><input type="radio" name="sc-lz" value="0" checked/> frei</label>
+                            <label class="flex items-center gap-2"><input type="radio" name="sc-lz" value="3"/> an einer Wand</label>
+                            <label class="flex items-center gap-2"><input type="radio" name="sc-lz" value="6"/> in einer Ecke</label>
+                        </div>
+                        <span class="text-xs text-text-muted-light dark:text-text-muted-dark">Wand oder Ecke zählt, wenn sie näher als 3 m am Gerät ist.</span>
+                    </fieldset>
+                    <label class="block">
+                        <span class="font-semibold">Widmung des Nachbargrundstücks</span>
+                        <select id="sc-cat" class="mt-1 w-full rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-3 py-2">
+                            <option value="1">Kategorie 1 — Ruhegebiet, Kurgebiet</option>
+                            <option value="2">Kategorie 2 — Wohngebiet in Vororten, ländlich</option>
+                            <option value="3" selected>Kategorie 3 — städtisches Wohngebiet (Wien: W)</option>
+                            <option value="4">Kategorie 4 — Kerngebiet, gemischtes Baugebiet (Wien: GB)</option>
+                            <option value="5">Kategorie 5 — Betriebsgebiet (Wien: GBBG, GBS)</option>
+                        </select>
+                        <span class="text-xs text-text-muted-light dark:text-text-muted-dark">Nachzusehen im Flächenwidmungsplan der Stadt Wien. Im Zweifel die strengere Kategorie wählen.</span>
+                    </label>
+                    <fieldset>
+                        <legend class="font-semibold mb-1">Lage</legend>
+                        <label class="flex items-center gap-2"><input id="sc-yard" type="checkbox"/> Innenhof, Dachgeschoß oder besonders ruhige Lage</label>
+                        <label class="flex items-center gap-2 mt-1"><input id="sc-night" type="checkbox" checked/> Gerät läuft auch nachts (22–6 Uhr)</label>
+                    </fieldset>
+                </form>
+
+                <div class="rounded-2xl p-6 md:p-8 border border-border-light dark:border-border-dark" aria-live="polite">
+                    <p class="text-[10px] font-bold tracking-widest text-text-muted-light dark:text-text-muted-dark uppercase mb-4">Ergebnis der Abschätzung</p>
+                    <div id="sc-result" class="space-y-3"></div>
+                    <p id="sc-max" class="mt-4 text-sm"></p>
+                    <div class="mt-6 rounded-xl bg-accent/5 border border-accent/30 p-5 text-sm leading-relaxed">
+                        <p class="font-bold mb-2">Abschätzung oder Nachweis?</p>
+                        <p class="text-text-muted-light dark:text-text-muted-dark">Der Schnellcheck rechnet mit Ihren Angaben. Für die Behörde zählt, ob die Angaben stimmen:
+                            Beim <b>Nachweis ab € 390,–</b> prüfen wir die Widmung im Flächenwidmungsplan, den Abstand im Kataster, den richtigen
+                            Schallleistungspegel je Betriebsart und die Aufstellung — und Sie bekommen den fertigen Ergebnisbogen für die Einreichung.
+                            Ist es knapp oder ein Sonderfall, rechnen wir genau.</p>
+                        <a id="sc-mail" href="mailto:office@coustiq.com" class="inline-flex items-center gap-2 mt-4 bg-primary dark:bg-white dark:text-primary text-white font-semibold px-5 py-2.5 rounded-full text-sm">
+                            Nachweis anfragen — mit diesen Angaben
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+    (function () {
+        // ÖNORM S 5021, Table 1 of the Vienna guideline (Lyzer Immission immission/s5021.py): L_r Tag/Abend/Nacht
+        var LR = {1: [45, 40, 35], 2: [50, 45, 40], 3: [55, 50, 45], 4: [60, 55, 50], 5: [65, 60, 55]};
+        var NAMES = ['Tag (6–19 Uhr)', 'Abend (19–22 Uhr)', 'Nacht (22–6 Uhr)'];
+        var $ = function (id) { return document.getElementById(id); };
+        function fmt(v) { return (Math.round(v * 10) / 10).toLocaleString('de-AT', {minimumFractionDigits: 1}); }
+        function run() {
+            var lwa = parseFloat($('sc-lwa').value), s = Math.max(1, parseFloat($('sc-dist').value));
+            var lz = parseFloat(document.querySelector('input[name="sc-lz"]:checked').value);
+            var cat = $('sc-cat').value, yard = $('sc-yard').checked, night = $('sc-night').checked;
+            var out = $('sc-result'), max = $('sc-max');
+            out.innerHTML = ''; max.textContent = '';
+            if (isNaN(lwa) || isNaN(s)) { out.textContent = 'Bitte Schallleistung und Abstand eingeben.'; return; }
+            if (yard) {
+                out.innerHTML = '<div class="rounded-xl p-4 bg-amber-50 text-amber-900 dark:bg-amber-900/20 dark:text-amber-200">In Innenhöfen, Dachgeschoßen und ruhigen Lagen sieht der Leitfaden eine zusätzliche Abminderung vor, die ein Fachkundiger festlegt. Das lässt sich hier nicht abschätzen — wir rechnen es genau.</div>';
+                return;
+            }
+            // L_A,IP = L_WA - 20 lg s + L_Z - 8 ; limit L_A,95,IP = L_r - 10 (ΔL_Lage = 0)
+            var la = lwa - 20 * Math.log10(s) + lz - 8, worst = null, lines = [];
+            LR[cat].forEach(function (lr, i) {
+                if (i === 2 && !night) { lines.push([NAMES[i], null, null]); return; }
+                var limit = lr - 10, margin = limit - la;
+                if (worst === null || margin < worst.margin) worst = {margin: margin, limit: limit};
+                lines.push([NAMES[i], limit, margin]);
+            });
+            lines.forEach(function (l) {
+                var row = document.createElement('div'), cls, text;
+                if (l[1] === null) { cls = 'bg-surface-light dark:bg-surface-dark text-text-muted-light dark:text-text-muted-dark'; text = 'kein Nachtbetrieb — entfällt'; }
+                else if (l[2] >= 3) { cls = 'bg-emerald-50 text-emerald-900 dark:bg-emerald-900/20 dark:text-emerald-200'; text = 'eingehalten, ' + fmt(l[2]) + ' dB Reserve'; }
+                else if (l[2] >= 0) { cls = 'bg-amber-50 text-amber-900 dark:bg-amber-900/20 dark:text-amber-200'; text = 'knapp eingehalten (' + fmt(l[2]) + ' dB) — genau prüfen lassen'; }
+                else { cls = 'bg-red-50 text-red-900 dark:bg-red-900/20 dark:text-red-200'; text = 'überschritten um ' + fmt(-l[2]) + ' dB'; }
+                row.className = 'rounded-xl px-4 py-3 text-sm flex justify-between gap-3 ' + cls;
+                row.innerHTML = '<span class="font-semibold">' + l[0] + '</span><span class="text-right">' +
+                    (l[1] === null ? '' : 'Pegel ' + fmt(la) + ' dB · Grenze ' + fmt(l[1]) + ' dB · ') + text + '</span>';
+                out.appendChild(row);
+            });
+            if (worst) {
+                var lwaMax = worst.limit + 20 * Math.log10(s) - lz + 8;
+                max.innerHTML = 'An diesem Standort dürfte das Gerät höchstens <b>L<sub>WA</sub> ' + fmt(lwaMax) + ' dB(A)</b> haben.';
+            }
+            var body = 'Schnellcheck Wärmepumpe/Klimagerät%0D%0A' +
+                'LWA: ' + lwa + ' dB(A)%0D%0AAbstand Grundgrenze: ' + s + ' m%0D%0AAufstellung L_Z: ' + lz + ' dB%0D%0A' +
+                'Widmung: Kategorie ' + cat + '%0D%0ANachtbetrieb: ' + (night ? 'ja' : 'nein') + '%0D%0A%0D%0AAdresse:%0D%0A';
+            $('sc-mail').href = 'mailto:office@coustiq.com?subject=Nachweis%20W%C3%A4rmepumpe%20(Schnellcheck)&body=' + body;
+        }
+        document.getElementById('sc-form').addEventListener('input', run);
+        document.getElementById('sc-form').addEventListener('change', run);
+        run();
+    })();
+    </script>
 
     <!-- Packages -->
     <section class="py-20 px-6 bg-surface-light dark:bg-surface-dark border-t border-border-light dark:border-border-dark">
