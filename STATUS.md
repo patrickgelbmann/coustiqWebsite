@@ -10,7 +10,7 @@ _Zuletzt aktualisiert: 2026-09-25. Vorgänger (bis April 2026): [docs/archive/ST
 ### 2026-10-25 — Raumakustik: Abschnitt „Raumakustik messen lassen" (live seit 2026-10-25, Commit 4925e1d)
 - Neuer Abschnitt `/raumakustik#messung` zwischen Ablauf und Normen: 4 Schritte (Termin, Auswertung/Prognose nach ÖNORM B 8115-3, Lösungsvorschlag, Messbericht in 10 Arbeitstagen), Preisbox **ab € 1.250,– netto**, „bei Auftrag angerechnet" (Gründer-Freigabe 2026-10-25), „Wichtig vorab", CTA „Messung anfragen"
 - Inhalt aus dem Standardangebot AN-1116/1117 (Hub, Kunden → Angebote); geprüft bei 1366 px, 390 px und Dark Mode
-- Gründer-Go „online" 2026-10-25; live geprüft per curl. Offen: Preis in die Meta-Description (wie Schallschutz-Seite)
+- Gründer-Go „online" 2026-10-25; live geprüft per curl. Meta-/OG-/Schema-Description mit Preis nachgezogen
 
 ### 2026-09-25 — Keyword-H1s (live, Commit 8186f65)
 - **H1** auf 10 Seiten Suchbegriff in die erste Slogan-Zeile (Raumakustik in Wien, Bauakustik & Schallschutz, Lärmgutachten, …); Startseite behält Markenzeile, Badge „Ingenieurbüro für Akustik · Wien"
