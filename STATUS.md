@@ -7,6 +7,11 @@ _Zuletzt aktualisiert: 2026-09-25. Vorgänger (bis April 2026): [docs/archive/ST
 
 ## Session-Log
 
+### 2026-10-25 — Raumakustik: Abschnitt „Raumakustik messen lassen" (Branch `website/raumakustik-messen`, nicht live)
+- Neuer Abschnitt `/raumakustik#messung` zwischen Ablauf und Normen: 4 Schritte (Termin, Auswertung/Prognose nach ÖNORM B 8115-3, Lösungsvorschlag, Messbericht in 10 Arbeitstagen), Preisbox **ab € 1.250,– netto**, „bei Auftrag angerechnet" (Gründer-Freigabe 2026-10-25), „Wichtig vorab", CTA „Messung anfragen"
+- Inhalt aus dem Standardangebot AN-1116/1117 (Hub, Kunden → Angebote); geprüft bei 1366 px, 390 px und Dark Mode
+- Online erst nach „online" vom Gründer (Merge nach `master`)
+
 ### 2026-09-25 — Keyword-H1s (live, Commit 8186f65)
 - **H1** auf 10 Seiten Suchbegriff in die erste Slogan-Zeile (Raumakustik in Wien, Bauakustik & Schallschutz, Lärmgutachten, …); Startseite behält Markenzeile, Badge „Ingenieurbüro für Akustik · Wien"
 - EVVA-Badge „Industrieakustik"; Mobile-Fixes: EVVA-Hero-Überlauf, Impressum-E-Mail
