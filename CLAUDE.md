@@ -48,3 +48,7 @@ npm run preview  # Build-Vorschau
 - Keine externen Abhängigkeiten hinzufügen ohne Absprache
 - Bilder aktuell via Unsplash/Google-URLs — später durch echte Assets ersetzen
 - `STATUS.md` nach jeder Arbeits-Session aktualisieren
+- **Geht etwas online** (Merge auf `master` nach Gründer-Go): prüfen, ob es eine Marketing-Maßnahme im Hub erfüllt
+  (`../Coustiq Hub/config/marketing_measures.yaml`, Status offen/übernommen). Wenn ja, im Hub schließen:
+  `backend.app.actions.measures.decide(id, "erledigt", "Claude", note="online seit <Datum>, Commit <hash>")`,
+  danach `scripts/hub_views.py`. Hintergrund: Am 04.11.2026 standen drei Maßnahmen offen, die längst live waren.
