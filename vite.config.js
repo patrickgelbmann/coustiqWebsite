@@ -52,6 +52,7 @@ export default defineConfig({
         'schallschutz-wohnung-messen': resolve(__dirname, 'schallschutz-wohnung-messen.html'),
         schallimmissionsschutz:  resolve(__dirname, 'schallimmissionsschutz.html'),
         'waermepumpe-laermnachweis': resolve(__dirname, 'waermepumpe-laermnachweis.html'),
+        'laerm-vom-nachbarn':    resolve(__dirname, 'laerm-vom-nachbarn.html'),
         'projekt-wieselthaler':  resolve(__dirname, 'projekt-wieselthaler.html'),
         'projekt-cop':           resolve(__dirname, 'projekt-cop.html'),
         'projekt-evva':          resolve(__dirname, 'projekt-evva.html'),
