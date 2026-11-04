@@ -1,11 +1,17 @@
 # STATUS — Coustiq Website
 
-_Zuletzt aktualisiert: 2026-09-25. Vorgänger (bis April 2026): [docs/archive/STATUS-2026-04.md](docs/archive/STATUS-2026-04.md)_
+_Zuletzt aktualisiert: 2026-11-04. Vorgänger (bis April 2026): [docs/archive/STATUS-2026-04.md](docs/archive/STATUS-2026-04.md)_
 
 **Live:** https://coustiq.com — Cloudflare Pages, Deploy bei Push auf `master`.
 **Plan:** [ROADMAP.md](ROADMAP.md) (SEO- & Design-Audit 2026-09)
 
 ## Session-Log
+
+### 2026-11-04 — Kampagne „Lärm vom Nachbarn“ + Formular-Herkunft (live seit 2026-11-04)
+- Neue Seite `/laerm-vom-nachbarn` (H1 „Lärm vom Nachbarn? Wir belegen, was Sie hören.“): Anlässe, „erst messen, dann Gutachten“, Ablauf in 4 Schritten, zwei anonymisierte Fälle (P140 Brummton/Pumpe, P141 Musik nachts), Preise ab 1.250 / 1.650 / Gutachten ab 1.450 € netto zusätzlich, FAQ mit FAQPage-Schema
+- Preise aus AN-1110/AN-1111, Gründer-Go „öffentlich, mit Bernd noch abklären“ — ggf. anpassen
+- Kachel „Lärm vom Nachbarn“ auf `/schallimmissionsschutz` verlinkt jetzt die Seite; Sitemap + Vite-Input ergänzt; geprüft bei 1366/390/360 px und Dark Mode
+- Kontaktformular „Wie haben Sie uns gefunden?“: „LinkedIn / Social Media“ getrennt in „LinkedIn“ und „Instagram“ (Hub zählt beide als Herkunft)
 
 ### 2026-10-25 — Raumakustik: Abschnitt „Raumakustik messen lassen" (live seit 2026-10-25, Commit 4925e1d)
 - Neuer Abschnitt `/raumakustik#messung` zwischen Ablauf und Normen: 4 Schritte (Termin, Auswertung/Prognose nach ÖNORM B 8115-3, Lösungsvorschlag, Messbericht in 10 Arbeitstagen), Preisbox **ab € 1.250,– netto**, „bei Auftrag angerechnet" (Gründer-Freigabe 2026-10-25), „Wichtig vorab", CTA „Messung anfragen"
